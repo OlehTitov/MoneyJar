@@ -59,7 +59,7 @@ extension ConfigureJar {
         
         var body: some View {
             ZStack {
-                BlueGradientView()
+                BackgroundView()
                 VStack(spacing: 12) {
                     ZStack {
                         Pager(page: vm.page, data: vm.currencies, id: \.self) { item in

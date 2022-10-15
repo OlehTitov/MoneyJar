@@ -17,9 +17,7 @@ struct AwardsView: View {
     @State var showAward = false
     var body: some View {
         ZStack {
-//            Color(UIColor.systemGray5)
-//                .ignoresSafeArea()
-            JarBackgroundView()
+            BackgroundView()
             ScrollView {
                 Text("You unlocked \(numberOfUnlockedAwards()) of \(stateController.account.awards.count) awards")
                     .padding()

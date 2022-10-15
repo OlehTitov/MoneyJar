@@ -42,9 +42,7 @@ extension WelcomeToJar {
         var paragraph3 = "You own the data, nothing is stored on server."
         var body: some View {
             ZStack {
-//                BlueGradientView()
-                Color(UIColor.tertiarySystemFill)
-                    .ignoresSafeArea()
+                BackgroundView()
                 ScrollView(.vertical, showsIndicators: false) {
                     ZStack {
                         makeMovingElement(image: "", name: "Gold bar", type: "Commodity", isCommodity: true, quantity: "10 oz", bgrdOpacity: 0.6, offsetStart: -110, offsetFinish: 280, offsetY: 0, duration: 3)

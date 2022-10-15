@@ -16,7 +16,7 @@ struct AddResultView: View {
     var descriptionText = " was sucessfully added to your account"
     var body: some View {
         ZStack {
-            BlueGradientView()
+            BackgroundView()
             VStack {
                 Spacer()
                 Circle()

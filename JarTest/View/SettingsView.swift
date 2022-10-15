@@ -15,7 +15,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack(path: $navPath) {
             ZStack {
-//                BlueGradientView()
+                BackgroundView()
                 List {
                     Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 18))) {
                         ForEach(SettingsRoute.allCases, id: \.self) { route in

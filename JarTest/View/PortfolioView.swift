@@ -13,7 +13,7 @@ struct PortfolioView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                BlueGradientView()
+                BackgroundView()
                 List {
                     Rectangle()
                         .fill(Color.clear)

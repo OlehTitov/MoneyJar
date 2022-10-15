@@ -18,7 +18,7 @@ struct AddGoldView2: View {
 
     var body: some View {
         ZStack {
-            BlueGradientView()
+            BackgroundView()
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     Text("Select gold type".uppercased())

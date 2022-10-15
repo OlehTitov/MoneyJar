@@ -14,41 +14,45 @@ struct ChangeJarNameView: View {
     @State var showResult = false
     @FocusState var focusedTextField: Bool
     var body: some View {
-        Form {
-            TextField("Jar name", text: $jarName, axis: .vertical)
-                .focused($focusedTextField)
-        }
-        .onAppear {
-            focusedTextField = true
-        }
-        .toolbar {
-            Button {
-                stateController.renameJar(newName: jarName)
-                showResult = true
-                focusedTextField = false
-            } label: {
-                Text("Save")
+        ZStack {
+            BackgroundView()
+            Form {
+                TextField("Jar name", text: $jarName, axis: .vertical)
+                    .focused($focusedTextField)
             }
-            .disabled(jarName == "")
+            .scrollContentBackground(.hidden)
+            .onAppear {
+                focusedTextField = true
+            }
+            .toolbar {
+                Button {
+                    stateController.renameJar(newName: jarName)
+                    showResult = true
+                    focusedTextField = false
+                } label: {
+                    Text("Save")
+                }
+                .disabled(jarName == "")
+            }
+            .sheet(isPresented: $showResult) {
+                VStack(spacing: 20) {
+                    Spacer()
+                    Image("penguin_waving")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .background(Color(UIColor.tertiarySystemFill))
+                        .clipShape(Circle())
+                    Text("Successfuly renamed jar to:")
+                    Text(jarName)
+                        .font(.title)
+                    Spacer()
+                }
+                .safeAreaInset(edge: .bottom) {
+                    Button(action: {doneTapped()}, label: {})
+                        .buttonStyle(MyButtonStyle(title: "Done"))
+                }
+                
         }
-        .sheet(isPresented: $showResult) {
-            VStack(spacing: 20) {
-                Spacer()
-                Image("penguin_waving")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-                    .background(Color(UIColor.tertiarySystemFill))
-                    .clipShape(Circle())
-                Text("Successfuly renamed jar to:")
-                Text(jarName)
-                    .font(.title)
-                Spacer()
-            }
-            .safeAreaInset(edge: .bottom) {
-                Button(action: {doneTapped()}, label: {})
-                    .buttonStyle(MyButtonStyle(title: "Done"))
-            }
-            
         }
     }
     

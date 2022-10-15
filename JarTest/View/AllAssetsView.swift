@@ -13,8 +13,7 @@ struct AllAssetsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-//                BlueGradientView()
-                JarBackgroundView()
+                BackgroundView()
                 if stateController.account.assets.isEmpty {
                     EmptyAssetsView()
                 } else {

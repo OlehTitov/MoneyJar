@@ -17,7 +17,7 @@ struct AddCashView3: View {
     
     var body: some View {
         ZStack {
-            BlueGradientView()
+            BackgroundView()
                 .onAppear {
                     //The beauty of MVVM with SwitfUI...
                     vm.selectedCurrency = selectedCurrency

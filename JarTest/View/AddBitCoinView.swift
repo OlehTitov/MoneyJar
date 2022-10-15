@@ -19,7 +19,7 @@ struct AddBitCoinView: View {
     @State var alertText = ""
     var body: some View {
         ZStack {
-            BlueGradientView()
+            BackgroundView()
             VStack {
                 Spacer()
                 HStack(spacing: 16) {

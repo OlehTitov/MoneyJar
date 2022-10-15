@@ -13,8 +13,7 @@ struct SelectAssetTypeView: View {
     var screenTitle = "Select asset"
     var body: some View {
         ZStack {
-//            BlueGradientView()
-            JarBackgroundView()
+            BackgroundView()
             List {
                 ForEach(assetTypes, id: \.self) { asset in
                     switch asset {

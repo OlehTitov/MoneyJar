@@ -68,7 +68,7 @@ extension SetAmount {
         
         var body: some View {
             ZStack {
-                BlueGradientView()
+                BackgroundView()
                 VStack {
                     Spacer()
                     VStack(spacing: 20) {

@@ -14,9 +14,7 @@ struct AwardUnlockedSheet: View {
     var award: Award
     var body: some View {
         ZStack {
-            //            BlueGradientView()
-            Color("BackgroundBottom")
-                .ignoresSafeArea()
+            BackgroundView()
             VStack {
                 VStack{
                     Text("Award unlocked!")

@@ -11,8 +11,7 @@ struct AwardDetails: View {
     var award: Award
     var body: some View {
         ZStack {
-            Color(UIColor.tertiarySystemFill)
-                .ignoresSafeArea()
+            BackgroundView()
             VStack {
                 ConditionalAwardImage(award: award, size: 180)
                 Text(award.name)

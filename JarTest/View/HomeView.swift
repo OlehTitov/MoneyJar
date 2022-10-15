@@ -49,9 +49,7 @@ extension HomeView {
             ZStack {
                 NavigationStack(path: $mainStack) {
                     ZStack {
-//                        JarBackgroundView()
-                        Color("x11Gray")
-                            .ignoresSafeArea()
+                        BackgroundView()
                         VStack(spacing: 32) {
                             goalAmount()
                             JarWithCoinsView(progress: stateController.account.progress)
