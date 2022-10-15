@@ -135,6 +135,7 @@
 		7CEF6C3F286B4DDE0013EA3D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */; };
 		7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C42286C23C30013EA3D /* AddCashView3.swift */; };
+		7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */; };
 		7CFB99E028DE4B6B0049EA78 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */; };
 		7CFB99E528DED90B0049EA78 /* Space_Mono in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB99E428DED90B0049EA78 /* Space_Mono */; };
 		7CFB99FB28E241C30049EA78 /* SeamlessIconTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99FA28E241C30049EA78 /* SeamlessIconTile.swift */; };
@@ -267,6 +268,7 @@
 		7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBitCoinView.swift; sourceTree = "<group>"; };
 		7CEF6C42286C23C30013EA3D /* AddCashView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashView3.swift; sourceTree = "<group>"; };
+		7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 		7CFB99E328DE71150049EA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7CFB99E428DED90B0049EA78 /* Space_Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Space_Mono; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */,
+				7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */,
 				7CDDF61B28F98F7400A4B706 /* JarBackgroundView.swift */,
 				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
 				7CFB99FA28E241C30049EA78 /* SeamlessIconTile.swift */,
@@ -787,6 +790,7 @@
 				7CFB99FD28E246DD0049EA78 /* SeamlessBackgroundTest.swift in Sources */,
 				7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */,
 				7CEF6C2E2865AA8A0013EA3D /* AddCashView.swift in Sources */,
+				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,
 				7CDDF61028ED7C4B00A4B706 /* AwardsManager.swift in Sources */,
 				7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */,
 				7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */,
