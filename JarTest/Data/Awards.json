@@ -1,0 +1,66 @@
+[
+  {
+      "id": 1,
+      "name": "Hello!",
+      "image": "penguin_hello",
+      "status": "completed",
+      "presented": false,
+      "detailedText": "Create your money jar"
+  },
+  {
+      "id": 2,
+      "name": "First steps",
+      "image": "penguin_first_steps",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Put your first asset into the money jar"
+  },
+  {
+      "id": 3,
+      "name": "Jar is full",
+      "image": "penguin_jar_full",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Congratulations! You've made it. Your jar is full up to the brim."
+  },
+  {
+      "id": 4,
+      "name": "Fast lane",
+      "image": "penguin_fast_lane",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Make 2 replenishments in one day"
+  },
+  {
+      "id": 5,
+      "name": "First crypto",
+      "image": "penguin_bitcoin",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Have at least one cryptocurrency asset"
+  },
+  {
+      "id": 6,
+      "name": "First gold",
+      "image": "penguin_gold",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Have at least one gold asset"
+  },
+  {
+      "id": 7,
+      "name": "Share",
+      "image": "penguin_twitter",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Go to settings and share me in twitter"
+  },
+  {
+      "id": 8,
+      "name": "Rate",
+      "image": "penguin_twitter",
+      "status": "unavailable",
+      "presented": false,
+      "detailedText": "Go to settings and rate me in App Store"
+  }
+]

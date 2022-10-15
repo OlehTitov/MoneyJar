@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Inconsolata/Inconsolata-Medium.ttf</string>
+		<string>Inconsolata/Inconsolata-ExtraBold.ttf</string>
+		<string>Space_Mono/SpaceMono-Bold.ttf</string>
+		<string>Space_Mono/SpaceMono-Regular.ttf</string>
+		<string>Mitr/Mitr-Regular.ttf</string>
+		<string>Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf</string>
+		<string>Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf</string>
+		<string>Roboto_Mono/RobotoMono-Medium.ttf</string>
+		<string>Roboto_Mono/RobotoMono-Bold.ttf</string>
+	</array>
+</dict>
+</plist>
