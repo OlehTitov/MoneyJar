@@ -37,7 +37,7 @@ extension WelcomeToJar {
         @StateObject var viewModel : WelcomeToJarViewModel
         
         var title = "Multi-asset financial goal tracker"
-        var paragraph1 = "Set your financial goal. Save different assets elsewhere and log it here. See how your jar is filling."
+        var paragraph1 = "Set your financial goal. Add different assets and currencies to see how your jar is filling."
         var paragraph2 = "Save in Bitcoin, gold coins or bars, world currencies and instantly see the amount in your home currency."
         var paragraph3 = "You own the data, nothing is stored on server."
         var body: some View {
@@ -72,11 +72,9 @@ extension WelcomeToJar {
         func titleAndDescription() -> some View {
             VStack(spacing: 12) {
                 VStack(spacing: -8) {
-                    Text("Multi-asset financial goal tracker")
-//                        .font(.system(size: 38, weight: .bold, design: .rounded))
-                        .font(Font.custom("RobotoMono-Bold", size: 28))
+                    Text("Multi-asset savings tracker")
+                        .font(.system(size: 40, weight: .bold, design: .serif))
                         .multilineTextAlignment(.center)
-                    
                 }
                 .padding(.vertical)
                 .padding(.top, 38)
@@ -86,12 +84,9 @@ extension WelcomeToJar {
                     Text(paragraph2)
                     Text(paragraph3)
                 }
-//                .font(Font.custom("RobotoMono-Medium", size: 18))
-//                .font(.system(.headline, design: .rounded))
-//                .font(.system(size: 20))
+                .font(.headline)
                 .lineSpacing(6)
                 .padding(.horizontal, 24)
-//                .foregroundColor(.white)
             }
         }
         
@@ -104,7 +99,7 @@ extension WelcomeToJar {
             .frame(width: 300)
             .background(.ultraThinMaterial)
             .cornerRadius(60)
-            .shadow(color: Color("cloudBurst").opacity(0.4), radius: 8, x: 0, y: 2)
+            .shadow(color: Color.black.opacity(0.4), radius: 8, x: 0, y: 2)
             .offset(x: viewModel.animate ? offsetStart : offsetFinish, y: offsetY)
             .animation(.easeInOut(duration: duration), value: viewModel.animate)
         }
