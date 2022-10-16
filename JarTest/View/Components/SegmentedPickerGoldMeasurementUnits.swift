@@ -13,7 +13,7 @@ struct SegmentedPickerGoldMeasurementUnits: View {
         HStack {
             Text("Grams")
                 .font(.headline)
-                .foregroundColor(selection == .grams ? .white : .white.opacity(0.5))
+                .foregroundColor(selection == .grams ? .primary : .secondary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
                 .onTapGesture {
@@ -26,7 +26,7 @@ struct SegmentedPickerGoldMeasurementUnits: View {
                 .frame(height: 20)
             Text("Ounces")
                 .font(.headline)
-                .foregroundColor(selection == .ounces ? .white : .white.opacity(0.5))
+                .foregroundColor(selection == .ounces ? .primary : .secondary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
                 .onTapGesture {
@@ -36,8 +36,9 @@ struct SegmentedPickerGoldMeasurementUnits: View {
                 }
         }
         .padding(8)
+        .padding(.vertical, 8)
         .background(Color.black.opacity(0.1))
-        .clipShape(Capsule())
+        .cornerRadius(8)
     }
 }
 

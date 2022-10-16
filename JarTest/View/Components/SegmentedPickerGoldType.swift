@@ -11,9 +11,9 @@ struct SegmentedPickerGoldType: View {
     @Binding var selection : Gold.GoldType
     var body: some View {
         HStack {
-            Text("Gold bar")
+            Text("Bar")
                 .font(.headline)
-                .foregroundColor(selection == .bar ? .white : .white.opacity(0.5))
+                .foregroundColor(selection == .bar ? .primary : .secondary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
                 .onTapGesture {
@@ -24,9 +24,9 @@ struct SegmentedPickerGoldType: View {
             Divider()
                 .background(Color.white)
                 .frame(height: 20)
-            Text("Gold coin")
+            Text("Coin")
                 .font(.headline)
-                .foregroundColor(selection == .coin ? .white : .white.opacity(0.5))
+                .foregroundColor(selection == .coin ? .primary : .secondary)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 4)
                 .onTapGesture {
@@ -36,8 +36,9 @@ struct SegmentedPickerGoldType: View {
                 }
         }
         .padding(8)
+        .padding(.vertical, 8)
         .background(Color.black.opacity(0.1))
-        .clipShape(Capsule())
+        .cornerRadius(8)
     }
 }
 

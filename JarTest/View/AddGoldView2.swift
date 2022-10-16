@@ -19,40 +19,27 @@ struct AddGoldView2: View {
     var body: some View {
         ZStack {
             BackgroundView()
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack {
-                    Text("Select gold type".uppercased())
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.5))
-                        .tracking(4)
-                    
-                    SegmentedPickerGoldType(selection: $vm.selectedType)
-                }
-                .padding()
-                
-                VStack {
-                    Text("Select measurement unit".uppercased())
-                        .font(.caption)
-                        .foregroundColor(.white.opacity(0.5))
-                        .tracking(4)
-                    
-                    SegmentedPickerGoldMeasurementUnits(selection: $vm.selectedUnit)
-                }
-                .padding()
-                
+            VStack {
+                Spacer()
                 HStack(spacing: 8) {
                     AmountLine(amount: vm.weight, showPlaceholder: vm.showPlaceholder, placeholderText: "0")
                     Text(vm.selectedUnit == .grams ? "g" : "oz")
                         .font(.system(size: 46, weight: .semibold, design: .default))
                 }
                 .padding()
-                
-                
+                Spacer()
             }
+            .safeAreaInset(edge: .top, content: {
+                HStack {
+                    SegmentedPickerGoldType(selection: $vm.selectedType)
+                    Spacer()
+                    SegmentedPickerGoldMeasurementUnits(selection: $vm.selectedUnit)
+                }
+                .padding()
+            })
             .safeAreaInset(edge: .bottom) {
                 VStack {
                     NumberPadView(text: $vm.weight, showPlaceholder: $vm.showPlaceholder, amountAsDouble: $vm.amountAsDouble, presentAlert: $vm.presentAlert, alertDescription: $alertDescription, showDecimal: true, currency: .constant(.usd), isForCrypto: true)
-//                        .padding(.horizontal)
                         .padding()
                     Button(action: {vm.addGoldToAccount(sc: stateController)}, label: {})
                         .buttonStyle(MyButtonStyle(title: "Add gold"))
@@ -62,7 +49,9 @@ struct AddGoldView2: View {
             }
             .sheet(isPresented: $vm.presentResult, onDismiss: { dismiss() }) {
                 AddResultView(mainStack: .constant([]), amount: "\(vm.weight) \(vm.selectedUnit == .grams ? "g" : "oz")")
-        }
+            }
+            .navigationTitle("Add gold")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
