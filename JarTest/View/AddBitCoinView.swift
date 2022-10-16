@@ -10,7 +10,6 @@ import SwiftUI
 struct AddBitCoinView: View {
     @EnvironmentObject private var stateController: StateController
     @Binding var mainStack: [NavigationType]
-    @Environment(\.presentationMode) var presentationMode // for returning to HomeView
     @State var amountString = ""
     @State var amountAsDouble = 0.0
     @State var showPlaceholder = true
@@ -60,11 +59,6 @@ struct AddBitCoinView: View {
         mainStack = []
         stateController.calculateBalance()
     }
-    
-//    func dismissResults() {
-//        self.presentationMode.wrappedValue.dismiss() // pop to HomeView when user taps Done button on the AddResultView
-//        self.amountString = ""
-//    }
 }
 
 struct AddBitCoinView_Previews: PreviewProvider {
