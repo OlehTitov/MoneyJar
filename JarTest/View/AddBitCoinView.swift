@@ -44,7 +44,7 @@ struct AddBitCoinView: View {
                         .disabled(amountString == "")
                 }
             }
-            .sheet(isPresented: $presentResult) {
+            .sheet(isPresented: $presentResult, onDismiss: {dismissView()}) {
                 AddResultView(mainStack: $mainStack, amount: "\(amountString) BTC")
         }
         }
@@ -55,10 +55,16 @@ struct AddBitCoinView: View {
         stateController.addAsset(asset: finalAsset)
         self.presentResult = true
     }
-    func dismissResults() {
-        self.presentationMode.wrappedValue.dismiss() // pop to HomeView when user taps Done button on the AddResultView
-        self.amountString = ""
+    
+    func dismissView() {
+        mainStack = []
+        stateController.calculateBalance()
     }
+    
+//    func dismissResults() {
+//        self.presentationMode.wrappedValue.dismiss() // pop to HomeView when user taps Done button on the AddResultView
+//        self.amountString = ""
+//    }
 }
 
 struct AddBitCoinView_Previews: PreviewProvider {
