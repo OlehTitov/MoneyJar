@@ -10,10 +10,8 @@ import SwiftUI
 struct AddGoldView2: View {
     @EnvironmentObject private var stateController: StateController
     @StateObject var vm = ViewModel()
-    @Environment(\.dismiss) private var dismiss// for returning to HomeView
+    @Binding var mainStack: [NavigationType]
     @State var alertDescription = ""
-    private var descriptionText = "How much does the gold weights?"
-    
     @State var selection: Gold.MeasurementUnit = .grams
 
     var body: some View {
@@ -47,18 +45,23 @@ struct AddGoldView2: View {
                 }
                 
             }
-            .sheet(isPresented: $vm.presentResult, onDismiss: { dismiss() }) {
-                AddResultView(mainStack: .constant([]), amount: "\(vm.weight) \(vm.selectedUnit == .grams ? "g" : "oz")")
+            .sheet(isPresented: $vm.presentResult, onDismiss: { dismissView() }) {
+                AddResultView(mainStack: $mainStack, amount: "\(vm.weight) \(vm.selectedUnit == .grams ? "g" : "oz")")
             }
             .navigationTitle("Add gold")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
+    
+    func dismissView() {
+        mainStack = []
+        stateController.calculateBalance()
+    }
 }
 
 struct AddGoldView2_Previews: PreviewProvider {
     static var previews: some View {
-        AddGoldView2()
+        AddGoldView2(mainStack: .constant([]))
             .environmentObject(StateController.dummyData())
     }
 }
@@ -79,11 +82,6 @@ extension AddGoldView2 {
             print(finalAsset)
             sc.addAsset(asset: finalAsset)
             self.presentResult = true
-        }
-        
-        func dismissResults(dismiss: DismissAction) {
-            dismiss() // pop to HomeView when user taps Done button on the AddResultView
-            self.weight = ""
         }
     }
 }

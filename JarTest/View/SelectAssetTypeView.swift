@@ -33,7 +33,7 @@ struct SelectAssetTypeView: View {
                         }
                         .isDetailLink(false)
                     case .gold(_):
-                        NavigationLink(destination: AddGoldView2()) {
+                        NavigationLink(destination: AddGoldView2(mainStack: $mainStack)) {
                             TransactionListItem(
                                 image: "",
                                 name: "Gold",
