@@ -47,7 +47,7 @@ struct RollingCounterAnimation: View {
             // Decide on the number of animation steps
             let animationDuration = 1600 // milliseconds
             let steps: Int = Int(min(self.amountAdded, 200))
-            let stepDuration = (animationDuration / steps)
+            let stepDuration = (animationDuration / (steps == 0 ? 1 : steps))
             
             // For each step
             (0..<steps).forEach { step in
