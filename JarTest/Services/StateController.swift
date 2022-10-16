@@ -142,6 +142,22 @@ extension StateController {
         }
     }
     
+    func checkAwardBitcoin() {
+        if cointainsCrypto() {
+            completeAwardWithId(id: 5)
+        }
+        
+        func cointainsCrypto() -> Bool {
+            account.assets.contains(where: { asset in
+                switch asset {
+                case .crypto(_): return true
+                case .gold(_): return false
+                case .cash(_): return false
+                }
+            })
+        }
+    }
+    
     //Helper method to find an award and mark it as completed
     func completeAwardWithId(id: Int) {
         account.awards = account.awards.map {
