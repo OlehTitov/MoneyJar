@@ -73,7 +73,7 @@ extension WelcomeToJar {
             VStack(spacing: 12) {
                 VStack(spacing: -8) {
                     Text("Multi-asset savings tracker")
-                        .font(.system(size: 40, weight: .bold, design: .serif))
+                        .font(Font.custom("RobotoMono-Bold", size: 38).smallCaps())
                         .multilineTextAlignment(.center)
                 }
                 .padding(.vertical)

@@ -60,7 +60,7 @@ extension SetAmount {
         var jarName: String
         @State var selectedCurrency: ForeignCurrency
         @State var alertText = ""
-        var headline = "What is your goal?"
+        var headline = "What is your goal amount?"
         var buttonText = "Create"
         var jarImage = "Jar-4"
         var jarIcon = "flag.fill"
