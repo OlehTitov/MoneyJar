@@ -19,7 +19,7 @@
 		7C87EF4228B381DF0021F607 /* AnimatingLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87EF4128B381DF0021F607 /* AnimatingLight.swift */; };
 		7CA930EF28B6040F00C8286C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */; };
 		7CA930F128B6048100C8286C /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F028B6048100C8286C /* Color+extension.swift */; };
-		7CA930F428B74B1300C8286C /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F328B74B1300C8286C /* Title.swift */; };
+		7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F328B74B1300C8286C /* Subtitle.swift */; };
 		7CA930F628B7A12600C8286C /* JarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F528B7A12600C8286C /* JarShadow.swift */; };
 		7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F728B892FF00C8286C /* JarWithFlag.swift */; };
 		7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */; };
@@ -172,7 +172,7 @@
 		7C87EF4128B381DF0021F607 /* AnimatingLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingLight.swift; sourceTree = "<group>"; };
 		7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		7CA930F028B6048100C8286C /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
-		7CA930F328B74B1300C8286C /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		7CA930F328B74B1300C8286C /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		7CA930F528B7A12600C8286C /* JarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarShadow.swift; sourceTree = "<group>"; };
 		7CA930F728B892FF00C8286C /* JarWithFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarWithFlag.swift; sourceTree = "<group>"; };
 		7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboMonospacedAmount.swift; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 		7CA930F228B74ADA00C8286C /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				7CA930F328B74B1300C8286C /* Title.swift */,
+				7CA930F328B74B1300C8286C /* Subtitle.swift */,
 				7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */,
 				7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */,
 				7CFB99FE28E255AF0049EA78 /* SeamlessIconBackground.swift */,
@@ -747,7 +747,7 @@
 				7CDA98F12859F17700EDCF42 /* Bar.swift in Sources */,
 				7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */,
 				7CA9310428BDE6CC00C8286C /* PacificHeightsGradient.swift in Sources */,
-				7CA930F428B74B1300C8286C /* Title.swift in Sources */,
+				7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */,
 				7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */,
 				7CC1EB5F28719A970022139C /* GoldCoin.swift in Sources */,
 				7CDA98E3285478E300EDCF42 /* CustomCorner.swift in Sources */,

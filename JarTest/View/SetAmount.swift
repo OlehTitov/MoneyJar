@@ -60,7 +60,7 @@ extension SetAmount {
         var jarName: String
         @State var selectedCurrency: ForeignCurrency
         @State var alertText = ""
-        var headline = "What is your desired amount?"
+        var headline = "What is your goal?"
         var buttonText = "Create"
         var jarImage = "Jar-4"
         var jarIcon = "flag.fill"
@@ -83,7 +83,7 @@ extension SetAmount {
                             )
                         }
                         Text(headline)
-                            .font(Font.custom("RobotoMono-Medium", size: 18))
+                            .subtitleStyle()
                         
                         AmountLine(
                             amount: viewModel.amount,

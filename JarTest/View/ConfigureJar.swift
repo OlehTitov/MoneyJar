@@ -56,6 +56,7 @@ extension ConfigureJar {
         let pagerItemSpacing : CGFloat = 0
         let pagerInteractiveScale : Double = 0.7
         let pagerItemAspectRatio : Double = 0.8
+        let headlineFont = Font.custom("RobotoMono-Bold", size: 20)
         
         var body: some View {
             ZStack {
@@ -82,7 +83,7 @@ extension ConfigureJar {
                         
                     VStack(spacing: 12) {
                         Text(headline)
-                            .font(Font.custom("RobotoMono-Medium", size: 18))
+                            .subtitleStyle()
                         LegacyTextField(
                             text: $vm.name,
                             isFirstResponder: $vm.isFirstResponder,
