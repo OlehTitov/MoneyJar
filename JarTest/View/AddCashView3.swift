@@ -63,7 +63,7 @@ struct AddCashView3: View {
             })
             
             //Result sheet
-            .sheet(isPresented: $vm.presentResult) {
+            .sheet(isPresented: $vm.presentResult, onDismiss: {dismissView()}) {
                 AddResultView(
                     mainStack: $mainStack,
                     amount: "\(vm.amountAsDouble.currencyFormatter(with: vm.selectedCurrency.locale, code: vm.selectedCurrency.rawValue))")
@@ -71,6 +71,11 @@ struct AddCashView3: View {
             .navigationTitle("Add currency")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func dismissView() {
+        mainStack = []
+        stateController.calculateBalance()
     }
 }
 
@@ -115,7 +120,6 @@ extension AddCashView3 {
             self.presentResult = true // shows AddResultView as a sheet
             let finalAsset = Asset.cash(Cash(symbol: selectedCurrency, amount: amountAsDouble, dateAdded: Date.now))
             sc.addAsset(asset: finalAsset)
-            //            sc.calculateBalance()
         }
     }
 }
