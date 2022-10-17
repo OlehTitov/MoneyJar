@@ -128,6 +128,14 @@ extension StateController {
         storageController.save(account)
     }
     
+    //Check all awards
+    func checkAllAwards() {
+        checkAwardFirstSteps()
+        checkAwardJarIsFull()
+        checkAwardBitcoin()
+        checkAwardGold()
+    }
+    
     //Check if user has made any transactions to present an award
     func checkAwardFirstSteps() {
         if !account.assets.isEmpty {

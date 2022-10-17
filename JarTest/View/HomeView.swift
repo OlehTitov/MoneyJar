@@ -167,9 +167,7 @@ extension HomeView {
         }
         
         func checkAwards() {
-            stateController.checkAwardFirstSteps()
-            stateController.checkAwardJarIsFull()
-            stateController.checkAwardBitcoin()
+            stateController.checkAllAwards()
             if stateController.account.awardsForPresentation.count != 0 {
                 
                 //Show award with delay because there might be a sound of fallings coins and balance amount animation
