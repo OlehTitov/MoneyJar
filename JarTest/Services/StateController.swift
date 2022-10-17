@@ -158,6 +158,22 @@ extension StateController {
         }
     }
     
+    func checkAwardGold() {
+        if cointainsGold() {
+            completeAwardWithId(id: 6)
+        }
+        
+        func cointainsGold() -> Bool {
+            account.assets.contains(where: { asset in
+                switch asset {
+                case .crypto(_): return false
+                case .gold(_): return true
+                case .cash(_): return false
+                }
+            })
+        }
+    }
+    
     //Helper method to find an award and mark it as completed
     func completeAwardWithId(id: Int) {
         account.awards = account.awards.map {
