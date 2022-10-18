@@ -95,7 +95,6 @@
 		7CD1044C287C481100BF8478 /* coin3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1044B287C481100BF8478 /* coin3.usdz */; };
 		7CDA98E3285478E300EDCF42 /* CustomCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98E2285478E300EDCF42 /* CustomCorner.swift */; };
 		7CDA98E9285746D500EDCF42 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98E8285746D500EDCF42 /* TriangleShape.swift */; };
-		7CDA98ED2859D79800EDCF42 /* Pity to delete.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7CDA98EC2859D79700EDCF42 /* Pity to delete.rtf */; };
 		7CDA98F12859F17700EDCF42 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98F02859F17700EDCF42 /* Bar.swift */; };
 		7CDA98F32859F21D00EDCF42 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98F22859F21D00EDCF42 /* Coin.swift */; };
 		7CDA98F5285B4FFD00EDCF42 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */; };
@@ -228,7 +227,6 @@
 		7CD1044B287C481100BF8478 /* coin3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = coin3.usdz; sourceTree = "<group>"; };
 		7CDA98E2285478E300EDCF42 /* CustomCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorner.swift; sourceTree = "<group>"; };
 		7CDA98E8285746D500EDCF42 /* TriangleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
-		7CDA98EC2859D79700EDCF42 /* Pity to delete.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Pity to delete.rtf"; sourceTree = "<group>"; };
 		7CDA98F02859F17700EDCF42 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 		7CDA98F22859F21D00EDCF42 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
@@ -461,7 +459,6 @@
 				7CEF6C2B286470B50013EA3D /* View */,
 				7CA930F228B74ADA00C8286C /* Modifiers */,
 				7CEF6C2C286470CD0013EA3D /* Extensions */,
-				7CDA98EC2859D79700EDCF42 /* Pity to delete.rtf */,
 				7CFB99E428DED90B0049EA78 /* Space_Mono */,
 				7CFB9A0028E25ABB0049EA78 /* Roboto_Mono */,
 				7CEC2A50283547F7007A1897 /* Assets.xcassets */,
@@ -648,7 +645,6 @@
 				7CC8FB0428E8A9210032FF3E /* Awards.json in Resources */,
 				7CD1044C287C481100BF8478 /* coin3.usdz in Resources */,
 				7CEC2A54283547F7007A1897 /* Preview Assets.xcassets in Resources */,
-				7CDA98ED2859D79800EDCF42 /* Pity to delete.rtf in Resources */,
 				7C1D099928ADE9D500C82211 /* coins-falling.wav in Resources */,
 				7C1D099728AD3F0F00C82211 /* coins-sound.wav in Resources */,
 				7CFB9A0728E5E3A10049EA78 /* jarCreated.wav in Resources */,
