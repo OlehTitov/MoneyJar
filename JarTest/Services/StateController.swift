@@ -134,6 +134,7 @@ extension StateController {
         checkAwardJarIsFull()
         checkAwardBitcoin()
         checkAwardGold()
+        checkFastLaneAward()
     }
     
     //Check if user has made any transactions to present an award
@@ -179,6 +180,37 @@ extension StateController {
                 case .cash(_): return false
                 }
             })
+        }
+    }
+    
+    func checkFastLaneAward() {
+        if assetsWithSameDate() {
+            completeAwardWithId(id: 4)
+        }
+        
+        func assetsWithSameDate() -> Bool {
+            var dates : [Date] = []
+            for asset in account.assets {
+                switch asset {
+                case .gold(let gold):
+                    let date = gold.dateAdded.onlyDate
+                    if let date = date {
+                        dates.append(date)
+                    }
+                case .cash(let cash):
+                    let date = cash.dateAdded.onlyDate
+                    if let date = date {
+                        dates.append(date)
+                    }
+                case .crypto(let crypto):
+                    let date = crypto.dateAdded.onlyDate
+                    if let date = date {
+                        dates.append(date)
+                    }
+                }
+            }
+            let datesSet : Set<Date> = Set(dates)
+            return dates.count != datesSet.count
         }
     }
     
