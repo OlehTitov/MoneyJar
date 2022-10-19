@@ -49,14 +49,6 @@
   },
   {
       "id": 7,
-      "name": "Share",
-      "image": "penguin_twitter",
-      "status": "unavailable",
-      "presented": false,
-      "detailedText": "Go to settings and share me in twitter"
-  },
-  {
-      "id": 8,
       "name": "Rate",
       "image": "penguin_twitter",
       "status": "unavailable",
