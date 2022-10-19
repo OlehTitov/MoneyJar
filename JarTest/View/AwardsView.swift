@@ -65,8 +65,8 @@ struct AwardThumbnailView: View {
             ZStack {
                 Circle()
                     .strokeBorder(strokeColor(award: award), lineWidth: 5)
-                    .frame(width: 110, height: 110)
-                ConditionalAwardImage(award: award, size: 90)
+                    .frame(width: 100, height: 100)
+                ConditionalAwardImage(award: award, size: 80)
             }
             VStack {
                 Text(award.name)
