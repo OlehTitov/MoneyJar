@@ -19,8 +19,17 @@ struct AwardsView: View {
         ZStack {
             BackgroundView()
             ScrollView {
-                Text("You unlocked \(numberOfUnlockedAwards()) of \(stateController.account.awards.count) awards")
-                    .padding()
+                VStack {
+                    Image("penguin_award")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .padding(10)
+                        .background(Color.white)
+                        .clipShape(Circle())
+                    Text("You unlocked \(numberOfUnlockedAwards()) of \(stateController.account.awards.count) awards")
+                        .bold()
+                        .padding()
+                }
                 LazyVGrid(columns: gridItemLayout) {
                     ForEach(stateController.account.awards) { award in
                         NavigationLink{
