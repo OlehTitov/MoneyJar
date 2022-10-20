@@ -79,7 +79,6 @@ extension HomeView {
                         ///Navigation happens here
                             //passing mainStack to views so later I could pop to root
                         case .selectAsset: SelectAssetTypeView(mainStack: $mainStack)
-                        case .settings: SettingsView()
                         case .awards: AwardsView()
                         }
                     })
@@ -104,6 +103,7 @@ extension HomeView {
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)
                 .padding(.horizontal)
+                
         }
         
         func goalAmount() -> some View {
@@ -205,7 +205,6 @@ extension HomeView {
 enum NavigationType: String, Hashable {
     case selectAsset = "Select asset"
     case awards = "Your awards"
-    case settings = "Settings"
 }
 
 

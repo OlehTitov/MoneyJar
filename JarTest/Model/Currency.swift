@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Currency {
+struct Currency: Hashable {
     let locale: String
     let amount: Double
     

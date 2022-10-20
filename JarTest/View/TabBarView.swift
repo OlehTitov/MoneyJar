@@ -26,7 +26,7 @@ struct TabBarView: View {
                     Label("Structure", systemImage: "chart.pie")
                 }
                 
-            SettingsView()
+            SettingsView(selectedCurrency: stateController.account.baseCurrency)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

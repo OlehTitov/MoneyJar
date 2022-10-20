@@ -40,6 +40,12 @@ class StateController : ObservableObject {
         storageController.save(account)
     }
     
+    func setBaseCurrency(newValue: ForeignCurrency) {
+        objectWillChange.send()
+        account.baseCurrency = newValue
+        storageController.save(account)
+    }
+    
     func addAsset(asset : Asset) {
         account.balanceBeforeChange = account.balance //used to animate the balance change
         account.assets.append(asset)
@@ -94,6 +100,7 @@ class StateController : ObservableObject {
         account.addPortfolioItem(goldPortfolio)
         account.addPortfolioItem(currencyPortfolio)
         account.addPortfolioItem(cryptoPortfolio)
+        storageController.save(account)
     }
     
     func getLatestRates() async {

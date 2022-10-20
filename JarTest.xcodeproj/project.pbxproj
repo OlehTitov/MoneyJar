@@ -146,6 +146,7 @@
 		7CFB9A0728E5E3A10049EA78 /* jarCreated.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */; };
 		7CFB9A0928E5E6A30049EA78 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0828E5E6A30049EA78 /* success.wav */; };
 		7CFB9A0C28E6C49E0049EA78 /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = 7CFB9A0B28E6C49E0049EA78 /* Subsonic */; };
+		7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,6 +279,7 @@
 		7CFB9A0428E428F30049EA78 /* IconsLineWidthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsLineWidthTest.swift; sourceTree = "<group>"; };
 		7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jarCreated.wav; sourceTree = "<group>"; };
 		7CFB9A0828E5E6A30049EA78 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +520,7 @@
 				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
 				7C1D099E28AEA22F00C82211 /* SettingsView.swift */,
+				7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */,
 				7CDDF61528F1498B00A4B706 /* ChangeJarNameView.swift */,
 				7CC1EB62287496300022139C /* AddGoldView2.swift */,
 				7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */,
@@ -765,6 +768,7 @@
 				7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */,
 				7CEF6C39286712CA0013EA3D /* CurrencyTextField.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
+				7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */,
 				7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */,
 				7CC751EC28C6534600DBAF62 /* String+extension.swift in Sources */,
 				7CEA503D28B21C1100D33C45 /* RoundButton.swift in Sources */,

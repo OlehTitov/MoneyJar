@@ -12,20 +12,23 @@ struct SettingsView: View {
     @EnvironmentObject private var stateController: StateController
     @State var navPath: NavigationPath = NavigationPath()
 //    @StateObject var settingsStore: SettingsStore
+    @State var selectedCurrency: ForeignCurrency
     var body: some View {
         NavigationStack(path: $navPath) {
             ZStack {
                 BackgroundView()
-                List {
-                    Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 18))) {
+                Form {
+                    Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                        //Jar name and Goal amount
                         ForEach(SettingsRoute.allCases, id: \.self) { route in
                             NavigationLink(value: route) {
-                                HStack {
-                                    Image(systemName: route.icon)
-                                        .foregroundColor(Color.accentColor)
-                                        .frame(width: 40, height: 30, alignment: .center)
-                                    Text(route.rawValue)
-                                }
+                                Label(route.rawValue, systemImage: route.icon)
+                            }
+                        }
+                        //Base currency
+                        Picker(selection: $selectedCurrency, label: Label("Base currency", systemImage: "dollarsign")) {
+                            ForEach(ForeignCurrency.allCases, id: \.self) { currency in
+                                Text(currency.longDescription)
                             }
                         }
                     }
@@ -40,19 +43,22 @@ struct SettingsView: View {
                 switch route {
                 case .jarName: ChangeJarNameView(path: $navPath, jarName: stateController.account.name)
                     case .changeGoalAmount: Text("Some view")
-                    case .changeBaseCurrency: Text("Some view")
                 }
             })
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
+        .onChange(of: selectedCurrency) { newValue in
+            stateController.setBaseCurrency(newValue: newValue)
+            stateController.calculateBalance()
+        }
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(selectedCurrency: .usd)
             .environmentObject(StateController.dummyData())
     }
 }
@@ -60,26 +66,24 @@ struct SettingsView_Previews: PreviewProvider {
 enum SettingsRoute: String, Hashable, CaseIterable {
     case jarName = "Jar name"
     case changeGoalAmount = "Goal amount"
-    case changeBaseCurrency = "Base currency"
     
     var icon: String {
         switch self {
         case .jarName: return "character.cursor.ibeam"
         case .changeGoalAmount: return "banknote"
-        case .changeBaseCurrency: return "dollarsign"
         }
     }
 }
 
-enum JarSettingsRoute: Hashable {
-    case jarName(SettingsItem)
-    case goalAmount(SettingsItem)
-    case baseCurrency(SettingsItem)
-}
-
-struct SettingsItem: Hashable {
-    var title: String
-    var icon: String
-}
+//enum JarSettingsRoute: Hashable {
+//    case jarName(SettingsItem)
+//    case goalAmount(SettingsItem)
+//    case baseCurrency(SettingsItem)
+//}
+//
+//struct SettingsItem: Hashable {
+//    var title: String
+//    var icon: String
+//}
 
 
