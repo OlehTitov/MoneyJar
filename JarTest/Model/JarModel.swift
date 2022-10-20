@@ -187,8 +187,7 @@ extension ForeignCurrency {
 }
 
 extension ForeignCurrency {
-    var showAmountPlaceholder: String {
-        let amount = 0
+    func placeholder(amount: Double) -> String {
         return formatter.string(from: NSNumber(value: amount))!
     }
 }

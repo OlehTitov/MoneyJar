@@ -88,7 +88,7 @@ extension SetAmount {
                         AmountLine(
                             amount: viewModel.amount,
                             showPlaceholder: viewModel.showPlaceholder,
-                            placeholderText: selectedCurrency.showAmountPlaceholder
+                            placeholderText: selectedCurrency.placeholder(amount: 0.0)
                         )
                         .minimumScaleFactor(0.5)
                         .frame(height: 100)
@@ -115,7 +115,7 @@ extension SetAmount {
                         presentAlert: $viewModel.presentAlert,
                         alertDescription: $alertText,
                         showDecimal: false,
-                        currency: $selectedCurrency,
+                        currency: selectedCurrency,
                         isForCrypto: false
                     )
                     .alert(alertText, isPresented: $viewModel.presentAlert) {
@@ -129,6 +129,7 @@ extension SetAmount {
 }
 
 //MARK: - SetAmount ViewModel
+///This VM is used by 2 views: SetAmount and ChangeAmountView
 class SetAmountViewModel : ObservableObject {
     
     @Published var amount : String = ""
@@ -137,11 +138,16 @@ class SetAmountViewModel : ObservableObject {
     @Published var presentAlert = false
     @Published var nextView = false
     
+    //Method is used during Jar creation
     func updateAccount(sc: StateController, selectedCurrency: ForeignCurrency, jarName: String) {
         //update master account
         sc.updateMasterAccount(name: jarName, goalAmount: amountAsDouble, currency: selectedCurrency)
         //Trigger next view
         self.nextView = true
+    }
+    
+    func setExistingAmount() {
+        
     }
     
     var isButtonDisabled : Bool {

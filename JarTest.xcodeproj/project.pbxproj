@@ -70,6 +70,7 @@
 		7CBAF35A28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
 		7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
 		7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */; };
+		7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */; };
 		7CC1EB55286EF37E0022139C /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
 		7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */; };
 		7CC1EB5B287193110022139C /* GoldTypeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */; };
@@ -204,6 +205,7 @@
 		7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageControllerProtocol.swift; sourceTree = "<group>"; };
 		7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeClientProtocol.swift; sourceTree = "<group>"; };
 		7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAmountView.swift; sourceTree = "<group>"; };
+		7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeResultView.swift; sourceTree = "<group>"; };
 		7CC1EB54286EF37E0022139C /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySwipingSelector.swift; sourceTree = "<group>"; };
 		7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldTypeSwitch.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				7C1D099E28AEA22F00C82211 /* SettingsView.swift */,
 				7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */,
 				7CDDF61528F1498B00A4B706 /* ChangeJarNameView.swift */,
+				7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */,
 				7CC1EB62287496300022139C /* AddGoldView2.swift */,
 				7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */,
 				7CEF6C42286C23C30013EA3D /* AddCashView3.swift */,
@@ -796,6 +799,7 @@
 				7CEF6C2E2865AA8A0013EA3D /* AddCashView.swift in Sources */,
 				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,
 				7CDDF61028ED7C4B00A4B706 /* AwardsManager.swift in Sources */,
+				7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */,
 				7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */,
 				7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */,
 				7CC684D228CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift in Sources */,

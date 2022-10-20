@@ -16,12 +16,9 @@ struct AmountLine: View {
         ZStack {
             Text(amount)
                 .font(Font.custom("RobotoMono-Medium", size: 46))
-//                .foregroundColor(.white)
             if showPlaceholder {
                 Text(placeholderText)
                     .font(Font.custom("RobotoMono-Medium", size: 46))
-//                    .foregroundColor(.white.opacity(0.5))
-//                    .opacity(0.5)
             } else {
                 EmptyView()
             }

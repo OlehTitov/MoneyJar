@@ -8,13 +8,63 @@
 import SwiftUI
 
 struct ChangeAmountView: View {
+    @StateObject var viewModel = SetAmountViewModel()
+    @Binding var path: NavigationPath
+    @EnvironmentObject private var stateController: StateController
+    @State var alertText = ""
+    @State var showResult = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            BackgroundView()
+            VStack {
+                Spacer()
+                AmountLine(
+                    amount: viewModel.amount,
+                    showPlaceholder: viewModel.showPlaceholder,
+                    placeholderText: stateController.account.baseCurrency.placeholder(amount: stateController.account.goalAmount)
+                )
+                .minimumScaleFactor(0.5)
+                .frame(height: 100)
+                Spacer()
+                NumberPadView(
+                    text: $viewModel.amount,
+                    showPlaceholder: $viewModel.showPlaceholder,
+                    amountAsDouble: $viewModel.amountAsDouble,
+                    presentAlert: $viewModel.presentAlert,
+                    alertDescription: $alertText,
+                    showDecimal: false,
+                    currency: stateController.account.baseCurrency,
+                    isForCrypto: false
+                )
+                .alert(alertText, isPresented: $viewModel.presentAlert) {
+                    Button("OK", role: .cancel, action: {})
+                }
+                .padding()
+            }
+            .toolbar {
+                Button {
+                    stateController.changeGoalAmount(new: viewModel.amountAsDouble)
+                    showResult = true
+                } label: {
+                    Text("Save")
+                }
+                .disabled(viewModel.amountAsDouble == 0.0)
+            }
+            .sheet(isPresented: $showResult) {
+                SettingsChangeResultView(settingsTitle: "Goal amount changed", newValue: viewModel.amount, action: {doneTapped()})
+            }
+        }
+    }
+    
+    func doneTapped() {
+        path.removeLast()
+        showResult = false
     }
 }
 
 struct ChangeAmountView_Previews: PreviewProvider {
     static var previews: some View {
-        ChangeAmountView()
+        ChangeAmountView(path: .constant(NavigationPath()))
+            .environmentObject(StateController.dummyData())
     }
 }

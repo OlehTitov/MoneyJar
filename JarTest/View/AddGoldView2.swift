@@ -37,7 +37,7 @@ struct AddGoldView2: View {
             })
             .safeAreaInset(edge: .bottom) {
                 VStack {
-                    NumberPadView(text: $vm.weight, showPlaceholder: $vm.showPlaceholder, amountAsDouble: $vm.amountAsDouble, presentAlert: $vm.presentAlert, alertDescription: $alertDescription, showDecimal: true, currency: .constant(.usd), isForCrypto: true)
+                    NumberPadView(text: $vm.weight, showPlaceholder: $vm.showPlaceholder, amountAsDouble: $vm.amountAsDouble, presentAlert: $vm.presentAlert, alertDescription: $alertDescription, showDecimal: true, currency: .usd, isForCrypto: true)
                         .padding()
                     Button(action: {vm.addGoldToAccount(sc: stateController)}, label: {})
                         .buttonStyle(MyButtonStyle(title: "Add gold"))

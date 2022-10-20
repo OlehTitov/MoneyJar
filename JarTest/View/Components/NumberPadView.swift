@@ -14,7 +14,7 @@ struct NumberPadView: View {
     @Binding var presentAlert : Bool
     @Binding var alertDescription : String
     var showDecimal : Bool
-    @Binding var currency : ForeignCurrency
+    var currency : ForeignCurrency
     var isForCrypto : Bool
     var gridItemLayout = [
         GridItem(.flexible()),
@@ -39,7 +39,6 @@ struct NumberPadView: View {
                             if digit == .delete {
                                 Image(systemName: digit.rawValue)
                                     .font(Font.system(size: 26, weight: .regular, design: .default))
-//                                    .foregroundColor(Color.white)
                                     .offset(x: -3)
                             } else if digit == .period {
                                 Text(digit.rawValue)
@@ -48,7 +47,6 @@ struct NumberPadView: View {
                             } else {
                                 Text(digit.rawValue)
                                     .font(Font.system(size: 26, weight: .regular, design: .default))
-//                                    .foregroundColor(Color.white)
                             }
                         }
                 }
@@ -56,9 +54,9 @@ struct NumberPadView: View {
             }
         }
         //When user updates the currency in CurrencySwiperSelector we update the text to show the change of currency
-        .onChange(of: self.currency) { item in
-            self.text = updateAmount()
-        }
+//        .onChange(of: self.currency) { item in
+//            self.text = updateAmount()
+//        }
     }
     enum Digit : String, CaseIterable {
         case one = "1"
@@ -125,7 +123,6 @@ struct NumberPadView: View {
                     } else {
                         self.text = updateAmount()
                     }
-                    
                 }
             }
             
@@ -144,9 +141,18 @@ struct NumberPadView: View {
         let amount = Double(amt/100) + Double(amt%100)/100
         amountAsDouble = amount
         result = formatter.string(from: NSNumber(value: amount)) ?? ""
-//        if let currency = currency {
-//        }
         return result
+    }
+    
+    func placeCurrentGoalAmount() -> Self {
+        var view = self
+        DispatchQueue.main.async {
+            view.showPlaceholder = false
+            view.amountAsDouble = 1000.00
+            let formatter = currency.formatter
+            view.text = formatter.string(from: NSNumber(value: 1000)) ?? ""
+        }
+        return view
     }
     
     func simpleSuccess() {
@@ -190,7 +196,7 @@ struct NumberPadView: View {
 struct NumberPadView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            NumberPadView(text: .constant(""), showPlaceholder: .constant(true), amountAsDouble: .constant(0.0), presentAlert: .constant(false), alertDescription: .constant("test alert text"), showDecimal: true, currency: .constant(.usd), isForCrypto: true)
+            NumberPadView(text: .constant(""), showPlaceholder: .constant(true), amountAsDouble: .constant(0.0), presentAlert: .constant(false), alertDescription: .constant("test alert text"), showDecimal: true, currency: .usd, isForCrypto: true)
         }
         .frame(maxHeight: .infinity)
         .background(Color.mirage)

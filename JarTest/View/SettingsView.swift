@@ -42,7 +42,7 @@ struct SettingsView: View {
             .navigationDestination(for: SettingsRoute.self, destination: { route in
                 switch route {
                 case .jarName: ChangeJarNameView(path: $navPath, jarName: stateController.account.name)
-                    case .changeGoalAmount: Text("Some view")
+                case .changeGoalAmount: ChangeAmountView(path: $navPath)
                 }
             })
             .navigationTitle("Settings")

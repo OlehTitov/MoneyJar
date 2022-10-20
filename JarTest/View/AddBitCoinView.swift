@@ -33,7 +33,7 @@ struct AddBitCoinView: View {
             }
             .safeAreaInset(edge: .bottom) {
                 VStack {
-                    NumberPadView(text: $amountString, showPlaceholder: $showPlaceholder, amountAsDouble: $amountAsDouble, presentAlert: $presentAlert, alertDescription: $alertText, showDecimal: true, currency: .constant(.usd), isForCrypto: true)
+                    NumberPadView(text: $amountString, showPlaceholder: $showPlaceholder, amountAsDouble: $amountAsDouble, presentAlert: $presentAlert, alertDescription: $alertText, showDecimal: true, currency: .usd, isForCrypto: true)
                         .alert(alertText, isPresented: $presentAlert) {
                             Button("OK", role: .cancel, action: {})
                         }

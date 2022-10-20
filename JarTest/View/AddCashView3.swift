@@ -44,7 +44,7 @@ struct AddCashView3: View {
                         presentAlert: $vm.presentAlert,
                         alertDescription: $alertText,
                         showDecimal: false,
-                        currency: $vm.selectedCurrency,
+                        currency: vm.selectedCurrency,
                         isForCrypto: false
                     )
                     .alert(alertText, isPresented: $vm.presentAlert) {

@@ -259,4 +259,9 @@ extension StateController {
         account.name = newName
         storageController.save(account)
     }
+    
+    func changeGoalAmount(new: Double) {
+        account.goalAmount = new
+        storageController.save(account)
+    }
 }
