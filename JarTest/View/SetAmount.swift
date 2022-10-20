@@ -94,6 +94,20 @@ extension SetAmount {
                         .frame(height: 100)
                     }
                     Spacer()
+                    
+                    Button(
+                        action: {
+                            viewModel.updateAccount(
+                                sc: stateController,
+                                selectedCurrency: selectedCurrency,
+                                jarName: jarName
+                            )
+                            jarIsCreated = true
+                        }, label: {}
+                    )
+                    .buttonStyle(MyButtonStyle(title: "Start saving"))
+                    .disabled(viewModel.isButtonDisabled)
+                    
                     NumberPadView(
                         text: $viewModel.amount,
                         showPlaceholder: $viewModel.showPlaceholder,
@@ -108,19 +122,6 @@ extension SetAmount {
                         Button("OK", role: .cancel, action: {})
                     }
                     .padding()
-        
-                    Button(
-                        action: {
-                            viewModel.updateAccount(
-                                sc: stateController,
-                                selectedCurrency: selectedCurrency,
-                                jarName: jarName
-                            )
-                            jarIsCreated = true
-                        }, label: {}
-                    )
-                    .buttonStyle(MyButtonStyle(title: "Start saving"))
-                    .disabled(viewModel.isButtonDisabled)
                 }
             }
         }
