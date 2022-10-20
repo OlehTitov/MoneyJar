@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SetAmount: View {
-    @StateObject var viewModel = ViewModel()
+    @StateObject var viewModel = SetAmountViewModel()
     @State var selectedCurrency : ForeignCurrency
     var jarName : String
     
@@ -56,7 +56,7 @@ extension SetAmount {
     struct Content: View {
         @EnvironmentObject private var stateController: StateController
         @AppStorage(storageKeys.jarIsCreated.rawValue) var jarIsCreated = false
-        @StateObject var viewModel : ViewModel
+        @StateObject var viewModel : SetAmountViewModel
         var jarName: String
         @State var selectedCurrency: ForeignCurrency
         @State var alertText = ""
@@ -129,25 +129,23 @@ extension SetAmount {
 }
 
 //MARK: - SetAmount ViewModel
-extension SetAmount {
-    class ViewModel : ObservableObject {
-        
-        @Published var amount : String = ""
-        @Published var amountAsDouble = 0.0
-        @Published var showPlaceholder = true
-        @Published var presentAlert = false
-        @Published var nextView = false
-        
-        func updateAccount(sc: StateController, selectedCurrency: ForeignCurrency, jarName: String) {
-            //update master account
-            sc.updateMasterAccount(name: jarName, goalAmount: amountAsDouble, currency: selectedCurrency)
-            //Trigger next view
-            self.nextView = true
-        }
-        
-        var isButtonDisabled : Bool {
-            return amountAsDouble == 0.0
-        }
-        
+class SetAmountViewModel : ObservableObject {
+    
+    @Published var amount : String = ""
+    @Published var amountAsDouble = 0.0
+    @Published var showPlaceholder = true
+    @Published var presentAlert = false
+    @Published var nextView = false
+    
+    func updateAccount(sc: StateController, selectedCurrency: ForeignCurrency, jarName: String) {
+        //update master account
+        sc.updateMasterAccount(name: jarName, goalAmount: amountAsDouble, currency: selectedCurrency)
+        //Trigger next view
+        self.nextView = true
     }
+    
+    var isButtonDisabled : Bool {
+        return amountAsDouble == 0.0
+    }
+    
 }

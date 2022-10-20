@@ -69,6 +69,7 @@
 		7CBAF35828987DDE00BD8BC9 /* StorageControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */; };
 		7CBAF35A28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
 		7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
+		7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */; };
 		7CC1EB55286EF37E0022139C /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
 		7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */; };
 		7CC1EB5B287193110022139C /* GoldTypeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */; };
@@ -202,6 +203,7 @@
 		7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExchangeClient.swift; sourceTree = "<group>"; };
 		7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageControllerProtocol.swift; sourceTree = "<group>"; };
 		7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeClientProtocol.swift; sourceTree = "<group>"; };
+		7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAmountView.swift; sourceTree = "<group>"; };
 		7CC1EB54286EF37E0022139C /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySwipingSelector.swift; sourceTree = "<group>"; };
 		7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldTypeSwitch.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
 				7CDA9900285E774400EDCF42 /* ConfigureJar.swift */,
 				7CEF02BD285F3F7D0009A82E /* SetAmount.swift */,
+				7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */,
 				7C1D099A28AE9F0500C82211 /* TabBarView.swift */,
 				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
 				7CC8FB0728EB7E520032FF3E /* AwardsView.swift */,
@@ -712,6 +715,7 @@
 				7CDDF61628F1498B00A4B706 /* ChangeJarNameView.swift in Sources */,
 				7CC1EB63287496300022139C /* AddGoldView2.swift in Sources */,
 				7CEF6C262863971D0013EA3D /* ExchangeClient.swift in Sources */,
+				7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */,
 				7CBAF3532898039700BD8BC9 /* MockExchangeClient.swift in Sources */,
 				7CDDF61428EFFB8F00A4B706 /* RollingCounterAnimation.swift in Sources */,
 				7C1D099B28AE9F0500C82211 /* TabBarView.swift in Sources */,
