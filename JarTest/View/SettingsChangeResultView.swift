@@ -22,8 +22,10 @@ struct SettingsChangeResultView: View {
                     .background(Color.white)
                     .clipShape(Circle())
                 Text(settingsTitle)
+                    .subtitleStyle()
                 Text(newValue)
                     .font(.title)
+                    .bold()
                 Spacer()
             }
             .safeAreaInset(edge: .bottom) {

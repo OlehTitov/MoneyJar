@@ -10,7 +10,8 @@ import SwiftUI
 struct Subtitle: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(Font.custom("RobotoMono-Bold", size: 20).smallCaps())
+            .font(Font.custom("RobotoMono-Medium", size: 18).smallCaps())
+            .foregroundColor(.secondary)
             .multilineTextAlignment(.center)
     }
 }
