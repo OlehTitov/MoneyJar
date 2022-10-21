@@ -10,6 +10,7 @@ import Subsonic
 
 struct AddResultView: View {
     @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var settingsStore : SettingsStore
     @Environment(\.dismiss) private var dismiss // for dismissing this view
     @Binding var mainStack: [NavigationType]
     var amount : String // to show what amount is added to account
@@ -43,7 +44,9 @@ struct AddResultView: View {
             }
         }
         .onAppear {
-            play(sound: "coins-sound.wav")
+            if settingsStore.soundIsOn {
+                play(sound: "coins-sound.wav")
+            }
         }
     }
     
@@ -57,5 +60,7 @@ struct AddResultView: View {
 struct AddResultView_Previews: PreviewProvider {
     static var previews: some View {
         AddResultView(mainStack: .constant([]), amount: "20.00 EUR")
+            .environmentObject(SettingsStore())
+            .environmentObject(StateController.dummyData())
     }
 }

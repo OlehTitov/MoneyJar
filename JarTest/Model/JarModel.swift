@@ -272,6 +272,7 @@ enum HomeViewStatus {
 enum storageKeys: String {
     case greetingSoundPlayed
     case jarIsCreated
+    case soundIsOn
 }
 
 

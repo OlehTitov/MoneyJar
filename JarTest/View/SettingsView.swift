@@ -11,13 +11,15 @@ struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject private var stateController: StateController
     @State var navPath: NavigationPath = NavigationPath()
-//    @StateObject var settingsStore: SettingsStore
+    @EnvironmentObject private var settingsStore: SettingsStore
     @State var selectedCurrency: ForeignCurrency
+    @AppStorage(storageKeys.soundIsOn.rawValue) var soundIsOn = true
     var body: some View {
         NavigationStack(path: $navPath) {
             ZStack {
                 BackgroundView()
                 Form {
+                    ///Jar Settings
                     Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 16))) {
                         //Jar name and Goal amount
                         ForEach(SettingsRoute.allCases, id: \.self) { route in
@@ -34,7 +36,18 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
-                    
+                    ///General Settings
+                    Section(header: Text("General").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                        //Sound settings
+                        Label {
+                            Toggle("Sound", isOn: $settingsStore.soundIsOn)
+                                .tint(Color.accentColor)
+                        } icon: {
+                            Image(systemName: "music.note")
+                        }
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
@@ -60,6 +73,7 @@ struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(selectedCurrency: .usd)
             .environmentObject(StateController.dummyData())
+            .environmentObject(SettingsStore())
     }
 }
 

@@ -10,6 +10,7 @@ import Subsonic
 
 struct AwardUnlockedSheet: View {
     @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var settingsStore : SettingsStore
     @Binding var show: Bool
     var award: Award
     var body: some View {
@@ -42,7 +43,9 @@ struct AwardUnlockedSheet: View {
                 .padding()
             }
             .onAppear {
-                play(sound: "upward_confirmation.wav")
+                if settingsStore.soundIsOn {
+                    play(sound: "upward_confirmation.wav")
+                }
             }
         }
     }
@@ -51,5 +54,6 @@ struct AwardUnlockedSheet: View {
 struct AwardUnlockedSheet_Previews: PreviewProvider {
     static var previews: some View {
         AwardUnlockedSheet(show: .constant(true), award: Award(id: 0, name: "test name", image: "1_engage", status: .completed, presented: false, detailedText: "test detail text"))
+            .environmentObject(SettingsStore())
     }
 }

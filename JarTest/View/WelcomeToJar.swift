@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WelcomeToJar: View {
+    @EnvironmentObject private var settingsStore : SettingsStore
     @StateObject var viewModel : WelcomeToJarViewModel
     var body: some View {
         VStack {
@@ -18,6 +19,10 @@ struct WelcomeToJar: View {
                 Content(viewModel: viewModel)
             }
         }
+        //Set initial settings values
+        .task {
+            settingsStore.soundIsOn = true
+        }
     }
 }
 
@@ -26,8 +31,10 @@ struct WelcomeToJar_Previews: PreviewProvider {
         Group {
             WelcomeToJar(viewModel: WelcomeToJarViewModel())
                 .preferredColorScheme(.light)
+                .environmentObject(SettingsStore())
             WelcomeToJar(viewModel: WelcomeToJarViewModel())
                 .preferredColorScheme(.dark)
+                .environmentObject(SettingsStore())
         }
     }
 }

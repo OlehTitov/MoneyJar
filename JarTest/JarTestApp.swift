@@ -15,6 +15,7 @@ struct JarTestApp: App {
         currencyConverter: CurrencyConverter(),
         awardsManager: AwardsManager()
     )
+    let settingsStore = SettingsStore()
     
     //This is to check if user has already created the jar
     var jarIsCreated = UserDefaults.standard.bool(forKey: storageKeys.jarIsCreated.rawValue)
@@ -24,9 +25,11 @@ struct JarTestApp: App {
             if jarIsCreated {
                 TabBarView()
                     .environmentObject(stateController)
+                    .environmentObject(settingsStore)
             } else {
                 WelcomeToJar(viewModel: WelcomeToJarViewModel())
                     .environmentObject(stateController)
+                    .environmentObject(settingsStore)
             }
         }
     }

@@ -9,6 +9,7 @@ import SwiftUI
 ///This implementation is inspired by https://unwrappedbytes.com/2020/10/18/learn-how-to-create-a-swiftui-rolling-number-animation-that-will-amaze-your-users/
 
 struct RollingCounterAnimation: View {
+    @EnvironmentObject private var settingsStore : SettingsStore
     @State var totalAmount: Double = 0.0
     var initialBalance : Double
     var currentBalance: Double
@@ -43,7 +44,9 @@ struct RollingCounterAnimation: View {
     func addNumberWithRollingAnimation() {
         withAnimation {
             //start playing sound of coins
-            player.play()
+            if settingsStore.soundIsOn {
+                player.play()
+            }
             // Decide on the number of animation steps
             let animationDuration = 1600 // milliseconds
             let steps: Int = Int(min(self.amountAdded, 200))
@@ -61,7 +64,7 @@ struct RollingCounterAnimation: View {
                     stepCounter += 1
                     self.totalAmount += self.amountAdded / Double(steps)
                     //stop playing sound of coins
-                    if stepCounter == steps {
+                    if stepCounter == steps && settingsStore.soundIsOn {
                         player.pauseSmoothly(duration: 0)
                     }
                 }

@@ -38,6 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 extension HomeView {
     struct Content2: View {
         @EnvironmentObject private var stateController: StateController
+        @EnvironmentObject private var settingsStore : SettingsStore
         @Environment(\.colorScheme) var colorScheme
         @AppStorage(storageKeys.greetingSoundPlayed.rawValue) var greetingSoundPlayed = false
         @ObservedObject var player = AudioPlayer(name: "coins-falling", withExtension: "wav")
@@ -45,6 +46,8 @@ extension HomeView {
         @State var presentSheet = false
         @State var animateButton = false
         @State var awardForPresentation = Award(id: 0, name: "Hello!", image: "1_engage", status: .completed, presented: false, detailedText: "sample detail text")
+        //Check sound settings
+//        var soundIsOn = UserDefaults.standard.bool(forKey: storageKeys.soundIsOn.rawValue)
         var body: some View {
             ZStack {
                 NavigationStack(path: $mainStack) {
