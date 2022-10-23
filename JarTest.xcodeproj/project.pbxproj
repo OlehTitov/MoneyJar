@@ -71,6 +71,7 @@
 		7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
 		7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */; };
 		7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */; };
+		7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1E29050D3400D858DA /* MailView.swift */; };
 		7CC1EB55286EF37E0022139C /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
 		7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */; };
 		7CC1EB5B287193110022139C /* GoldTypeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */; };
@@ -206,6 +207,7 @@
 		7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeClientProtocol.swift; sourceTree = "<group>"; };
 		7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAmountView.swift; sourceTree = "<group>"; };
 		7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeResultView.swift; sourceTree = "<group>"; };
+		7CBDCE1E29050D3400D858DA /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		7CC1EB54286EF37E0022139C /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySwipingSelector.swift; sourceTree = "<group>"; };
 		7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldTypeSwitch.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */,
+				7CBDCE1E29050D3400D858DA /* MailView.swift */,
 				7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */,
 				7CDDF61B28F98F7400A4B706 /* JarBackgroundView.swift */,
 				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
@@ -749,6 +752,7 @@
 				7CC8FB0C28ED554D0032FF3E /* AwardUnlockedSheet.swift in Sources */,
 				7CC751F228C8DDF900DBAF62 /* CustomSegmentedPicker.swift in Sources */,
 				7CDA98F32859F21D00EDCF42 /* Coin.swift in Sources */,
+				7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */,
 				7CC751E828C4EC7B00DBAF62 /* BlueGradientView.swift in Sources */,
 				7CDA98F12859F17700EDCF42 /* Bar.swift in Sources */,
 				7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */,

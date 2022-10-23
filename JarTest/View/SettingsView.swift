@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
@@ -14,6 +15,10 @@ struct SettingsView: View {
     @EnvironmentObject private var settingsStore: SettingsStore
     @State var selectedCurrency: ForeignCurrency
     @AppStorage(storageKeys.soundIsOn.rawValue) var soundIsOn = true
+    //Mail settings
+    @State var isShowingMailView = false
+    @State var alertNoMail = false
+    @State var result: Result<MFMailComposeResult, Error>? = nil
     var body: some View {
         NavigationStack(path: $navPath) {
             ZStack {
@@ -45,6 +50,33 @@ struct SettingsView: View {
                         } icon: {
                             Image(systemName: "music.note")
                         }
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                    
+                    ///Get in touch
+                    Section(header: Text("Get in touch").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                        Label {
+                            HStack {
+                                Text("Email")
+                                Spacer()
+                                Image(systemName: "arrow.up.right")
+                            }
+                        } icon: {
+                            Image(systemName: "envelope")
+                        }
+                        .onTapGesture {
+                            MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
+                        }
+                        .sheet(isPresented: $isShowingMailView) {
+                            MailView(result: $result,
+                                     recipients: ["oleg.titov81@gmail.com"],
+                                     subject: "MoneyJar feedback")
+                        }
+                        .alert(isPresented: self.$alertNoMail) {
+                            Alert(title: Text("Please setup your Mail app"))
+                        }
+
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
