@@ -273,6 +273,7 @@ enum storageKeys: String {
     case greetingSoundPlayed
     case jarIsCreated
     case soundIsOn
+    case hapticsIsOn
 }
 
 
