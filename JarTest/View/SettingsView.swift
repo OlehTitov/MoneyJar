@@ -56,6 +56,7 @@ struct SettingsView: View {
                     
                     ///Get in touch
                     Section(header: Text("Get in touch").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                        //Email
                         Label {
                             HStack {
                                 Text("Email")
@@ -75,6 +76,14 @@ struct SettingsView: View {
                         }
                         .alert(isPresented: self.$alertNoMail) {
                             Alert(title: Text("Please setup your Mail app"))
+                        }
+                        //Rate in AppStore
+                        Link(destination: URL(string: StateController.appStoreReviewLink)!) {
+                            HStack {
+                                Label("Rate in AppStore", systemImage: "star")
+                                Spacer()
+                                Image(systemName: "arrow.up.right")
+                            }
                         }
 
                     }

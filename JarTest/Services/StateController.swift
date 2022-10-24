@@ -264,4 +264,6 @@ extension StateController {
         account.goalAmount = new
         storageController.save(account)
     }
+    
+    static let appStoreReviewLink = "https://www.apple.com"
 }
