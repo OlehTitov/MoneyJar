@@ -27,7 +27,7 @@ struct SettingsView: View {
                     ///Jar Settings
                     Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 16))) {
                         //Jar name and Goal amount
-                        ForEach(SettingsRoute.allCases, id: \.self) { route in
+                        ForEach(SettingsRoute.general, id: \.self) { route in
                             NavigationLink(value: route) {
                                 Label(route.rawValue, systemImage: route.icon)
                             }
@@ -89,6 +89,15 @@ struct SettingsView: View {
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
+                    
+                    ///Other
+                    Section(header: Text("Other").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                        NavigationLink(value: SettingsRoute.credits) {
+                            Label(SettingsRoute.credits.rawValue, systemImage: SettingsRoute.credits.icon)
+                        }
+                    }
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
@@ -97,6 +106,7 @@ struct SettingsView: View {
                 switch route {
                 case .jarName: ChangeJarNameView(path: $navPath, jarName: stateController.account.name)
                 case .changeGoalAmount: ChangeAmountView(path: $navPath)
+                case .credits: Text("Some view")
                 }
             })
             .navigationTitle("Settings")
@@ -121,11 +131,15 @@ struct SettingsView_Previews: PreviewProvider {
 enum SettingsRoute: String, Hashable, CaseIterable {
     case jarName = "Jar name"
     case changeGoalAmount = "Goal amount"
+    case credits = "Credits"
+    
+    static let general = [jarName, changeGoalAmount]
     
     var icon: String {
         switch self {
         case .jarName: return "character.cursor.ibeam"
         case .changeGoalAmount: return "banknote"
+        case .credits: return "person.2"
         }
     }
 }
