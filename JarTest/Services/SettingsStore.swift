@@ -15,10 +15,15 @@ class SettingsStore: ObservableObject {
             }
         }
     
-//    @Published var hapticsIsOn: Bool = UserDefaults.standard.bool(forKey: storageKeys.hapticsIsOn.rawValue) {
-//            didSet {
-//                UserDefaults.standard.set(self.hapticsIsOn, forKey: storageKeys.hapticsIsOn.rawValue)
-//            }
-//        }
+    @Published var hapticsIsOn: Bool = UserDefaults.standard.bool(forKey: storageKeys.hapticsIsOn.rawValue) {
+            didSet {
+                UserDefaults.standard.set(self.hapticsIsOn, forKey: storageKeys.hapticsIsOn.rawValue)
+            }
+        }
+    
+    func initialSetup() {
+        soundIsOn = true
+        hapticsIsOn = true
+    }
     
 }

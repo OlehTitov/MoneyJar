@@ -21,7 +21,7 @@ struct WelcomeToJar: View {
         }
         //Set initial settings values
         .task {
-            settingsStore.soundIsOn = true
+            settingsStore.initialSetup()
         }
     }
 }
@@ -49,8 +49,12 @@ extension WelcomeToJar {
         var paragraph3 = "You own the data, nothing is stored on server."
         var body: some View {
             ZStack {
-                BackgroundView()
-                ScrollView(.vertical, showsIndicators: false) {
+//                BackgroundView()
+                Image("ultimateGradient")
+                    .resizable()
+                    .ignoresSafeArea()
+//                Color(UIColor.secondarySystemBackground)
+                VStack {
                     ZStack {
                         makeMovingElement(image: "", name: "Gold bar", type: "Commodity", isCommodity: true, quantity: "10 oz", bgrdOpacity: 0.6, offsetStart: -110, offsetFinish: 280, offsetY: 0, duration: 3)
                         
@@ -63,16 +67,24 @@ extension WelcomeToJar {
                         
                         makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: 60, offsetFinish: -250, offsetY: 90, duration: 4)
                     }
-                    titleAndDescription()
+                    .padding(40)
+                    
+                    ZStack {
+                        CustomCorner(corners: [.topLeft, .topRight], radius: 12)
+                            .fill(Color(UIColor.secondarySystemBackground))
+                        VStack {
+                            titleAndDescription()
+                            Spacer()
+                            Button (action: {viewModel.createPressed()}, label: {})
+                                .buttonStyle(MyButtonStyle(title: "Get Started"))
+                                .padding(.bottom)
+                        }
+                    }
                 }
-                .safeAreaInset(edge: .bottom, content: {
-                    Button (action: {viewModel.createPressed()}, label: {})
-                        .buttonStyle(MyButtonStyle(title: "Get Started"))
-                }
-                )
+                .ignoresSafeArea()
                 .onAppear {
                     viewModel.startAnimation()
-            }
+                }
             }
         }
         
@@ -80,18 +92,17 @@ extension WelcomeToJar {
             VStack(spacing: 12) {
                 VStack(spacing: -8) {
                     Text("Multi-asset savings tracker")
-                        .font(Font.custom("RobotoMono-Bold", size: 38).smallCaps())
+                        .font(.largeTitle)
+                        .bold()
                         .multilineTextAlignment(.center)
                 }
                 .padding(.vertical)
-                .padding(.top, 38)
                 
                 VStack(alignment: .leading, spacing: 24) {
                     Text(paragraph1)
                     Text(paragraph2)
                     Text(paragraph3)
                 }
-                .font(.headline)
                 .lineSpacing(6)
                 .padding(.horizontal, 24)
             }
