@@ -51,12 +51,12 @@ struct SettingsView: View {
                             Image(systemName: "music.note")
                         }
                         //Haptic settings
-                        Label {
-                            Toggle("Haptics", isOn: $settingsStore.hapticsIsOn)
-                                .tint(Color.accentColor)
-                        } icon: {
-                            Image(systemName: "hand.tap")
-                        }
+//                        Label {
+//                            Toggle("Haptics", isOn: $settingsStore.hapticsIsOn)
+//                                .tint(Color.accentColor)
+//                        } icon: {
+//                            Image(systemName: "hand.tap")
+//                        }
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)

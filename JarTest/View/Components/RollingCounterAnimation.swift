@@ -27,7 +27,7 @@ struct RollingCounterAnimation: View {
     var body: some View {
         VStack {
             Text(totalAmount.currencyFormatter(with: currencyLocale, code: currencyCode).decimalFormat(fontSize: fontSize, decimalSize: decimaSize))
-                .frame(maxWidth: .infinity, alignment: .center)
+//                .frame(maxWidth: .infinity, alignment: .center)
                 
                 .onAppear {
                     if amountAdded == 0 {

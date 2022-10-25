@@ -27,9 +27,11 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             HomeView()
                 .environmentObject(StateController.dummyData())
+                .environmentObject(SettingsStore())
                 .preferredColorScheme(.dark)
             HomeView()
                 .environmentObject(StateController.dummyData())
+                .environmentObject(SettingsStore())
                 .preferredColorScheme(.light)
         }
     }
@@ -51,20 +53,48 @@ extension HomeView {
         var body: some View {
             ZStack {
                 NavigationStack(path: $mainStack) {
+//                    ZStack {
+//                        BackgroundView()
+//                        VStack(spacing: 32) {
+//                            goalAmount()
+//                            JarWithCoinsView(progress: stateController.account.progress)
+//                            newTotalAmount(size: 50, decimalSize: 32)
+//                            fillJarButton()
+//                        }
+//                    }
                     ZStack {
-                        BackgroundView()
-                        VStack(spacing: 32) {
-                            goalAmount()
+//                        Color(uiColor: .systemGray3)
+//                        BackgroundView()
+                        Image("ultimateGradient")
+                            .resizable()
+                            .ignoresSafeArea()
+                        VStack {
                             JarWithCoinsView(progress: stateController.account.progress)
-                            newTotalAmount(size: 50, decimalSize: 32)
-                            fillJarButton()
+                                .padding(.bottom, 80)
+                                .padding(.top, 40)
+                            VStack(alignment: .leading) {
+                                fillJarButton()
+                                    .offset(y: -70)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Balance".uppercased())
+                                        .foregroundColor(.secondary)
+                                        .bold()
+                                    newTotalAmount(size: 50, decimalSize: 32)
+                                }
+                                Spacer()
+                                
+                            }
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color(uiColor: .secondarySystemBackground))
                         }
                     }
                     .onAppear {
                         //Play greeting sound only when Jar is freshly created
                         playGreetingSound()
                         //Check if there are any new awards to display
-                        checkAwards()
+//                        checkAwards()
                     }
                     .navigationTitle(stateController.account.name)
                     .navigationBarTitleDisplayMode(.inline)
@@ -104,8 +134,8 @@ extension HomeView {
         func newTotalAmount(size: CGFloat, decimalSize: CGFloat) -> some View {
             RollingCounterAnimation(initialBalance: stateController.account.balanceBeforeChange, currentBalance: stateController.account.balance, fontSize: size, decimaSize: decimalSize, currencyCode: stateController.account.baseCurrency.rawValue, currencyLocale: stateController.account.baseCurrency.locale)
                 .minimumScaleFactor(0.5)
-                .frame(height: 100)
-                .padding(.horizontal)
+//                .frame(height: 100)
+//                .padding(.horizontal)
                 
         }
         
@@ -119,32 +149,44 @@ extension HomeView {
         }
         
         func fillJarButton() -> some View {
-            Button(action: {
-                mainStack.append(.selectAsset)
-                greetingSoundPlayed = true
-            }) {
-                VStack {
-                    if colorScheme == .dark {
-                        Image(systemName: "arrow.down.to.line")
-                            .foregroundColor(Color.primary)
-                            .font(.title)
-                            .padding()
-                            .overlay {
-                                Circle()
-                                    .strokeBorder(Color.primary, lineWidth: 2)
-                            }
-                    } else {
-                        Image(systemName: "arrow.down.to.line")
-                            .foregroundColor(Color("x11Gray"))
-                            .font(.title)
-                            .padding()
-                            .background(Color.primary)
-                            .clipShape(Circle())
+            HStack(spacing: 20) {
+                Button(action: {
+                    mainStack.append(.selectAsset)
+                    greetingSoundPlayed = true
+                }) {
+                    VStack {
+                        if colorScheme == .dark {
+                            Image(systemName: "arrow.down.to.line")
+                                .foregroundColor(Color.primary)
+                                .font(.title3)
+                                .padding()
+                                .overlay {
+                                    Circle()
+                                        .strokeBorder(Color.primary, lineWidth: 2)
+                                }
+                        } else {
+                            Image(systemName: "arrow.down.to.line")
+                                .foregroundColor(Color("x11Gray"))
+                                .font(.title3)
+                                .padding()
+                                .background(Color.primary)
+                                .clipShape(Circle())
+                        }
                     }
                 }
-                
+                .accessibilityLabel("Add assets")
+                Text("Add assets")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .frame(width: 70)
+                Spacer()
             }
-            .accessibilityLabel("Fill the jar")
+            .padding()
+            .frame(width: 220)
+            .background(Color(UIColor.tertiarySystemBackground))
+            .cornerRadius(24)
+            .shadow(color: Color.black.opacity(0.1), radius: 8)
+            
         }
         
         func fillJarButtonDarkMode() -> some View {

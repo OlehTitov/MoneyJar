@@ -9,25 +9,13 @@ import SwiftUI
 
 struct JarWithCoinsView: View {
     var progress : Double
-    var jarWidth = 300.00
-    var coinsWidth = 236.00
-    var frameHeight = 320.00
+    var jarWidth = 270.00
+    var coinsWidth = 200.00
+    var frameHeight = 280.00
     var coinsBottomPadding = 2
     var jarImage = "Jar-4"
     var body: some View {
         ZStack {
-//            JarBlur()
-            Ellipse()
-                .fill(Color.clear)
-                .background(.ultraThinMaterial.opacity(0.9))
-                .frame(width: 230, height: 240)
-                .clipShape(Ellipse())
-                .cornerRadius(40)
-                .offset(y: 50)
-                .blur(radius: 20)
-                    
-            
-            
             JarShadow(
                 width: jarWidth,
                 height: 40,
@@ -206,7 +194,7 @@ struct JarWithCoinsView: View {
 struct JarWithCoinsView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            JarBackgroundView()
+            Image("ultimateGradient")
             JarWithCoinsView(progress: 9)
         }
     }
