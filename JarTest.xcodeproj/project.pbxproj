@@ -72,6 +72,8 @@
 		7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */; };
 		7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */; };
 		7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1E29050D3400D858DA /* MailView.swift */; };
+		7CBDCE212906F09A00D858DA /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE202906F09A00D858DA /* CreditsView.swift */; };
+		7CBDCE232906F2C500D858DA /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE222906F2C500D858DA /* Bundle+extension.swift */; };
 		7CC1EB55286EF37E0022139C /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
 		7CC1EB57287093490022139C /* CurrencySwipingSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */; };
 		7CC1EB5B287193110022139C /* GoldTypeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */; };
@@ -208,6 +210,8 @@
 		7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAmountView.swift; sourceTree = "<group>"; };
 		7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeResultView.swift; sourceTree = "<group>"; };
 		7CBDCE1E29050D3400D858DA /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		7CBDCE202906F09A00D858DA /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		7CBDCE222906F2C500D858DA /* Bundle+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
 		7CC1EB54286EF37E0022139C /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySwipingSelector.swift; sourceTree = "<group>"; };
 		7CC1EB5A287193110022139C /* GoldTypeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldTypeSwitch.swift; sourceTree = "<group>"; };
@@ -528,6 +532,7 @@
 				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
 				7C1D099E28AEA22F00C82211 /* SettingsView.swift */,
+				7CBDCE202906F09A00D858DA /* CreditsView.swift */,
 				7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */,
 				7CDDF61528F1498B00A4B706 /* ChangeJarNameView.swift */,
 				7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */,
@@ -549,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				7CEF6C212861E22C0013EA3D /* Double+extension.swift */,
+				7CBDCE222906F2C500D858DA /* Bundle+extension.swift */,
 				7CC751EB28C6534600DBAF62 /* String+extension.swift */,
 				7CEA503428AFC7AB00D33C45 /* Date+extension.swift */,
 				7CC751E528C2793700DBAF62 /* NSAttributedString+extension.swift */,
@@ -729,6 +735,7 @@
 				7CEF02BE285F3F7D0009A82E /* SetAmount.swift in Sources */,
 				7CEF6C3B286719D80013EA3D /* ForeignCurrencyTextField.swift in Sources */,
 				7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */,
+				7CBDCE212906F09A00D858DA /* CreditsView.swift in Sources */,
 				7CDA9903285F1BBF00EDCF42 /* LegacyTextField.swift in Sources */,
 				7CDDF61A28F6B78B00A4B706 /* BlurView.swift in Sources */,
 				7CBAF32F288FBD2600BD8BC9 /* ComplexBlueRadialBackground.swift in Sources */,
@@ -780,6 +787,7 @@
 				7CEF6C39286712CA0013EA3D /* CurrencyTextField.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
 				7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */,
+				7CBDCE232906F2C500D858DA /* Bundle+extension.swift in Sources */,
 				7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */,
 				7CC751EC28C6534600DBAF62 /* String+extension.swift in Sources */,
 				7CEA503D28B21C1100D33C45 /* RoundButton.swift in Sources */,

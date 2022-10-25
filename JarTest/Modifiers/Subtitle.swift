@@ -21,3 +21,13 @@ extension View {
         modifier(Subtitle())
     }
 }
+
+
+struct CenteredLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(alignment: .center, spacing: 24) {
+            configuration.icon
+            configuration.title
+        }
+    }
+}

@@ -113,7 +113,7 @@ struct SettingsView: View {
                 switch route {
                 case .jarName: ChangeJarNameView(path: $navPath, jarName: stateController.account.name)
                 case .changeGoalAmount: ChangeAmountView(path: $navPath)
-                case .credits: Text("Some view")
+                case .credits: CreditsView()
                 }
             })
             .navigationTitle("Settings")
