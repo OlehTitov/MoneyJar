@@ -26,9 +26,7 @@ struct WelcomeToJar: View {
             } else {
                 //Content
                 ZStack {
-                    Image("ultimateGradient")
-                        .resizable()
-                        .ignoresSafeArea()
+                    UltimateGradientView()
                     VStack {
                         jarWithAssetChips
                         

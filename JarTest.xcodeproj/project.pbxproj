@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6C2909079100206341 /* UltimateGradientView.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -163,6 +164,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C0ADA6C2909079100206341 /* UltimateGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateGradientView.swift; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */,
 				7CBDCE1E29050D3400D858DA /* MailView.swift */,
+				7C0ADA6C2909079100206341 /* UltimateGradientView.swift */,
 				7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */,
 				7CDDF61B28F98F7400A4B706 /* JarBackgroundView.swift */,
 				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
@@ -803,6 +806,7 @@
 				7CFB99FD28E246DD0049EA78 /* SeamlessBackgroundTest.swift in Sources */,
 				7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */,
 				7CEF6C2E2865AA8A0013EA3D /* AddCashView.swift in Sources */,
+				7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */,
 				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,
 				7CDDF61028ED7C4B00A4B706 /* AwardsManager.swift in Sources */,
 				7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */,
