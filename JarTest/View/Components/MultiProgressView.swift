@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MultiProgressView: View {
-    @Environment(\.colorScheme) var colorScheme
     var totalAmount: Double
     var items : [PortfolioItem]
     var height: CGFloat
@@ -19,32 +18,23 @@ struct MultiProgressView: View {
                 ZStack {
                     //Base layer
                     Rectangle()
-                        .fill(colorScheme == .dark ? Color("shipCove") : Color("mint"))
+                        .fill(Color(UIColor.systemFill))
                     //Progress items
                     HStack(spacing: 0) {
                         ForEach(items, id: \.self) { item in
+                            let initialWidth: CGFloat = 0
                             Rectangle()
                                 .fill(item.color)
-                                .frame(width: getWidth(item: item, geoProxy: geo), height: height)
+                                .frame(width: show ? getWidth(item: item, geoProxy: geo) : initialWidth, height: height)
+                                .animation(.easeInOut(duration: 1), value: show)
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    //Masking layer
-                    HStack {
-                        Spacer()
-                        Rectangle()
-                            .fill(colorScheme == .dark ? Color("shipCove") : Color("mint"))
-                            .frame(width: show ? 0 : geo.size.width, alignment: .trailing)
-                            .animation(.easeInOut(duration: 2), value: show)
-                    }
                 }
                 .onAppear {
                     if !items.isEmpty {
                         show = true
                     }
-                }
-                .onDisappear {
-                    show = false
                 }
                 .frame(height: height)
                 VStack(spacing: 8) {
@@ -54,7 +44,6 @@ struct MultiProgressView: View {
                         Text("\(Int(goalAmountOrActualAmount))")
                     }
                     .font(.caption)
-//                    .foregroundColor(.white.opacity(0.7))
                     HStack(spacing: 12) {
                         ForEach(items) { item in
                             HStack(spacing: 4) {
@@ -63,13 +52,18 @@ struct MultiProgressView: View {
                                     .frame(width: 8, height: 8)
                                 Text(item.assetName.rawValue)
                                     .font(.caption)
-//                                    .foregroundColor(.white.opacity(0.7))
                             }
                         }
                         Spacer()
                     }
                 }
             }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
+            )
+            .padding(.vertical)
         }
     }
     //Find out may be saved amount is bigger than goal
@@ -98,5 +92,6 @@ struct MultiProgressView: View {
 struct MultiProgressView_Previews: PreviewProvider {
     static var previews: some View {
         MultiProgressView(totalAmount: 100_000.00, items: [PortfolioItem(assetName: .Currency, amountInBaseCurrency: 50000.00), PortfolioItem(assetName: .Gold, amountInBaseCurrency: 25000.00)], height: 34)
+            .environmentObject(StateController.dummyData())
     }
 }

@@ -9,15 +9,15 @@ import SwiftUI
 
 struct PortfolioView: View {
     @EnvironmentObject private var stateController: StateController
-    @Environment(\.colorScheme) var colorScheme
+//    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ZStack {
-                BackgroundView()
+//                BackgroundView()
                 List {
                     Rectangle()
                         .fill(Color.clear)
-                        .frame(height: 80)
+                        .frame(height: 120)
                         .overlay {
                             MultiProgressView(totalAmount: stateController.account.goalAmount, items: filteredItems, height: 30)
                         }
@@ -36,9 +36,10 @@ struct PortfolioView: View {
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
             }
+            .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("Asset structure")
             .navigationBarTitleDisplayMode(.large)
-            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
+//            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
         
     }
@@ -62,8 +63,13 @@ struct PortfolioView: View {
 
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
-        PortfolioView()
-            .environmentObject(StateController.dummyData())
-            .preferredColorScheme(.light)
+        Group {
+            PortfolioView()
+                .environmentObject(StateController.dummyData())
+                .preferredColorScheme(.light)
+            PortfolioView()
+                .environmentObject(StateController.dummyData())
+                .preferredColorScheme(.dark)
+        }
     }
 }
