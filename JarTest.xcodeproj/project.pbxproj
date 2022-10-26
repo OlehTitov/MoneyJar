@@ -31,9 +31,7 @@
 		7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */; };
 		7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81928CF0F7500E87A6D /* CardBackgroundColor.swift */; };
 		7CB0E81C28D7A73A00E87A6D /* TimelineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81B28D7A73A00E87A6D /* TimelineTest.swift */; };
-		7CBAF313288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF312288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift */; };
 		7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */; };
-		7CBAF321288E680900BD8BC9 /* WelcomeToJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF312288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift */; };
 		7CBAF323288E6A2300BD8BC9 /* WelcomeToJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */; };
 		7CBAF325288E7C7F00BD8BC9 /* MainThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF324288E7C7F00BD8BC9 /* MainThemeButton.swift */; };
 		7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
@@ -189,7 +187,6 @@
 		7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssetTypeView.swift; sourceTree = "<group>"; };
 		7CB0E81928CF0F7500E87A6D /* CardBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackgroundColor.swift; sourceTree = "<group>"; };
 		7CB0E81B28D7A73A00E87A6D /* TimelineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTest.swift; sourceTree = "<group>"; };
-		7CBAF312288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeToJarViewModel.swift; sourceTree = "<group>"; };
 		7CBAF318288E67F200BD8BC9 /* MoneyJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyJarTests.swift; sourceTree = "<group>"; };
 		7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeToJarTests.swift; sourceTree = "<group>"; };
@@ -338,7 +335,6 @@
 		7CBAF311288E5D2400BD8BC9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7CBAF312288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift */,
 				7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */,
 				7CBAF33A2891798C00BD8BC9 /* SetAmountViewModel.swift */,
 			);
@@ -687,7 +683,6 @@
 				7CBAF32A288EE3BC00BD8BC9 /* Double+extension.swift in Sources */,
 				7CBAF32D288EE86000BD8BC9 /* ConfigureJarTests.swift in Sources */,
 				7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */,
-				7CBAF321288E680900BD8BC9 /* WelcomeToJarViewModel.swift in Sources */,
 				7CBAF336289110E200BD8BC9 /* StateController.swift in Sources */,
 				7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */,
 				7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */,
@@ -770,7 +765,6 @@
 				7CDA98E3285478E300EDCF42 /* CustomCorner.swift in Sources */,
 				7CA930F128B6048100C8286C /* Color+extension.swift in Sources */,
 				7CA930F628B7A12600C8286C /* JarShadow.swift in Sources */,
-				7CBAF313288E5D5100BD8BC9 /* WelcomeToJarViewModel.swift in Sources */,
 				7CC1EB6128745CF90022139C /* SegmentPickerStroked.swift in Sources */,
 				7CC8FB0628EB254C0032FF3E /* AwardDetails.swift in Sources */,
 				7CEF6C37286712010013EA3D /* Currency.swift in Sources */,

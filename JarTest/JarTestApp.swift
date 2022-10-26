@@ -27,7 +27,7 @@ struct JarTestApp: App {
                     .environmentObject(stateController)
                     .environmentObject(settingsStore)
             } else {
-                WelcomeToJar(viewModel: WelcomeToJarViewModel())
+                WelcomeToJar()
                     .environmentObject(stateController)
                     .environmentObject(settingsStore)
             }
