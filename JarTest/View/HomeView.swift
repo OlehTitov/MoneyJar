@@ -53,50 +53,68 @@ extension HomeView {
         var body: some View {
             ZStack {
                 NavigationStack(path: $mainStack) {
-//                    ZStack {
-//                        BackgroundView()
-//                        VStack(spacing: 32) {
-//                            goalAmount()
-//                            JarWithCoinsView(progress: stateController.account.progress)
-//                            newTotalAmount(size: 50, decimalSize: 32)
-//                            fillJarButton()
-//                        }
-//                    }
                     ZStack {
-//                        Color(uiColor: .systemGray3)
-//                        BackgroundView()
-                        Image("ultimateGradient")
-                            .resizable()
-                            .ignoresSafeArea()
+                        UltimateGradientView()
                         VStack {
                             JarWithCoinsView(progress: stateController.account.progress)
-                                .padding(.bottom, 80)
+                                .padding(.bottom, 60)
                                 .padding(.top, 40)
                             VStack(alignment: .leading) {
                                 fillJarButton()
-                                    .offset(y: -70)
+                                    .offset(y: -60)
                                     .frame(maxWidth: .infinity, alignment: .center)
-                                VStack(alignment: .leading, spacing: 8) {
-                                    Text("Balance".uppercased())
+                                ScrollView(.vertical, showsIndicators: false) {
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        Text("Balance".uppercased())
+                                            .foregroundColor(.secondary)
+                                            .bold()
+                                        newTotalAmount(size: 50, decimalSize: 32)
+                                    }
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        Text(stateController.account.name)
+                                            .font(.headline)
+                                        CustomProgressView(progress: stateController.account.progress/100)
+                                        HStack {
+                                            Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
+                                            Spacer()
+                                            goalAmount()
+                                        }
                                         .foregroundColor(.secondary)
-                                        .bold()
-                                    newTotalAmount(size: 50, decimalSize: 32)
+                                    }
+                                    .padding()
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 12)
+                                            .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
+                                    )
                                 }
-                                Spacer()
-                                
+                                .frame(maxHeight: .infinity)
+                                .offset(y: -44)
                             }
                             .padding()
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .background(Color(uiColor: .secondarySystemBackground))
                         }
+                        Button {
+                            mainStack.append(.awards)
+                        } label: {
+                            Image(systemName: "gift")
+                                .padding()
+                                .background(Color(UIColor.secondarySystemBackground))
+                                .clipShape(Circle())
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(maxHeight: .infinity, alignment: .top)
                     }
                     .onAppear {
                         //Play greeting sound only when Jar is freshly created
                         playGreetingSound()
                         //Check if there are any new awards to display
-//                        checkAwards()
+                        checkAwards()
                     }
                     .navigationTitle(stateController.account.name)
+                    .toolbar(.hidden, for: .navigationBar)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbarBackground(.hidden, for: .navigationBar)
                     .toolbarBackground(Color.clear, for: .navigationBar)
@@ -105,6 +123,9 @@ extension HomeView {
                             mainStack.append(.awards)
                         } label: {
                             Image(systemName: "gift")
+                                .padding(8)
+                                .background(Color(UIColor.secondarySystemBackground))
+                                .clipShape(Circle())
                         }
                     }
                     .navigationDestination(for: NavigationType.self, destination: { value in
@@ -134,26 +155,21 @@ extension HomeView {
         func newTotalAmount(size: CGFloat, decimalSize: CGFloat) -> some View {
             RollingCounterAnimation(initialBalance: stateController.account.balanceBeforeChange, currentBalance: stateController.account.balance, fontSize: size, decimaSize: decimalSize, currencyCode: stateController.account.baseCurrency.rawValue, currencyLocale: stateController.account.baseCurrency.locale)
                 .minimumScaleFactor(0.5)
-//                .frame(height: 100)
-//                .padding(.horizontal)
-                
         }
         
         func goalAmount() -> some View {
             HStack {
                 Image(systemName: "flag")
-                    .font(.headline.bold())
                 Text(Double(stateController.account.goalAmount).currencyFormatter(with: stateController.account.baseCurrency.locale, code: stateController.account.baseCurrency.rawValue))
-                    .font(Font.custom("RobotoMono-Medium", size: 20))
             }
         }
         
         func fillJarButton() -> some View {
-            HStack(spacing: 20) {
-                Button(action: {
-                    mainStack.append(.selectAsset)
-                    greetingSoundPlayed = true
-                }) {
+            Button(action: {
+                mainStack.append(.selectAsset)
+                greetingSoundPlayed = true
+            }) {
+                HStack(spacing: 20) {
                     VStack {
                         if colorScheme == .dark {
                             Image(systemName: "arrow.down.to.line")
@@ -173,35 +189,20 @@ extension HomeView {
                                 .clipShape(Circle())
                         }
                     }
+                    Text("Add assets")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .frame(width: 70)
+                    Spacer()
                 }
-                .accessibilityLabel("Add assets")
-                Text("Add assets")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .frame(width: 70)
-                Spacer()
             }
+            .accessibilityLabel("Add assets")
+            .buttonStyle(.plain)
             .padding()
             .frame(width: 220)
             .background(Color(UIColor.tertiarySystemBackground))
             .cornerRadius(24)
             .shadow(color: Color.black.opacity(0.1), radius: 8)
-            
-        }
-        
-        func fillJarButtonDarkMode() -> some View {
-            Button(action: {
-                mainStack.append(.selectAsset)
-                greetingSoundPlayed = true
-            }) {
-                Image(systemName: "arrow.down.to.line")
-                    .foregroundColor(Color("x11Gray"))
-                    .font(.title)
-                    .padding()
-                    .background(Color.primary)
-                    .clipShape(Circle())
-            }
-            .accessibilityLabel("Fill the jar")
         }
         
         func playGreetingSound() {
