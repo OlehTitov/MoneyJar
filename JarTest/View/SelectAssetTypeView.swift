@@ -13,7 +13,6 @@ struct SelectAssetTypeView: View {
     var screenTitle = "Select asset"
     var body: some View {
         ZStack {
-            BackgroundView()
             List {
                 ForEach(assetTypes, id: \.self) { asset in
                     switch asset {
@@ -62,9 +61,9 @@ struct SelectAssetTypeView: View {
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
         }
+        .background(Color(UIColor.secondarySystemBackground))
         .navigationTitle(screenTitle)
         .navigationBarTitleDisplayMode(.large)
-        .toolbarBackground(navbarBackgroundColor, for: .navigationBar)
     }
         
     var assetTypes : [Asset] {
@@ -90,19 +89,12 @@ struct SelectAssetTypeView: View {
         }
         return result
     }
-    
-    var navbarBackgroundColor: Color {
-        colorScheme == .dark ? Color("shipCove") : Color("mint")
-    }
 }
 
 struct SelectAssetTypeView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ZStack {
-                BlueGradientView()
-                SelectAssetTypeView(mainStack: .constant([]))
-            }
+            SelectAssetTypeView(mainStack: .constant([]))
         }
     }
 }
