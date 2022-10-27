@@ -14,6 +14,7 @@ struct AllAssetsView: View {
         NavigationStack {
             ZStack {
                 Color(UIColor.secondarySystemBackground)
+                    .ignoresSafeArea()
                 if stateController.account.assets.isEmpty {
                     EmptyAssetsView()
                 } else {

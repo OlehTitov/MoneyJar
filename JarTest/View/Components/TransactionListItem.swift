@@ -36,15 +36,15 @@ struct TransactionListItem: View {
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(name)
-//                    .foregroundColor(Color.white)
+                    .font(.customHeadlineFont)
                 Text(assetType)
-                    .opacity(0.6)
-                    .font(.callout)
+//                    .opacity(0.6)
+                    .font(.customBodyFont)
             }
             Spacer()
             if !quantity.isEmpty {
                 Text(quantity)
-//                    .foregroundColor(Color.white)
+                    .font(.customHeadlineFont)
             }
         }
     }
