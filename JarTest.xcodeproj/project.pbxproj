@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6C2909079100206341 /* UltimateGradientView.swift */; };
 		7C0ADA6F290910D600206341 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6E290910D600206341 /* CustomProgressView.swift */; };
+		7C0ADA71290A5E8600206341 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ADA70290A5E8600206341 /* Montserrat */; };
+		7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA74290A668E00206341 /* Font+extension.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -163,6 +165,8 @@
 /* Begin PBXFileReference section */
 		7C0ADA6C2909079100206341 /* UltimateGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateGradientView.swift; sourceTree = "<group>"; };
 		7C0ADA6E290910D600206341 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		7C0ADA70290A5E8600206341 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
+		7C0ADA74290A668E00206341 /* Font+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -468,6 +472,7 @@
 				7CEF6C2C286470CD0013EA3D /* Extensions */,
 				7CFB99E428DED90B0049EA78 /* Space_Mono */,
 				7CFB9A0028E25ABB0049EA78 /* Roboto_Mono */,
+				7C0ADA70290A5E8600206341 /* Montserrat */,
 				7CEC2A50283547F7007A1897 /* Assets.xcassets */,
 				7CEC2A52283547F7007A1897 /* Preview Content */,
 			);
@@ -548,6 +553,7 @@
 			isa = PBXGroup;
 			children = (
 				7CEF6C212861E22C0013EA3D /* Double+extension.swift */,
+				7C0ADA74290A668E00206341 /* Font+extension.swift */,
 				7CBDCE222906F2C500D858DA /* Bundle+extension.swift */,
 				7CC751EB28C6534600DBAF62 /* String+extension.swift */,
 				7CEA503428AFC7AB00D33C45 /* Date+extension.swift */,
@@ -653,6 +659,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0ADA71290A5E8600206341 /* Montserrat in Resources */,
 				7CFB9A0928E5E6A30049EA78 /* success.wav in Resources */,
 				7CC8FB0428E8A9210032FF3E /* Awards.json in Resources */,
 				7CD1044C287C481100BF8478 /* coin3.usdz in Resources */,
@@ -794,6 +801,7 @@
 				7CFB99FF28E255AF0049EA78 /* SeamlessIconBackground.swift in Sources */,
 				7CC751EA28C6517500DBAF62 /* CompoundAssetGridItem.swift in Sources */,
 				7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
+				7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */,
 				7CB0E81C28D7A73A00E87A6D /* TimelineTest.swift in Sources */,
 				7CFB99FD28E246DD0049EA78 /* SeamlessBackgroundTest.swift in Sources */,
 				7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */,

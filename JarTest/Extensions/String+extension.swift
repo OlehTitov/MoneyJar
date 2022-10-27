@@ -18,13 +18,14 @@ extension String {
         }
                 if let range = attributedString.range(of: separator) {
                     attributedString[attributedString.startIndex...attributedString.index(beforeCharacter: range.lowerBound)]
-                        .font = Font.system(size: fontSize, weight: .bold, design: .default)
+                        .font = Font.custom("Montserrat-Bold", size: fontSize)
+//                        .font = Font.system(size: fontSize, weight: .bold, design: .default)
                         .monospacedDigit()
-//                        .font = Font.custom("RobotoMono-Medium", size: fontSize)
+                        
                     attributedString[attributedString.index(afterCharacter: range.lowerBound)..<attributedString.endIndex]
-                        .font = Font.system(size: decimalSize, weight: .bold, design: .default)
+//                        .font = Font.system(size: decimalSize, weight: .bold, design: .default)
+                        .font = Font.custom("Montserrat-Bold", size: decimalSize)
                         .monospacedDigit()
-//                        .font = Font.custom("RobotoMono-Medium", size: decimalSize)
                 }
                 return attributedString
     }

@@ -72,8 +72,7 @@ struct WelcomeToJar: View {
                 VStack(spacing: 12) {
                     VStack(spacing: -8) {
                         Text(title)
-                            .font(.largeTitle)
-                            .bold()
+                            .font(.customTitleFont)
                             .multilineTextAlignment(.center)
                     }
                     .padding()
@@ -83,6 +82,7 @@ struct WelcomeToJar: View {
                         Text(paragraph2)
                         Text(paragraph3)
                     }
+                    .font(.customHeadlineFont)
                     .lineSpacing(6)
                     .padding(.horizontal, 24)
                 }

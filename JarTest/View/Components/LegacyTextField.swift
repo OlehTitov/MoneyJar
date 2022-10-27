@@ -27,7 +27,8 @@ struct LegacyTextField: UIViewRepresentable {
     public func makeUIView(context: Context) -> UITextField {
         let view = UITextField()
         view.keyboardType = keyboard
-        view.font = .boldSystemFont(ofSize: 26)
+//        view.font = .boldSystemFont(ofSize: 26)
+        view.font = .customTitleFont()
 //        view.textColor = .white
         view.autocorrectionType = .no
         view.contentHorizontalAlignment = .center

@@ -14,7 +14,8 @@ struct MyButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         //MyButtonStyleView(configuration: configuration)
         Text(title)
-            .font(.subheadline.weight(.bold))
+//            .font(.subheadline.weight(.bold))
+            .font(.customButtonTextFont)
             .foregroundColor(isEnabled ? (configuration.isPressed ? .yellow : .white) : .white.opacity(0.5))
             .frame(height: 60)
             .frame(maxWidth: .infinity, alignment: .center)

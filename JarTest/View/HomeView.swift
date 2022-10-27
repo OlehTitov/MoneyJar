@@ -67,22 +67,23 @@ extension HomeView {
                                     VStack(alignment: .leading, spacing: 8) {
                                         Text("Balance".uppercased())
                                             .foregroundColor(.secondary)
-                                            .bold()
+                                            .font(.customBodyFont)
                                         newTotalAmount(size: 50, decimalSize: 32)
                                     }
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     VStack(alignment: .leading, spacing: 8) {
                                         Text(stateController.account.name)
-                                            .font(.headline)
+                                            .font(.customHeadlineFont)
                                         CustomProgressView(progress: stateController.account.progress/100)
                                         HStack {
                                             Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
                                             Spacer()
                                             goalAmount()
                                         }
+                                        .font(.customBodyFont)
                                         .foregroundColor(.secondary)
                                     }
-                                    .padding()
+                                    .padding(24)
                                     .background(
                                         RoundedRectangle(cornerRadius: 12)
                                             .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
@@ -190,8 +191,8 @@ extension HomeView {
                         }
                     }
                     Text("Add assets")
-                        .font(.title3)
-                        .fontWeight(.bold)
+                        .font(.customButtonTextFont)
+//                        .fontWeight(.bold)
                         .frame(width: 70)
                     Spacer()
                 }

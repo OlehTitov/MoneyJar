@@ -15,10 +15,12 @@ struct AmountLine: View {
     var body: some View {
         ZStack {
             Text(amount)
-                .font(Font.custom("RobotoMono-Medium", size: 46))
+//                .font(Font.custom("RobotoMono-Medium", size: 46))
+                .font(.customTitleFont)
             if showPlaceholder {
                 Text(placeholderText)
-                    .font(Font.custom("RobotoMono-Medium", size: 46))
+//                    .font(Font.custom("RobotoMono-Medium", size: 46))
+                    .font(.customTitleFont)
             } else {
                 EmptyView()
             }

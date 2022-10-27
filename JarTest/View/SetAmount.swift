@@ -83,7 +83,7 @@ extension SetAmount {
                             )
                         }
                         Text(headline)
-                            .subtitleStyle()
+                            .font(.customHeadlineFont)
                         
                         AmountLine(
                             amount: viewModel.amount,
