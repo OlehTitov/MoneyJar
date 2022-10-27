@@ -24,9 +24,10 @@ struct PortfolioView: View {
                     ForEach(filteredItems) { item in
                         HStack {
                             Text(item.assetName.rawValue)
-                                .bold()
+                                .font(.customBodyFont)
                             Spacer()
                             Text(item.amountInBaseCurrency.currencyFormatter(with: locale, code: baseCurrency))
+                                .font(.customBodyFont)
                         }
                     }
                     .listRowBackground(Color.clear)
