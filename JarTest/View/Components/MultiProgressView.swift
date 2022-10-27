@@ -40,8 +40,10 @@ struct MultiProgressView: View {
                 VStack(spacing: 8) {
                     HStack {
                         Text("0")
+                            .font(.customCaptionFont)
                         Spacer()
                         Text("\(Int(goalAmountOrActualAmount))")
+                            .font(.customCaptionFont)
                     }
                     .font(.caption)
                     HStack(spacing: 12) {
@@ -51,7 +53,7 @@ struct MultiProgressView: View {
                                     .fill(item.color)
                                     .frame(width: 8, height: 8)
                                 Text(item.assetName.rawValue)
-                                    .font(.caption)
+                                    .font(.customCaptionFont)
                             }
                         }
                         Spacer()
