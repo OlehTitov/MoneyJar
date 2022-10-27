@@ -25,7 +25,7 @@ struct SettingsView: View {
                 BackgroundView()
                 Form {
                     ///Jar Settings
-                    Section(header: Text("Jar settings").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                    Section(header: Text("Jar settings").font(.customBodyFont)) {
                         //Jar name and Goal amount
                         ForEach(SettingsRoute.general, id: \.self) { route in
                             NavigationLink(value: route) {
