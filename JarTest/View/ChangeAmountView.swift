@@ -25,6 +25,13 @@ struct ChangeAmountView: View {
                 )
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .overlay {
+                    Text("Just start typing new amount")
+                        .font(.customBodyFont)
+                        .foregroundColor(.secondary)
+                        .offset(y: 80)
+                }
                 Spacer()
                 NumberPadView(
                     text: $viewModel.amount,
