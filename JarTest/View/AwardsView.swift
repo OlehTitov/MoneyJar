@@ -17,7 +17,8 @@ struct AwardsView: View {
     @State var showAward = false
     var body: some View {
         ZStack {
-            BackgroundView()
+            Color(UIColor.secondarySystemBackground)
+                .ignoresSafeArea()
             ScrollView {
                 VStack {
                     Image("penguin_award")
@@ -27,7 +28,7 @@ struct AwardsView: View {
                         .background(Color.white)
                         .clipShape(Circle())
                     Text("You unlocked \(numberOfUnlockedAwards()) of \(stateController.account.awards.count) awards")
-                        .bold()
+                        .font(.customHeadlineFont)
                         .padding()
                 }
                 LazyVGrid(columns: gridItemLayout) {
@@ -70,7 +71,7 @@ struct AwardThumbnailView: View {
             }
             VStack {
                 Text(award.name)
-                    .foregroundColor(.primary)
+                    .font(.customBodyFont)
             }
         }
     }
