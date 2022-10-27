@@ -70,21 +70,19 @@ struct WelcomeToJar: View {
                 .fill(cardBackground)
             VStack {
                 VStack(spacing: 12) {
-                    VStack(spacing: -8) {
+                    VStack(alignment: .center, spacing: 24) {
                         Text(title)
                             .font(.customTitleFont)
-                            .multilineTextAlignment(.center)
-                    }
-                    .padding()
-                    
-                    VStack(alignment: .leading, spacing: 24) {
                         Text(paragraph1)
-                        Text(paragraph2)
+                            .font(.customHeadlineFont)
+//                        Text(paragraph2)
                         Text(paragraph3)
+                            .font(.customHeadlineFont)
                     }
-                    .font(.customHeadlineFont)
-                    .lineSpacing(6)
-                    .padding(.horizontal, 24)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, 42)
+                    .lineSpacing(8)
+                    .padding(.horizontal, 36)
                 }
                 Spacer()
                 Button (action: {buttonTapped()}, label: {})

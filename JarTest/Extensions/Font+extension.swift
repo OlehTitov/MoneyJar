@@ -27,7 +27,7 @@ extension Font {
     }
     
     static var customTitleFont: Font {
-        Font.custom("Montserrat-Bold", size: 28, relativeTo: .title)
+        Font.custom("Montserrat-Bold", size: 26, relativeTo: .title)
     }
     
     static var customLargeTitleFont: Font {
