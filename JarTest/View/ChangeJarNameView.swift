@@ -35,21 +35,25 @@ struct ChangeJarNameView: View {
                 .disabled(jarName == "")
             }
             .sheet(isPresented: $showResult) {
-                VStack(spacing: 20) {
-                    Spacer()
-                    Image("penguin_waving")
-                        .resizable()
-                        .frame(width: 120, height: 120)
-                        .background(Color(UIColor.tertiarySystemFill))
-                        .clipShape(Circle())
-                    Text("Successfuly renamed jar to:")
-                    Text(jarName)
-                        .font(.title)
-                    Spacer()
-                }
-                .safeAreaInset(edge: .bottom) {
-                    Button(action: {doneTapped()}, label: {})
-                        .buttonStyle(MyButtonStyle(title: "Done"))
+                ZStack {
+                    BackgroundView()
+                    VStack(spacing: 20) {
+                        Spacer()
+                        Image("penguin_waving")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                        Text("Successfuly renamed")
+                            .font(.customTitleFont)
+                        Text(jarName)
+                            .font(.customBodyFont)
+                        Spacer()
+                    }
+                    .safeAreaInset(edge: .bottom) {
+                        Button(action: {doneTapped()}, label: {})
+                            .buttonStyle(MyButtonStyle(title: "Done"))
+                    }
                 }
                 
         }
