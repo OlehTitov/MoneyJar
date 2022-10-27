@@ -13,7 +13,7 @@ struct AllAssetsView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                BackgroundView()
+                Color(UIColor.secondarySystemBackground)
                 if stateController.account.assets.isEmpty {
                     EmptyAssetsView()
                 } else {
@@ -71,7 +71,6 @@ struct AllAssetsView: View {
             }
             .navigationBarTitle("Transactions")
             .navigationBarTitleDisplayMode(.large)
-            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
     }
     

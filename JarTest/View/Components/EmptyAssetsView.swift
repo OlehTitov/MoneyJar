@@ -10,22 +10,18 @@ import SwiftUI
 struct EmptyAssetsView: View {
     var body: some View {
         VStack {
-//            Spacer()
             VStack(spacing: 36) {
-                Image("astronaut")
+                Image("penguin_emptyState")
                     .resizable()
-                    .frame(width: 140, height: 140, alignment: .center)
-                    .padding(20)
-                    .background(.ultraThinMaterial)
+                    .frame(width: 100, height: 100, alignment: .center)
+                    .padding()
+                    .background(Color.white)
                     .clipShape(Circle())
-                    .opacity(0.2)
                 VStack(spacing: 12) {
                     Text("Your jar is empty")
                         .font(.title.bold())
-                        .foregroundColor(.white.opacity(0.8))
                         .multilineTextAlignment(.center)
                     Text("Add some assets and you'll see your transactions here")
-                        .foregroundColor(.white.opacity(0.6))
                         .multilineTextAlignment(.center)
                 }
             }
@@ -40,6 +36,6 @@ struct EmptyAssetsView_Previews: PreviewProvider {
     static var previews: some View {
         EmptyAssetsView()
             .frame(maxWidth: .infinity)
-            .background(Color.mirage)
+            .background(Color(UIColor.secondarySystemBackground))
     }
 }

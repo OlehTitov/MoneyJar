@@ -28,8 +28,6 @@
 		7CA930FC28B8F3D900C8286C /* JarWithCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */; };
 		7CA930FE28B8F5E200C8286C /* TextUnderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */; };
 		7CA9310028BBC90600C8286C /* RoundButtonMonotone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FF28BBC90600C8286C /* RoundButtonMonotone.swift */; };
-		7CA9310228BDE38100C8286C /* DuneRoadSunsetGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9310128BDE38100C8286C /* DuneRoadSunsetGradient.swift */; };
-		7CA9310428BDE6CC00C8286C /* PacificHeightsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9310328BDE6CC00C8286C /* PacificHeightsGradient.swift */; };
 		7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */; };
 		7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81928CF0F7500E87A6D /* CardBackgroundColor.swift */; };
 		7CB0E81C28D7A73A00E87A6D /* TimelineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81B28D7A73A00E87A6D /* TimelineTest.swift */; };
@@ -54,12 +52,10 @@
 		7CBAF33F28965F9300BD8BC9 /* AmountLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */; };
 		7CBAF34028965F9300BD8BC9 /* AmountLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */; };
 		7CBAF3422896664A00BD8BC9 /* ChevronStyleTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3412896664A00BD8BC9 /* ChevronStyleTextButton.swift */; };
-		7CBAF3432896664A00BD8BC9 /* ChevronStyleTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3412896664A00BD8BC9 /* ChevronStyleTextButton.swift */; };
 		7CBAF34428968A4300BD8BC9 /* MainThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF324288E7C7F00BD8BC9 /* MainThemeButton.swift */; };
 		7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */; };
 		7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CBAF3482896DED400BD8BC9 /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
-		7CBAF3492896DEDE00BD8BC9 /* CurrencySwipingSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */; };
 		7CBAF34E2897AB1600BD8BC9 /* StateControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34D2897AB1500BD8BC9 /* StateControllerTests.swift */; };
 		7CBAF3502898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
 		7CBAF3512898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
@@ -186,8 +182,6 @@
 		7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarWithCoinsView.swift; sourceTree = "<group>"; };
 		7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUnderButton.swift; sourceTree = "<group>"; };
 		7CA930FF28BBC90600C8286C /* RoundButtonMonotone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonMonotone.swift; sourceTree = "<group>"; };
-		7CA9310128BDE38100C8286C /* DuneRoadSunsetGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuneRoadSunsetGradient.swift; sourceTree = "<group>"; };
-		7CA9310328BDE6CC00C8286C /* PacificHeightsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacificHeightsGradient.swift; sourceTree = "<group>"; };
 		7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssetTypeView.swift; sourceTree = "<group>"; };
 		7CB0E81928CF0F7500E87A6D /* CardBackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackgroundColor.swift; sourceTree = "<group>"; };
 		7CB0E81B28D7A73A00E87A6D /* TimelineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTest.swift; sourceTree = "<group>"; };
@@ -389,17 +383,11 @@
 				7CEA503628B0AFDE00D33C45 /* EmptyAssetsView.swift */,
 				7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */,
 				7CA930F728B892FF00C8286C /* JarWithFlag.swift */,
-				7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */,
 				7CC1EB54286EF37E0022139C /* PopupButton.swift */,
 				7CBAF324288E7C7F00BD8BC9 /* MainThemeButton.swift */,
 				7CEA503A28B213A300D33C45 /* PrimaryButton.swift */,
-				7CEA503C28B21C1100D33C45 /* RoundButton.swift */,
-				7CA930FF28BBC90600C8286C /* RoundButtonMonotone.swift */,
 				7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */,
-				7CA9310128BDE38100C8286C /* DuneRoadSunsetGradient.swift */,
-				7CA9310328BDE6CC00C8286C /* PacificHeightsGradient.swift */,
 				7CEA503E28B26BFB00D33C45 /* MultiProgressView.swift */,
-				7CBAF3412896664A00BD8BC9 /* ChevronStyleTextButton.swift */,
 				7CFB9A0428E428F30049EA78 /* IconsLineWidthTest.swift */,
 			);
 			path = Components;
@@ -408,6 +396,10 @@
 		7CBAF3452896DDC600BD8BC9 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
+				7CEA503C28B21C1100D33C45 /* RoundButton.swift */,
+				7CC1EB56287093490022139C /* CurrencySwipingSelector.swift */,
+				7CBAF3412896664A00BD8BC9 /* ChevronStyleTextButton.swift */,
+				7CA930FF28BBC90600C8286C /* RoundButtonMonotone.swift */,
 				7CC1EB5C287193B30022139C /* GoldBar.swift */,
 				7CB0E81B28D7A73A00E87A6D /* TimelineTest.swift */,
 				7CC1EB5E28719A970022139C /* GoldCoin.swift */,
@@ -685,14 +677,12 @@
 			files = (
 				7CBAF333289037CA00BD8BC9 /* CurrencyConverter.swift in Sources */,
 				7CBAF3512898008700BD8BC9 /* MockStorageController.swift in Sources */,
-				7CBAF3432896664A00BD8BC9 /* ChevronStyleTextButton.swift in Sources */,
 				7CBAF32A288EE3BC00BD8BC9 /* Double+extension.swift in Sources */,
 				7CBAF32D288EE86000BD8BC9 /* ConfigureJarTests.swift in Sources */,
 				7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */,
 				7CBAF336289110E200BD8BC9 /* StateController.swift in Sources */,
 				7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */,
 				7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */,
-				7CBAF3492896DEDE00BD8BC9 /* CurrencySwipingSelector.swift in Sources */,
 				7CBAF3482896DED400BD8BC9 /* PopupButton.swift in Sources */,
 				7CBAF34428968A4300BD8BC9 /* MainThemeButton.swift in Sources */,
 				7CBAF3382891126900BD8BC9 /* ExchangeClient.swift in Sources */,
@@ -740,7 +730,6 @@
 				7CDA9903285F1BBF00EDCF42 /* LegacyTextField.swift in Sources */,
 				7CDDF61A28F6B78B00A4B706 /* BlurView.swift in Sources */,
 				7CBAF32F288FBD2600BD8BC9 /* ComplexBlueRadialBackground.swift in Sources */,
-				7CA9310228BDE38100C8286C /* DuneRoadSunsetGradient.swift in Sources */,
 				7CEC2A4F283547F5007A1897 /* HomeView.swift in Sources */,
 				7CC1EB55286EF37E0022139C /* PopupButton.swift in Sources */,
 				7CBAF3422896664A00BD8BC9 /* ChevronStyleTextButton.swift in Sources */,
@@ -764,7 +753,6 @@
 				7CC751E828C4EC7B00DBAF62 /* BlueGradientView.swift in Sources */,
 				7CDA98F12859F17700EDCF42 /* Bar.swift in Sources */,
 				7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */,
-				7CA9310428BDE6CC00C8286C /* PacificHeightsGradient.swift in Sources */,
 				7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */,
 				7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */,
 				7CC1EB5F28719A970022139C /* GoldCoin.swift in Sources */,

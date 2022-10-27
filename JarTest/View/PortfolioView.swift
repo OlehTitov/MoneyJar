@@ -9,11 +9,9 @@ import SwiftUI
 
 struct PortfolioView: View {
     @EnvironmentObject private var stateController: StateController
-//    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ZStack {
-//                BackgroundView()
                 List {
                     Rectangle()
                         .fill(Color.clear)
@@ -26,6 +24,7 @@ struct PortfolioView: View {
                     ForEach(filteredItems) { item in
                         HStack {
                             Text(item.assetName.rawValue)
+                                .bold()
                             Spacer()
                             Text(item.amountInBaseCurrency.currencyFormatter(with: locale, code: baseCurrency))
                         }
@@ -39,7 +38,6 @@ struct PortfolioView: View {
             .background(Color(UIColor.secondarySystemBackground))
             .navigationTitle("Asset structure")
             .navigationBarTitleDisplayMode(.large)
-//            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
         
     }
