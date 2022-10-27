@@ -11,12 +11,14 @@ struct AwardDetails: View {
     var award: Award
     var body: some View {
         ZStack {
-            BackgroundView()
-            VStack {
+            Color(UIColor.secondarySystemBackground)
+                .ignoresSafeArea()
+            VStack(spacing: 18) {
                 ConditionalAwardImage(award: award, size: 180)
                 Text(award.name)
-                    .font(Font.custom("RobotoMono-Medium", size: 52))
+                    .font(.customTitleFont)
                 Text(award.detailedText)
+                    .font(.customBodyFont)
             }
         }
     }
