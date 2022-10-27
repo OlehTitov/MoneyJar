@@ -21,10 +21,10 @@ struct AddBitCoinView: View {
             BackgroundView()
             VStack {
                 Spacer()
-                HStack(spacing: 16) {
+                HStack(spacing: 8) {
                     AmountLine(amount: amountString, showPlaceholder: showPlaceholder, placeholderText: "0")
                     Text("BTC")
-                        .font(Font.custom("RobotoMono-Medium", size: 46))
+                        .font(.customTitleFont)
                 }
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)
