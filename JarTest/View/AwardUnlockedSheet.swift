@@ -15,19 +15,24 @@ struct AwardUnlockedSheet: View {
     var award: Award
     var body: some View {
         ZStack {
-            BackgroundView()
+            Color(UIColor.secondarySystemBackground)
+                .ignoresSafeArea()
             VStack {
                 VStack{
                     Text("Award unlocked!")
-                        .font(Font.custom("RobotoMono-Medium", size: 20))
+                        .font(.customTitleFont)
                     Spacer()
                     VStack(spacing: 18){
                         Image(award.image)
                             .resizable()
                             .frame(width: 100, height: 100)
+                            .padding()
+                            .background(Color.white)
+                            .clipShape(Circle())
                         Text(award.name)
-                            .font(.title2.bold())
+                            .font(.customHeadlineFont)
                         Text(award.detailedText)
+                            .font(.customBodyFont)
                     }
                     Spacer()
                     Button(action: {
