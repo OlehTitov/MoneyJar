@@ -30,9 +30,9 @@ struct AddResultView: View {
                     .padding()
                 VStack(spacing: 12) {
                     Text(titleText)
-                        .subtitleStyle()
-                    Text(amount).font(.subheadline.bold()) +
-                    Text(descriptionText).font(.subheadline)
+                        .font(.customTitleFont)
+                    Text(amount).font(.customBodyFont.bold()) +
+                    Text(descriptionText).font(.customBodyFont)
                 }
                 .padding()
                 .multilineTextAlignment(.center)
