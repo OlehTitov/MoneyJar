@@ -59,42 +59,47 @@ extension HomeView {
                             JarWithCoinsView(progress: stateController.account.progress)
                                 .padding(.bottom, 60)
                                 .padding(.top, 40)
-                            VStack(alignment: .leading) {
-                                fillJarButton()
-                                    .offset(y: -60)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                ScrollView(.vertical, showsIndicators: false) {
-                                    VStack(alignment: .leading, spacing: 8) {
-                                        Text("Balance")
-                                            .foregroundColor(.secondary)
-                                            .font(.customHeadlineFont)
-                                        newTotalAmount(size: 50, decimalSize: 32)
-                                    }
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    VStack(alignment: .leading, spacing: 8) {
-                                        Text(stateController.account.name)
-                                            .font(.customHeadlineFont)
-                                        CustomProgressView(progress: stateController.account.progress/100)
-                                        HStack {
-                                            Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
-                                            Spacer()
-                                            goalAmount()
-                                        }
-                                        .font(.customBodyFont)
+                            ScrollView(.vertical, showsIndicators: false) {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Balance")
                                         .foregroundColor(.secondary)
-                                    }
-                                    .padding(24)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 12)
-                                            .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
-                                    )
+                                        .font(.customHeadlineFont)
+                                    newTotalAmount(size: 50, decimalSize: 32)
                                 }
-                                .frame(maxHeight: .infinity)
-                                .offset(y: -44)
+                                .padding(.vertical)
+                                .padding(.top, 24)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(stateController.account.name)
+                                        .font(.customHeadlineFont)
+                                    CustomProgressView(progress: stateController.account.progress/100)
+                                    HStack {
+                                        Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
+                                        Spacer()
+                                        goalAmount()
+                                    }
+                                    .font(.customBodyFont)
+                                    .foregroundColor(.secondary)
+                                }
+                                .padding(24)
+                                .padding(.vertical, 8)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 24)
+                                        .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
+                                )
+                                .padding(.vertical)
                             }
+                            .frame(maxHeight: .infinity)
                             .padding()
-                            .frame(maxWidth: .infinity, alignment: .leading)
+//                            .offset(y: -44)
                             .background(Color(uiColor: .secondarySystemBackground))
+                            .overlay {
+                                VStack {
+                                    fillJarButton()
+                                }
+                                .frame(maxHeight: .infinity, alignment: .top)
+                                .offset(y: -50)
+                            }
                         }
                         Button {
                             mainStack.append(.awards)
