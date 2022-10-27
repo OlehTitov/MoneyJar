@@ -29,20 +29,35 @@ struct SettingsView: View {
                         //Jar name and Goal amount
                         ForEach(SettingsRoute.general, id: \.self) { route in
                             NavigationLink(value: route) {
-                                Label(route.rawValue, systemImage: route.icon)
+                                Label {
+                                    Text(route.rawValue)
+                                        .font(.customBodyFont)
+                                }icon: {
+                                    Image(systemName: route.icon)
+                                }
+//                                Label(route.rawValue, systemImage: route.icon)
                             }
                         }
                         //Base currency
-                        Picker(selection: $selectedCurrency, label: Label("Base currency", systemImage: "dollarsign")) {
+                        Picker(
+                            selection: $selectedCurrency,
+                            label: Label {
+                                Text("Base currency")
+                                    .font(.customBodyFont)
+                            }icon: {
+                                Image(systemName: "dollarsign")
+                            }
+                        ) {
                             ForEach(ForeignCurrency.allCases, id: \.self) { currency in
                                 Text(currency.longDescription)
+                                    .font(.customBodyFont)
                             }
                         }
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     ///General Settings
-                    Section(header: Text("General").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                    Section(header: Text("General").font(.customBodyFont)) {
                         //Sound settings
                         Label {
                             Toggle("Sound", isOn: $settingsStore.soundIsOn)
@@ -62,11 +77,12 @@ struct SettingsView: View {
                     .listRowSeparator(.hidden)
                     
                     ///Get in touch
-                    Section(header: Text("Get in touch").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                    Section(header: Text("Get in touch").font(.customBodyFont)) {
                         //Email
                         Label {
                             HStack {
                                 Text("Email")
+                                    .font(.customBodyFont)
                                 Spacer()
                                 Image(systemName: "arrow.up.right")
                             }
@@ -87,20 +103,31 @@ struct SettingsView: View {
                         //Rate in AppStore
                         Link(destination: URL(string: StateController.appStoreReviewLink)!) {
                             HStack {
-                                Label("Rate in AppStore", systemImage: "star")
+                                Label {
+                                    Text("Rate in AppStore")
+                                        .font(.customBodyFont)
+                                }icon: {
+                                    Image(systemName: "star")
+                                }
                                 Spacer()
                                 Image(systemName: "arrow.up.right")
                             }
                         }
+                        .buttonStyle(.plain)
 
                     }
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     
                     ///Other
-                    Section(header: Text("Other").font(Font.custom("RobotoMono-Medium", size: 16))) {
+                    Section(header: Text("Other").font(.customBodyFont)) {
                         NavigationLink(value: SettingsRoute.credits) {
-                            Label(SettingsRoute.credits.rawValue, systemImage: SettingsRoute.credits.icon)
+                            Label {
+                                Text(SettingsRoute.credits.rawValue)
+                                    .font(.customBodyFont)
+                            }icon: {
+                                Image(systemName: SettingsRoute.credits.icon)
+                            }
                         }
                     }
                     .listRowBackground(Color.clear)
