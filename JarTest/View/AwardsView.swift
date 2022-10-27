@@ -38,6 +38,7 @@ struct AwardsView: View {
                         }label: {
                             AwardThumbnailView(award: award)
                         }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding()
