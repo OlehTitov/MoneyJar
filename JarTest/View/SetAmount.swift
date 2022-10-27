@@ -83,7 +83,7 @@ extension SetAmount {
                             )
                         }
                         Text(headline)
-                            .font(.customHeadlineFont)
+                            .font(.customBodyFont)
                         
                         AmountLine(
                             amount: viewModel.amount,

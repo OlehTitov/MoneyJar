@@ -65,9 +65,9 @@ extension HomeView {
                                     .frame(maxWidth: .infinity, alignment: .center)
                                 ScrollView(.vertical, showsIndicators: false) {
                                     VStack(alignment: .leading, spacing: 8) {
-                                        Text("Balance".uppercased())
+                                        Text("Balance")
                                             .foregroundColor(.secondary)
-                                            .font(.customBodyFont)
+                                            .font(.customHeadlineFont)
                                         newTotalAmount(size: 50, decimalSize: 32)
                                     }
                                     .frame(maxWidth: .infinity, alignment: .leading)

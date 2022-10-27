@@ -31,7 +31,7 @@ struct SettingsView: View {
                             NavigationLink(value: route) {
                                 Label {
                                     Text(route.rawValue)
-                                        .font(.customBodyFont)
+                                        .font(.customHeadlineFont)
                                 }icon: {
                                     Image(systemName: route.icon)
                                 }
@@ -43,7 +43,7 @@ struct SettingsView: View {
                             selection: $selectedCurrency,
                             label: Label {
                                 Text("Base currency")
-                                    .font(.customBodyFont)
+                                    .font(.customHeadlineFont)
                             }icon: {
                                 Image(systemName: "dollarsign")
                             }
@@ -60,7 +60,10 @@ struct SettingsView: View {
                     Section(header: Text("General").font(.customBodyFont)) {
                         //Sound settings
                         Label {
-                            Toggle("Sound", isOn: $settingsStore.soundIsOn)
+                            Toggle(isOn: $settingsStore.soundIsOn) {
+                                Text("Sound")
+                                    .font(.customHeadlineFont)
+                            }
                                 .tint(Color.accentColor)
                         } icon: {
                             Image(systemName: "music.note")
@@ -82,7 +85,7 @@ struct SettingsView: View {
                         Label {
                             HStack {
                                 Text("Email")
-                                    .font(.customBodyFont)
+                                    .font(.customHeadlineFont)
                                 Spacer()
                                 Image(systemName: "arrow.up.right")
                             }
@@ -105,7 +108,7 @@ struct SettingsView: View {
                             HStack {
                                 Label {
                                     Text("Rate in AppStore")
-                                        .font(.customBodyFont)
+                                        .font(.customHeadlineFont)
                                 }icon: {
                                     Image(systemName: "star")
                                 }
@@ -124,7 +127,7 @@ struct SettingsView: View {
                         NavigationLink(value: SettingsRoute.credits) {
                             Label {
                                 Text(SettingsRoute.credits.rawValue)
-                                    .font(.customBodyFont)
+                                    .font(.customHeadlineFont)
                             }icon: {
                                 Image(systemName: SettingsRoute.credits.icon)
                             }
