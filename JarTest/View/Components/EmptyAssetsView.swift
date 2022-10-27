@@ -19,9 +19,10 @@ struct EmptyAssetsView: View {
                     .clipShape(Circle())
                 VStack(spacing: 12) {
                     Text("Your jar is empty")
-                        .font(.title.bold())
+                        .font(.customHeadlineFont)
                         .multilineTextAlignment(.center)
                     Text("Add some assets and you'll see your transactions here")
+                        .font(.customBodyFont)
                         .multilineTextAlignment(.center)
                 }
             }
