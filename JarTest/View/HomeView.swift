@@ -63,35 +63,36 @@ extension HomeView {
                                 VStack(alignment: .leading, spacing: 8) {
                                     Text("Balance")
                                         .foregroundColor(.secondary)
-                                        .font(.customHeadlineFont)
+                                        .font(.customBodyFont)
                                     newTotalAmount(size: 50, decimalSize: 32)
                                 }
                                 .padding(.vertical)
                                 .padding(.top, 24)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                VStack(alignment: .leading, spacing: 8) {
+                                VStack(alignment: .leading, spacing: 16) {
                                     Text(stateController.account.name)
-                                        .font(.customHeadlineFont)
+                                        .foregroundColor(.secondary)
+                                        .font(.customBodyFont)
                                     CustomProgressView(progress: stateController.account.progress/100)
                                     HStack {
                                         Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
                                         Spacer()
                                         goalAmount()
                                     }
-                                    .font(.customBodyFont)
-                                    .foregroundColor(.secondary)
+                                    .font(.customHeadlineFont)
+//                                    .foregroundColor(.secondary)
                                 }
-                                .padding(24)
-                                .padding(.vertical, 8)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 24)
-                                        .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
-                                )
-                                .padding(.vertical)
+                                .padding(.vertical, 24)
+//                                .padding()
+//                                .padding(.vertical, 8)
+//                                .background(
+//                                    RoundedRectangle(cornerRadius: 24)
+//                                        .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
+//                                )
+//                                .padding(.vertical)
                             }
                             .frame(maxHeight: .infinity)
                             .padding()
-//                            .offset(y: -44)
                             .background(Color(uiColor: .secondarySystemBackground))
                             .overlay {
                                 VStack {
