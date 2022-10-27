@@ -179,7 +179,8 @@ extension ForeignCurrency {
 extension ForeignCurrency {
     var formatter: NumberFormatter {
         let numberFormatter = NumberFormatter()
-        numberFormatter.locale = Locale(identifier: self.locale)
+//        numberFormatter.locale = Locale(identifier: self.locale)
+        numberFormatter.locale = Locale.current
         numberFormatter.numberStyle = .currency
         numberFormatter.currencyCode = self.rawValue
         return numberFormatter
