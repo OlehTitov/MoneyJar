@@ -31,6 +31,7 @@ struct MultiProgressView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .cornerRadius(8)
                 .onAppear {
                     if !items.isEmpty {
                         show = true
@@ -38,14 +39,13 @@ struct MultiProgressView: View {
                 }
                 .frame(height: height)
                 VStack(spacing: 8) {
-                    HStack {
-                        Text("0")
-                            .font(.customCaptionFont)
-                        Spacer()
-                        Text("\(Int(goalAmountOrActualAmount))")
-                            .font(.customCaptionFont)
-                    }
-                    .font(.caption)
+//                    HStack {
+//                        Text("0")
+//                        Spacer()
+//                        Text("\(Int(goalAmountOrActualAmount))")
+//                    }
+//                    .font(.customCaptionFont)
+//                    .foregroundColor(.secondary)
                     HStack(spacing: 12) {
                         ForEach(items) { item in
                             HStack(spacing: 4) {
@@ -54,18 +54,19 @@ struct MultiProgressView: View {
                                     .frame(width: 8, height: 8)
                                 Text(item.assetName.rawValue)
                                     .font(.customCaptionFont)
+                                    .foregroundColor(.secondary)
                             }
                         }
                         Spacer()
                     }
                 }
             }
-            .padding()
-            .background(
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
-            )
-            .padding(.vertical)
+//            .padding()
+//            .background(
+//                RoundedRectangle(cornerRadius: 12)
+//                    .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
+//            )
+//            .padding(.vertical)
         }
     }
     //Find out may be saved amount is bigger than goal

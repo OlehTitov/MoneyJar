@@ -75,11 +75,11 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
     var color: Color {
         switch assetName {
         case .Currency:
-            return Color("honeysuckle")
+            return Color.red
         case .Gold:
-            return Color("mimosa")
+            return Color.yellow
         case .Crypto:
-            return Color("mauve")
+            return Color.orange
         }
     }
 }

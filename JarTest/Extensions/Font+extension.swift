@@ -11,7 +11,7 @@ import SwiftUI
 extension Font {
 
     static var customCaptionFont: Font {
-        Font.custom("Montserrat-Regular", size: 14, relativeTo: .caption)
+        Font.custom("Montserrat-Bold", size: 13, relativeTo: .caption)
     }
     
     static var customBodyFont: Font {

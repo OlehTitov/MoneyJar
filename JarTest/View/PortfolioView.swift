@@ -15,19 +15,20 @@ struct PortfolioView: View {
                 List {
                     Rectangle()
                         .fill(Color.clear)
-                        .frame(height: 120)
+                        .frame(height: 60)
                         .overlay {
                             MultiProgressView(totalAmount: stateController.account.goalAmount, items: filteredItems, height: 30)
                         }
+                        .padding(.top)
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden, edges: .all)
                     ForEach(filteredItems) { item in
                         HStack {
                             Text(item.assetName.rawValue)
-                                .font(.customBodyFont)
+                                .font(.customHeadlineFont)
                             Spacer()
                             Text(item.amountInBaseCurrency.currencyFormatter(with: locale, code: baseCurrency))
-                                .font(.customBodyFont)
+                                .font(.customHeadlineFont)
                         }
                     }
                     .listRowBackground(Color.clear)
