@@ -19,6 +19,7 @@
 		7C0ADA82290C17A300206341 /* ForeignCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA81290C17A300206341 /* ForeignCurrency.swift */; };
 		7C0ADA84290C670800206341 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA83290C670800206341 /* Crypto.swift */; };
 		7C0ADA86290C678600206341 /* Crypto+CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA85290C678600206341 /* Crypto+CryptoCurrency.swift */; };
+		7C0ADA89290C6A2B00206341 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA88290C6A2B00206341 /* Award.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -181,6 +182,7 @@
 		7C0ADA81290C17A300206341 /* ForeignCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignCurrency.swift; sourceTree = "<group>"; };
 		7C0ADA83290C670800206341 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		7C0ADA85290C678600206341 /* Crypto+CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Crypto+CryptoCurrency.swift"; sourceTree = "<group>"; };
+		7C0ADA88290C6A2B00206341 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 			children = (
 				7CC8FB0328E8A9210032FF3E /* Awards.json */,
 				7CDDF60F28ED7C4B00A4B706 /* AwardsManager.swift */,
+				7C0ADA88290C6A2B00206341 /* Award.swift */,
 			);
 			path = Awards;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */,
 				7CDA98E9285746D500EDCF42 /* TriangleShape.swift in Sources */,
 				7CEA503B28B213A400D33C45 /* PrimaryButton.swift in Sources */,
+				7C0ADA89290C6A2B00206341 /* Award.swift in Sources */,
 				7CBAF35A28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */,
 				7CDDF61828F4258500A4B706 /* SettingsStore.swift in Sources */,
 				7CC684D028C947270067E26F /* CustomPickerSwitcher.swift in Sources */,
