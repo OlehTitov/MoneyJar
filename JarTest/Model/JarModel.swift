@@ -80,52 +80,6 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
     }
 }
 
-
-
-
-
-
-
-//enum BaseCurrency : Codable, CaseIterable {
-//    case usd
-//    case euro
-//    case pln
-//
-//    var name : String {
-//        switch self {
-//        case .usd:
-//            return "USD"
-//        case .euro:
-//            return "EUR"
-//        case .pln:
-//            return "PLN"
-//        }
-//    }
-//
-//    var color : Color {
-//        switch self {
-//        case .usd:
-//            return Color(hue: 0.39, saturation: 0.88, brightness: 0.81)
-//        case .euro:
-//            return Color(hue: 0.56, saturation: 0.88, brightness: 0.81)
-//        case .pln:
-//            return Color(hue: 0.77, saturation: 0.88, brightness: 0.81)
-//        }
-//    }
-//
-//    var colorsForGradient : [Color] {
-//        switch self {
-//        case .usd:
-//            return [Color(hue: 0.23, saturation: 0.76, brightness: 0.75), Color(hue: 0.3, saturation: 0.67, brightness: 0.7)]
-//        case .euro:
-//            return [Color(hue: 0.605, saturation: 1, brightness: 1), Color(hue: 0.663, saturation: 1, brightness: 1)]
-//        case .pln:
-//            return [Color(hue: 0.663, saturation: 0.76, brightness: 0.75), Color(hue: 0.3, saturation: 0.67, brightness: 0.7)]
-//        }
-//    }
-//
-//}
-
 struct Cash : Codable, Hashable, Equatable {
     var symbol : ForeignCurrency
     var amount : Double
