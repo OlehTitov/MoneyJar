@@ -84,21 +84,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
 
 
 
-extension Gold {
-    enum MeasurementUnit : String, CaseIterable, Codable {
-        case grams = "grams"
-        case ounces = "ounce"
-        
-        func abbreviate() -> String {
-            switch self {
-            case .grams:
-                return "g"
-            case .ounces:
-                return "oz"
-            }
-        }
-    }
-}
+
 
 //enum BaseCurrency : Codable, CaseIterable {
 //    case usd
