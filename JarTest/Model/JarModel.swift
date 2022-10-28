@@ -58,11 +58,7 @@ struct MasterAccount : Codable {
     }
 }
 
-enum Asset : Codable, Hashable, Equatable {
-    case gold(Gold)
-    case cash(Cash)
-    case crypto(Crypto)
-}
+
 
 struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
     var assetName: AssetName

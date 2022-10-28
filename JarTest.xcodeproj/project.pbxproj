@@ -11,6 +11,7 @@
 		7C0ADA6F290910D600206341 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6E290910D600206341 /* CustomProgressView.swift */; };
 		7C0ADA71290A5E8600206341 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ADA70290A5E8600206341 /* Montserrat */; };
 		7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA74290A668E00206341 /* Font+extension.swift */; };
+		7C0ADA78290C0EC600206341 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA77290C0EC600206341 /* Asset.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -165,6 +166,7 @@
 		7C0ADA6E290910D600206341 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		7C0ADA70290A5E8600206341 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		7C0ADA74290A668E00206341 /* Font+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
+		7C0ADA77290C0EC600206341 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -307,6 +309,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0ADA76290C0E7B00206341 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ADA77290C0EC600206341 /* Asset.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		7C1D099528AD3EE800C82211 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,6 +465,7 @@
 			children = (
 				7CFB99E328DE71150049EA78 /* Info.plist */,
 				7CEC2A4C283547F5007A1897 /* JarTestApp.swift */,
+				7C0ADA76290C0E7B00206341 /* Assets */,
 				7CC8FB0228E8A22F0032FF3E /* Data */,
 				7CEF6C27286470160013EA3D /* Model */,
 				7C1D099528AD3EE800C82211 /* Sounds */,
@@ -720,6 +731,7 @@
 				7CC1EB63287496300022139C /* AddGoldView2.swift in Sources */,
 				7CEF6C262863971D0013EA3D /* ExchangeClient.swift in Sources */,
 				7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */,
+				7C0ADA78290C0EC600206341 /* Asset.swift in Sources */,
 				7CBAF3532898039700BD8BC9 /* MockExchangeClient.swift in Sources */,
 				7CDDF61428EFFB8F00A4B706 /* RollingCounterAnimation.swift in Sources */,
 				7C1D099B28AE9F0500C82211 /* TabBarView.swift in Sources */,
