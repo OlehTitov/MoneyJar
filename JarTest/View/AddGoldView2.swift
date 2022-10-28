@@ -40,9 +40,11 @@ struct AddGoldView2: View {
                 VStack {
                     NumberPadView(text: $vm.weight, showPlaceholder: $vm.showPlaceholder, amountAsDouble: $vm.amountAsDouble, presentAlert: $vm.presentAlert, alertDescription: $alertDescription, showDecimal: true, currency: .usd, isForCrypto: true)
                         .padding()
-                    Button(action: {vm.addGoldToAccount(sc: stateController)}, label: {})
-                        .buttonStyle(MyButtonStyle(title: "Add gold"))
-                        .disabled(vm.weight == "")
+                    Button("Add gold") {
+                        vm.addGoldToAccount(sc: stateController)
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
+                    .disabled(vm.weight == "")
                 }
                 
             }

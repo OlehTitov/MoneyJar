@@ -35,15 +35,14 @@ struct AwardUnlockedSheet: View {
                             .font(.customBodyFont)
                     }
                     Spacer()
-                    Button(action: {
+                    Button("OK") {
                         self.show = false
                         DispatchQueue.main.async {
                             stateController.markAwardAsPresented(award: award)
                         }
-                        
                         print(stateController.account.awards)
-                    }, label: {})
-                    .buttonStyle(MyButtonStyle(title: "OK"))
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
                 }
                 .padding()
             }

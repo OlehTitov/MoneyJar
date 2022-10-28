@@ -51,8 +51,10 @@ struct ChangeJarNameView: View {
                         Spacer()
                     }
                     .safeAreaInset(edge: .bottom) {
-                        Button(action: {doneTapped()}, label: {})
-                            .buttonStyle(MyButtonStyle(title: "Done"))
+                        Button("Done") {
+                            doneTapped()
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
                     }
                 }
                 

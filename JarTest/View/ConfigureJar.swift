@@ -83,10 +83,12 @@ extension ConfigureJar {
                             keyboard: .alphabet
                         )
                         Spacer()
-                        Button(action: {nextPressed()}, label: {})
-                            .disabled(checkButtonDisabled())
-                            .buttonStyle(MyButtonStyle(title: "Create Jar"))
-                            .padding(.bottom)
+                        Button("Create Jar") {
+                            nextPressed()
+                        }
+                        .buttonStyle(PrimaryButtonStyle())
+                        .disabled(checkButtonDisabled())
+                        .padding(.bottom)
                     }
                 }
             }

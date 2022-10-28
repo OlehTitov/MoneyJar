@@ -39,8 +39,10 @@ struct AddResultView: View {
                 Spacer()
             }
             .safeAreaInset(edge: .bottom) {
-                Button(action: dismissView, label: {})
-                    .buttonStyle(MyButtonStyle(title: "Done"))
+                Button("Done") {
+                    dismissView()
+                }
+                .buttonStyle(PrimaryButtonStyle())
             }
         }
         .onAppear {

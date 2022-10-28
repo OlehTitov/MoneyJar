@@ -38,9 +38,11 @@ struct AddBitCoinView: View {
                             Button("OK", role: .cancel, action: {})
                         }
                         .padding()
-                    Button(action: addBitCoinToAccount, label: {})
-                        .buttonStyle(MyButtonStyle(title: "Add crypto"))
-                        .disabled(amountString == "")
+                    Button("Add crypto") {
+                        addBitCoinToAccount()
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
+                    .disabled(amountString == "")
                 }
             }
             .sheet(isPresented: $presentResult, onDismiss: {dismissView()}) {

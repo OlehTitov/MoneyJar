@@ -54,11 +54,10 @@ struct AddCashView3: View {
                     .padding()
                     
                     //Add button
-                    Button(
-                        action: {vm.addCashToAccount(sc: stateController)},
-                        label: {}
-                    )
-                    .buttonStyle(MyButtonStyle(title: "Add currency"))
+                    Button("Add currency") {
+                        vm.addCashToAccount(sc: stateController)
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
                     .disabled(vm.amountAsDouble == 0.0)
                 }
             })

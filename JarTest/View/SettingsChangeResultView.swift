@@ -29,8 +29,10 @@ struct SettingsChangeResultView: View {
                 Spacer()
             }
             .safeAreaInset(edge: .bottom) {
-                Button(action: action, label: {})
-                    .buttonStyle(MyButtonStyle(title: "Done"))
+                Button("Done") {
+                    action()
+                }
+                .buttonStyle(PrimaryButtonStyle())
             }
         }
     }

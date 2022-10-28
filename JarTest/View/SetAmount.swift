@@ -95,17 +95,15 @@ extension SetAmount {
                     }
                     Spacer()
                     
-                    Button(
-                        action: {
-                            viewModel.updateAccount(
-                                sc: stateController,
-                                selectedCurrency: selectedCurrency,
-                                jarName: jarName
-                            )
-                            jarIsCreated = true
-                        }, label: {}
-                    )
-                    .buttonStyle(MyButtonStyle(title: "Start saving"))
+                    Button("Start saving") {
+                        viewModel.updateAccount(
+                            sc: stateController,
+                            selectedCurrency: selectedCurrency,
+                            jarName: jarName
+                        )
+                        jarIsCreated = true
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
                     .disabled(viewModel.isButtonDisabled)
                     
                     NumberPadView(
