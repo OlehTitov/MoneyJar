@@ -39,13 +39,6 @@ struct MultiProgressView: View {
                 }
                 .frame(height: height)
                 VStack(spacing: 8) {
-//                    HStack {
-//                        Text("0")
-//                        Spacer()
-//                        Text("\(Int(goalAmountOrActualAmount))")
-//                    }
-//                    .font(.customCaptionFont)
-//                    .foregroundColor(.secondary)
                     HStack(spacing: 12) {
                         ForEach(items) { item in
                             HStack(spacing: 4) {
@@ -61,12 +54,6 @@ struct MultiProgressView: View {
                     }
                 }
             }
-//            .padding()
-//            .background(
-//                RoundedRectangle(cornerRadius: 12)
-//                    .strokeBorder(.tertiary, style: StrokeStyle(lineWidth: 1))
-//            )
-//            .padding(.vertical)
         }
     }
     //Find out may be saved amount is bigger than goal
