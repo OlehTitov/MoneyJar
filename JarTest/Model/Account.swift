@@ -35,15 +35,6 @@ struct Account : Codable {
         return result.roundTo(places: 2)
     }
     
-//    func balanceWithoutDecimals(localeCode: String) -> String {
-//        let formatedBalance = balance.toStringWithTwoDecimals()
-//        let locale = NSLocale(localeIdentifier: localeCode)
-//        let separator = locale.decimalSeparator
-//        let currencyName = locale.currencySymbol
-//        let components = formatedBalance.components(separatedBy: separator)
-//        return String(components[0])
-//    }
-    
     mutating func add(_ asset: Asset) {
         assets.append(asset)
     }
