@@ -33,7 +33,7 @@ struct NumberPadView: View {
                         .frame(height: 50)
                         .frame(maxWidth: .infinity)
                         .foregroundColor(
-                            Color.white.opacity(backgroundColoringLogic(key: digit))
+                            Color(UIColor.tertiarySystemBackground).opacity(backgroundColoringLogic(key: digit))
                         )
                         .overlay {
                             if digit == .delete {
@@ -155,7 +155,7 @@ struct NumberPadView: View {
     }
     
     func backgroundColoringLogic(key: Digit) -> Double {
-        let normalState = 0.3
+        let normalState = 1.0
         switch key {
         case .one:
             return normalState
