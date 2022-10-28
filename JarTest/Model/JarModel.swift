@@ -80,11 +80,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
     }
 }
 
-struct Cash : Codable, Hashable, Equatable {
-    var symbol : ForeignCurrency
-    var amount : Double
-    var dateAdded : Date
-}
+
 
 enum ForeignCurrency : String, Codable, CaseIterable {
     case chf = "CHF"
