@@ -21,7 +21,7 @@ struct ChangeAmountView: View {
                 AmountLine(
                     amount: viewModel.amount,
                     showPlaceholder: viewModel.showPlaceholder,
-                    placeholderText: stateController.account.baseCurrency.placeholder(amount: stateController.account.goalAmount)
+                    placeholderText: stateController.account.baseCurrency.placeholder(amount: stateController.account.goalAmount), font: .customLargeTitleFont
                 )
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)

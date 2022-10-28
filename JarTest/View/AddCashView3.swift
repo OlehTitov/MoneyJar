@@ -28,7 +28,8 @@ struct AddCashView3: View {
                 AmountLine(
                     amount: vm.amount,
                     showPlaceholder: vm.showPlaceholder,
-                    placeholderText: vm.generatePlaceholder()
+                    placeholderText: vm.generatePlaceholder(),
+                    font: .customLargeTitleFont
                 )
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)

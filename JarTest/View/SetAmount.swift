@@ -88,7 +88,7 @@ extension SetAmount {
                         AmountLine(
                             amount: viewModel.amount,
                             showPlaceholder: viewModel.showPlaceholder,
-                            placeholderText: selectedCurrency.placeholder(amount: 0.0)
+                            placeholderText: selectedCurrency.placeholder(amount: 0.0), font: .customTitleFont
                         )
                         .minimumScaleFactor(0.5)
                         .frame(height: 100)

@@ -20,10 +20,11 @@ struct AddGoldView2: View {
             VStack {
                 Spacer()
                 HStack(spacing: 0) {
-                    AmountLine(amount: vm.weight, showPlaceholder: vm.showPlaceholder, placeholderText: "0")
+                    AmountLine(amount: vm.weight, showPlaceholder: vm.showPlaceholder, placeholderText: "0", font: .customLargeTitleFont)
                     Text(vm.selectedUnit == .grams ? "g" : "oz")
-                        .font(.customTitleFont)
+                        
                 }
+                .font(.customLargeTitleFont)
                 .padding()
                 Spacer()
             }

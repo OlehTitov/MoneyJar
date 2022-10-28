@@ -22,9 +22,9 @@ struct AddBitCoinView: View {
             VStack {
                 Spacer()
                 HStack(spacing: 8) {
-                    AmountLine(amount: amountString, showPlaceholder: showPlaceholder, placeholderText: "0")
+                    AmountLine(amount: amountString, showPlaceholder: showPlaceholder, placeholderText: "0", font: .customLargeTitleFont)
                     Text("BTC")
-                        .font(.customTitleFont)
+                        .font(.customLargeTitleFont)
                 }
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)
