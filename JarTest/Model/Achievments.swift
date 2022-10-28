@@ -10,8 +10,4 @@ import SwiftUI
 
 
 
-enum AwardStatus: String, Codable, Hashable {
-    case locked
-    case completed
-    case unavailable
-}
+
