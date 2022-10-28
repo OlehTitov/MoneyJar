@@ -342,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				7CC8FB0328E8A9210032FF3E /* Awards.json */,
+				7CDDF60F28ED7C4B00A4B706 /* AwardsManager.swift */,
 			);
 			path = Awards;
 			sourceTree = "<group>";
@@ -537,7 +538,6 @@
 			children = (
 				7CDA98F6285B622600EDCF42 /* StateController.swift */,
 				7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */,
-				7CDDF60F28ED7C4B00A4B706 /* AwardsManager.swift */,
 				7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */,
 				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
 				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
