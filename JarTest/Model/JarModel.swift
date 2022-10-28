@@ -80,12 +80,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
     }
 }
 
-struct Gold : Codable, Hashable, Equatable {
-    var type : GoldType
-    var unit : MeasurementUnit
-    var weight : Double
-    var dateAdded : Date
-}
+
 
 extension Gold {
     enum GoldType : String, CaseIterable , Codable {

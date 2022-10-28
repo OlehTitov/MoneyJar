@@ -12,6 +12,7 @@
 		7C0ADA71290A5E8600206341 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ADA70290A5E8600206341 /* Montserrat */; };
 		7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA74290A668E00206341 /* Font+extension.swift */; };
 		7C0ADA78290C0EC600206341 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA77290C0EC600206341 /* Asset.swift */; };
+		7C0ADA7A290C0F6A00206341 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA79290C0F6A00206341 /* Gold.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -167,6 +168,7 @@
 		7C0ADA70290A5E8600206341 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
 		7C0ADA74290A668E00206341 /* Font+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		7C0ADA77290C0EC600206341 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		7C0ADA79290C0F6A00206341 /* Gold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				7C0ADA77290C0EC600206341 /* Asset.swift */,
+				7C0ADA79290C0F6A00206341 /* Gold.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				7CEF6C29286470340013EA3D /* ForeignExchange.swift in Sources */,
 				7CFB99FF28E255AF0049EA78 /* SeamlessIconBackground.swift in Sources */,
 				7CC751EA28C6517500DBAF62 /* CompoundAssetGridItem.swift in Sources */,
+				7C0ADA7A290C0F6A00206341 /* Gold.swift in Sources */,
 				7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */,
 				7CB0E81C28D7A73A00E87A6D /* TimelineTest.swift in Sources */,
