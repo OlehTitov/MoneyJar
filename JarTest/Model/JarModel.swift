@@ -82,12 +82,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
 
 
 
-extension Gold {
-    enum GoldType : String, CaseIterable , Codable {
-        case bar = "bar"
-        case coin = "coin"
-    }
-}
+
 
 extension Gold {
     enum MeasurementUnit : String, CaseIterable, Codable {

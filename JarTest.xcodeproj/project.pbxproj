@@ -13,6 +13,7 @@
 		7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA74290A668E00206341 /* Font+extension.swift */; };
 		7C0ADA78290C0EC600206341 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA77290C0EC600206341 /* Asset.swift */; };
 		7C0ADA7A290C0F6A00206341 /* Gold.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA79290C0F6A00206341 /* Gold.swift */; };
+		7C0ADA7C290C0FF200206341 /* Gold+GoldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -169,6 +170,7 @@
 		7C0ADA74290A668E00206341 /* Font+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+extension.swift"; sourceTree = "<group>"; };
 		7C0ADA77290C0EC600206341 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		7C0ADA79290C0F6A00206341 /* Gold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gold.swift; sourceTree = "<group>"; };
+		7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gold+GoldType.swift"; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			children = (
 				7C0ADA77290C0EC600206341 /* Asset.swift */,
 				7C0ADA79290C0F6A00206341 /* Gold.swift */,
+				7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 				7CDDF61C28F98F7500A4B706 /* JarBackgroundView.swift in Sources */,
 				7CDA98F7285B622600EDCF42 /* StateController.swift in Sources */,
 				7CEA503F28B26BFB00D33C45 /* MultiProgressView.swift in Sources */,
+				7C0ADA7C290C0FF200206341 /* Gold+GoldType.swift in Sources */,
 				7CBAF35728987DDD00BD8BC9 /* StorageControllerProtocol.swift in Sources */,
 				7CEA503528AFC7AB00D33C45 /* Date+extension.swift in Sources */,
 				7CA9310028BBC90600C8286C /* RoundButtonMonotone.swift in Sources */,
