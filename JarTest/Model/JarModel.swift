@@ -82,14 +82,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
 
 
 
-enum ForeignCurrency : String, Codable, CaseIterable {
-    case chf = "CHF"
-    case usd = "USD"
-    case eur = "EUR"
-    case pln = "PLN"
-    case gbp = "GBP"
-    case uah = "UAH"
-}
+
 
 extension ForeignCurrency {
     func getSymbol(forCurrencyCode code: String) -> String? {

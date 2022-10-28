@@ -16,6 +16,7 @@
 		7C0ADA7C290C0FF200206341 /* Gold+GoldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */; };
 		7C0ADA7E290C10AE00206341 /* Gold+MeasurementUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA7D290C10AE00206341 /* Gold+MeasurementUnit.swift */; };
 		7C0ADA80290C127A00206341 /* Cash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA7F290C127A00206341 /* Cash.swift */; };
+		7C0ADA82290C17A300206341 /* ForeignCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA81290C17A300206341 /* ForeignCurrency.swift */; };
 		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099228ABF28F00C82211 /* AnimatableNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
@@ -175,6 +176,7 @@
 		7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gold+GoldType.swift"; sourceTree = "<group>"; };
 		7C0ADA7D290C10AE00206341 /* Gold+MeasurementUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gold+MeasurementUnit.swift"; sourceTree = "<group>"; };
 		7C0ADA7F290C127A00206341 /* Cash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cash.swift; sourceTree = "<group>"; };
+		7C0ADA81290C17A300206341 /* ForeignCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignCurrency.swift; sourceTree = "<group>"; };
 		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableNumberModifier.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */,
 				7C0ADA7D290C10AE00206341 /* Gold+MeasurementUnit.swift */,
 				7C0ADA7F290C127A00206341 /* Cash.swift */,
+				7C0ADA81290C17A300206341 /* ForeignCurrency.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -730,6 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CC8FB0128E82DE70032FF3E /* Achievments.swift in Sources */,
+				7C0ADA82290C17A300206341 /* ForeignCurrency.swift in Sources */,
 				7CDA98FF285E6C8300EDCF42 /* WelcomeToJar.swift in Sources */,
 				7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */,
 				7CEF6C3D2868637F0013EA3D /* AddResultView.swift in Sources */,
