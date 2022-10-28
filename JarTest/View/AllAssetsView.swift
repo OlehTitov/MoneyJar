@@ -29,10 +29,7 @@ struct AllAssetsView: View {
                                                 image: cash.symbol.rawValue,
                                                 name: cash.symbol.longDescription,
                                                 assetType: "Currency",
-                                                quantity: cash.amount.currencyFormatter(
-                                                    with: cash.symbol.locale,
-                                                    code: cash.symbol.rawValue
-                                                ),
+                                                quantity: cash.amount.format(with: cash.symbol),
                                                 isCommodity: false
                                             )
                                         }
