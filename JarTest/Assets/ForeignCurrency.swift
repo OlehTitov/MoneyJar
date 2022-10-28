@@ -18,6 +18,14 @@ enum ForeignCurrency: String, Codable, CaseIterable {
 }
 
 extension ForeignCurrency {
+    static let forInitialSelection: [ForeignCurrency] = [
+        .usd,
+        .eur,
+        .pln
+    ]
+}
+
+extension ForeignCurrency {
     func getSymbol(forCurrencyCode code: String) -> String? {
        let locale = NSLocale(localeIdentifier: code)
         return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)

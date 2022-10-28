@@ -61,7 +61,7 @@ extension ConfigureJar {
         @Binding var nextView: Bool
         
         //Make it a static let in ForeignCurrency
-        var currencies: [ForeignCurrency] = [.usd, .eur, .pln]
+//        var currencies: [ForeignCurrency] = [.usd, .eur, .pln]
         
         let jarImageName = "Jar-4"
         let pagerItemSpacing : CGFloat = 0
@@ -73,7 +73,7 @@ extension ConfigureJar {
                 BackgroundView()
                 VStack(spacing: 12) {
                     ZStack {
-                        Pager(page: page, data: currencies, id: \.self) { item in
+                        Pager(page: page, data: ForeignCurrency.forInitialSelection, id: \.self) { item in
                             self.pageView(item)
                                 .padding()
                         }
@@ -137,7 +137,7 @@ extension ConfigureJar {
         }
         
         func updateSelectedCurrencyWith(newIndex : Int) {
-            selectedCurrency = currencies[newIndex]
+            selectedCurrency = ForeignCurrency.forInitialSelection[newIndex]
         }
         
         func scrollPagerToNextOption() {
