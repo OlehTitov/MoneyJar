@@ -18,14 +18,14 @@ class MockStorageController: StorageControllerProtocol {
             .appendingPathExtension("json")
     }
     
-    func save(_ masterAccount: MasterAccount) {
+    func save(_ masterAccount: Account) {
         let encoder = JSONEncoder()
         guard let data = try? encoder.encode(masterAccount) else { return }
         try? data.write(to: accountsFileURL)
     }
     
-    func fetchMasterAccount() -> MasterAccount {
-        return MasterAccount(name: "", goalAmount: 0, baseCurrency: .eur, rates: [:], lastRatesUpdate: "", assets: [], balance: 0, awards: [], portfolioItems: [], balanceBeforeChange: 0)
+    func fetchMasterAccount() -> Account {
+        return Account(name: "", goalAmount: 0, baseCurrency: .eur, rates: [:], lastRatesUpdate: "", assets: [], balance: 0, awards: [], portfolioItems: [], balanceBeforeChange: 0)
     }
     
     

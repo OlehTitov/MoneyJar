@@ -8,6 +8,6 @@
 import Foundation
 
 protocol StorageControllerProtocol {
-    func save(_ masterAccount: MasterAccount)
-    func fetchMasterAccount() -> MasterAccount
+    func save(_ masterAccount: Account)
+    func fetchMasterAccount() -> Account
 }

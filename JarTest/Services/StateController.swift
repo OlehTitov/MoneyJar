@@ -8,7 +8,7 @@
 import Foundation
 
 class StateController : ObservableObject {
-    @Published var account : MasterAccount
+    @Published var account : Account
     
     private let storageController : StorageControllerProtocol
     
