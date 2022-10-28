@@ -26,14 +26,6 @@ extension Double {
         return currency.format(amount: self)
     }
     
-//    func currencyFormatter(with locale: String, code: String) -> String {
-//        let numberFormatter = NumberFormatter()
-////        numberFormatter.locale = Locale(identifier: locale)
-//        numberFormatter.locale = Locale.current
-//        numberFormatter.numberStyle = .currency
-//        numberFormatter.currencyCode = code
-//        return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
-//    }
 }
 
 extension Double {
