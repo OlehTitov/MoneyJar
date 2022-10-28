@@ -85,11 +85,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
 
 
 
-struct Crypto : Codable, Hashable, Equatable {
-    var symbol : CryptoCurrency
-    var amount : Double
-    var dateAdded : Date
-}
+
 
 extension Crypto {
     enum CryptoCurrency : String, Codable {
