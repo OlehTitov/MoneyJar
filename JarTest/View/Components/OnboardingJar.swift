@@ -38,7 +38,7 @@ struct OnboardingJar: View {
                         .shadow(color: Color(red: 0.24, green: 0.27, blue: 0.47), radius: 12, x: 2, y: 4)
                     //USD
                     VStack {
-                        TransactionListItem(image: "USD", name: "US Dollar", assetType: "Currency", quantity: 100.currencyFormatter(with: "en_US", code: "USD"), isCommodity: false)
+                        TransactionListItem(image: "USD", name: "US Dollar", assetType: "Currency", quantity: 100.00.format(with: .usd), isCommodity: false)
                             .padding(.horizontal)
                             .padding(.vertical, 6)
                     }

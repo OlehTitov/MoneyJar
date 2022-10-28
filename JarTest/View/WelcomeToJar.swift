@@ -57,7 +57,7 @@ struct WelcomeToJar: View {
             
             JarWithCoinsView(progress: 85.7, jarWidth: 250, coinsWidth: 220, frameHeight: 300)
             
-            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: 100.currencyFormatter(with: "en_US", code: "USD"), bgrdOpacity: 0.4, offsetStart: 220, offsetFinish: -380, offsetY: -40, duration: 3)
+            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: 100.00.format(with: .usd), bgrdOpacity: 0.4, offsetStart: 220, offsetFinish: -380, offsetY: -40, duration: 3)
             
             makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: 60, offsetFinish: -250, offsetY: 90, duration: 4)
         }

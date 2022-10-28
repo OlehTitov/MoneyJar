@@ -41,14 +41,3 @@ extension String {
         return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
     }
 }
-
-extension Int {
-    func currencyFormatter(with locale: String, code: String) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.locale = Locale(identifier: locale)
-        numberFormatter.numberStyle = .currency
-        numberFormatter.currencyCode = code
-        numberFormatter.maximumFractionDigits = 0
-        return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
-    }
-}
