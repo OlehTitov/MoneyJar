@@ -60,9 +60,6 @@ extension ConfigureJar {
         @State var isFirstResponder : Bool = true
         @Binding var nextView: Bool
         
-        //Make it a static let in ForeignCurrency
-//        var currencies: [ForeignCurrency] = [.usd, .eur, .pln]
-        
         let jarImageName = "Jar-4"
         let pagerItemSpacing : CGFloat = 0
         let pagerInteractiveScale : Double = 0.7
@@ -72,24 +69,10 @@ extension ConfigureJar {
             ZStack {
                 BackgroundView()
                 VStack(spacing: 12) {
-                    ZStack {
-                        Pager(page: page, data: ForeignCurrency.forInitialSelection, id: \.self) { item in
-                            self.pageView(item)
-                                .padding()
-                        }
-                        .multiplePagination()
-                        .itemSpacing(pagerItemSpacing)
-                        .bounces(true)
-                        .interactive(scale: pagerInteractiveScale)
-                        .draggingAnimation(.interactive)
-                        .itemAspectRatio(pagerItemAspectRatio, alignment: .center)
-                        .onPageChanged({ (newIndex) in
-                            updateSelectedCurrencyWith(newIndex: newIndex)
-                        })
+                    currencyJarSelection
                         .onAppear {
                             scrollPagerToNextOption()
                         }
-                    }
                         
                     VStack(spacing: 12) {
                         Text("What are you saving for?")
@@ -108,6 +91,23 @@ extension ConfigureJar {
                 }
             }
         }
+        
+        var currencyJarSelection: some View {
+            Pager(page: page, data: ForeignCurrency.forInitialSelection, id: \.self) { item in
+                self.pageView(item)
+                    .padding()
+            }
+            .multiplePagination()
+            .itemSpacing(pagerItemSpacing)
+            .bounces(true)
+            .interactive(scale: pagerInteractiveScale)
+            .draggingAnimation(.interactive)
+            .itemAspectRatio(pagerItemAspectRatio, alignment: .center)
+            .onPageChanged({ (newIndex) in
+                updateSelectedCurrencyWith(newIndex: newIndex)
+            })
+        }
+        
         func pageView(_ item: ForeignCurrency) -> some View {
             VStack {
                 Spacer()
