@@ -87,12 +87,7 @@ struct PortfolioItem: Codable, Hashable, Equatable, Identifiable {
 
 
 
-extension Crypto {
-    enum CryptoCurrency : String, Codable {
-        case bitcoin = "BTC"
-        case ethereum = "ETH"
-    }
-}
+
 
 
 enum HomeViewStatus {
