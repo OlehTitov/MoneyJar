@@ -27,7 +27,7 @@ struct PortfolioView: View {
                             Text(item.assetName.rawValue)
                                 .font(.customHeadlineFont)
                             Spacer()
-                            Text(item.amountInBaseCurrency.currencyFormatter(with: locale, code: baseCurrency))
+                            Text(item.amountInBaseCurrency.format(with: stateController.account.baseCurrency))
                                 .font(.customHeadlineFont)
                         }
                     }
@@ -52,13 +52,6 @@ struct PortfolioView: View {
         return sorted
     }
     
-    var locale: String {
-        stateController.account.baseCurrency.locale
-    }
-    
-    var baseCurrency: String {
-        stateController.account.baseCurrency.rawValue
-    }
 }
 
 struct PortfolioView_Previews: PreviewProvider {

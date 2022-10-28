@@ -26,22 +26,14 @@ extension Double {
         return currency.format(amount: self)
     }
     
-    func currencyFormatter(with locale: String, code: String) -> String {
-        let numberFormatter = NumberFormatter()
-//        numberFormatter.locale = Locale(identifier: locale)
-        numberFormatter.locale = Locale.current
-        numberFormatter.numberStyle = .currency
-        numberFormatter.currencyCode = code
-//        let formattedNumber = numberFormatter.string(from: NSNumber(value: self)) ?? "0"
-//        var attributedString = AttributedString(formattedNumber)
-//        let container = AttributeContainer()
-//        let decimal = container.numberPart(.fraction)
-//        let color = container.foregroundColor(.orange)
-//        attributedString.replaceAttributes(decimal, with: color)
-        
-        
-        return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
-    }
+//    func currencyFormatter(with locale: String, code: String) -> String {
+//        let numberFormatter = NumberFormatter()
+////        numberFormatter.locale = Locale(identifier: locale)
+//        numberFormatter.locale = Locale.current
+//        numberFormatter.numberStyle = .currency
+//        numberFormatter.currencyCode = code
+//        return numberFormatter.string(from: NSNumber(value: self)) ?? "0"
+//    }
 }
 
 extension Double {

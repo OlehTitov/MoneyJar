@@ -167,7 +167,7 @@ extension HomeView {
         func goalAmount() -> some View {
             HStack {
                 Image(systemName: "flag")
-                Text(Double(stateController.account.goalAmount).currencyFormatter(with: stateController.account.baseCurrency.locale, code: stateController.account.baseCurrency.rawValue))
+                Text(Double(stateController.account.goalAmount).format(with: stateController.account.baseCurrency))
             }
         }
         

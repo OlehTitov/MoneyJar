@@ -66,7 +66,7 @@ struct AddCashView3: View {
             .sheet(isPresented: $vm.presentResult, onDismiss: {dismissView()}) {
                 AddResultView(
                     mainStack: $mainStack,
-                    amount: "\(vm.amountAsDouble.currencyFormatter(with: vm.selectedCurrency.locale, code: vm.selectedCurrency.rawValue))")
+                    amount: "\(vm.amountAsDouble.format(with: selectedCurrency))")
             }
             .navigationTitle("Add currency")
             .navigationBarTitleDisplayMode(.inline)
