@@ -136,7 +136,6 @@ struct NumberPadView: View {
     }
     
     func updateAmount() -> String {
-        let formatter = currency.formatter
         let amount = Double(amt/100) + Double(amt%100)/100
         amountAsDouble = amount
         return currency.formatter.string(from: NSNumber(value: amount)) ?? ""
