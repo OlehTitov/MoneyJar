@@ -136,12 +136,10 @@ struct NumberPadView: View {
     }
     
     func updateAmount() -> String {
-        var result = ""
         let formatter = currency.formatter
         let amount = Double(amt/100) + Double(amt%100)/100
         amountAsDouble = amount
-        result = formatter.string(from: NSNumber(value: amount)) ?? ""
-        return result
+        return currency.formatter.string(from: NSNumber(value: amount)) ?? ""
     }
     
     func placeCurrentGoalAmount() -> Self {

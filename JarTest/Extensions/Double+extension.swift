@@ -21,6 +21,11 @@ extension Double {
         return String(format: "%.2f", self)
     }
     
+    //New method to format Doubles into String with currency symbols
+    func format(with currency: ForeignCurrency) -> String {
+        return currency.format(amount: self)
+    }
+    
     func currencyFormatter(with locale: String, code: String) -> String {
         let numberFormatter = NumberFormatter()
 //        numberFormatter.locale = Locale(identifier: locale)

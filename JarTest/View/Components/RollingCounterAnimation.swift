@@ -10,15 +10,14 @@ import SwiftUI
 
 struct RollingCounterAnimation: View {
     @EnvironmentObject private var settingsStore : SettingsStore
+    @EnvironmentObject private var stateController: StateController
     @State var totalAmount: Double = 0.0
     var initialBalance : Double
     var currentBalance: Double
     var fontSize: CGFloat
     var decimaSize: CGFloat
     var amountAdded: Double { currentBalance - initialBalance }
-    var currencyCode : String
-    var currencyLocale: String
-    // Subsonic was not able to stop sound when counter stops, so AudioPlayer is used here
+    /// Subsonic was not able to stop sound when counter stops, so AudioPlayer is used here
     @ObservedObject var player = AudioPlayer(
         name: "coins-falling",
         withExtension: "wav"
@@ -26,9 +25,12 @@ struct RollingCounterAnimation: View {
     @State var stepCounter = 0
     var body: some View {
         VStack {
-            Text(totalAmount.currencyFormatter(with: currencyLocale, code: currencyCode).decimalFormat(fontSize: fontSize, decimalSize: decimaSize))
-//                .frame(maxWidth: .infinity, alignment: .center)
-                
+            ///Total amount
+            ///Display total amount formatted as currency and with different font size for decimals
+            Text(totalAmount
+                .format(with: stateController.account.baseCurrency)
+                .decimalFormat(fontSize: fontSize, decimalSize: decimaSize))
+
                 .onAppear {
                     if amountAdded == 0 {
                         totalAmount = currentBalance
@@ -76,6 +78,8 @@ struct RollingCounterAnimation: View {
 
 struct RollingCounterAnimation_Previews: PreviewProvider {
     static var previews: some View {
-        RollingCounterAnimation(initialBalance: 800.21, currentBalance: 1000.35, fontSize: 56, decimaSize: 32, currencyCode: "UAH", currencyLocale: "uk")
+        RollingCounterAnimation(initialBalance: 800.21, currentBalance: 1000.35, fontSize: 56, decimaSize: 32)
+            .environmentObject(StateController.dummyData())
+            .environmentObject(SettingsStore())
     }
 }

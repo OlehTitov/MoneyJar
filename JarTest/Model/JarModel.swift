@@ -181,9 +181,13 @@ extension ForeignCurrency {
         let numberFormatter = NumberFormatter()
 //        numberFormatter.locale = Locale(identifier: self.locale)
         numberFormatter.locale = Locale.current
-        numberFormatter.numberStyle = .currency
         numberFormatter.currencyCode = self.rawValue
+        numberFormatter.numberStyle = .currency
         return numberFormatter
+    }
+    
+    func format(amount: Double) -> String {
+        return formatter.string(from: NSNumber(value: amount))!
     }
 }
 

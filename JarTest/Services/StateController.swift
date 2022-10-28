@@ -121,6 +121,14 @@ class StateController : ObservableObject {
     
 }
 
+//MARK: - Formatting
+extension StateController {
+    func displayCurrency(amount: Double) -> String {
+        let formatter = account.baseCurrency.formatter
+        return formatter.string(from: NSNumber(value: amount)) ?? ""
+    }
+}
+
 //MARK: - Managing awards
 extension StateController {
     //When award was presented we make sure it won't pop up again

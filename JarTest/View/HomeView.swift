@@ -160,7 +160,7 @@ extension HomeView {
         }
         
         func newTotalAmount(size: CGFloat, decimalSize: CGFloat) -> some View {
-            RollingCounterAnimation(initialBalance: stateController.account.balanceBeforeChange, currentBalance: stateController.account.balance, fontSize: size, decimaSize: decimalSize, currencyCode: stateController.account.baseCurrency.rawValue, currencyLocale: stateController.account.baseCurrency.locale)
+            RollingCounterAnimation(initialBalance: stateController.account.balanceBeforeChange, currentBalance: stateController.account.balance, fontSize: size, decimaSize: decimalSize)
                 .minimumScaleFactor(0.5)
         }
         
