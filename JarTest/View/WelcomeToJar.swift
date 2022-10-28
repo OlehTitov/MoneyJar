@@ -85,9 +85,11 @@ struct WelcomeToJar: View {
                     .padding(.horizontal, 36)
                 }
                 Spacer()
-                Button (action: {buttonTapped()}, label: {})
-                    .buttonStyle(MyButtonStyle(title: buttonTitle))
-                    .padding(.bottom)
+                Button("Get started") {
+                    buttonTapped()
+                }
+                .buttonStyle(PrimaryButtonStyle())
+                .padding(.bottom)
             }
         }
     }

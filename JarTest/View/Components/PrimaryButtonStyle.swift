@@ -7,13 +7,30 @@
 
 import SwiftUI
 
+struct PrimaryButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) var isEnabled
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.customButtonTextFont)
+            .foregroundColor(isEnabled ? (configuration.isPressed ? .yellow : .white) : .white.opacity(0.8))
+            .frame(height: 60)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .background(isEnabled ? Color.accentColor : Color(UIColor.secondarySystemFill))
+            .cornerRadius(16)
+            .opacity(configuration.isPressed ? 0.8 : 1.0)
+            .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
+            .padding()
+    }
+}
+
 struct MyButtonStyle: ButtonStyle {
     @Environment(\.isEnabled) var isEnabled
     @Environment(\.colorScheme) var colorScheme
     let title: String
     func makeBody(configuration: Self.Configuration) -> some View {
         //MyButtonStyleView(configuration: configuration)
-        Text(title)
+//        Text(title)
+        configuration.label
 //            .font(.subheadline.weight(.bold))
             .font(.customButtonTextFont)
             .foregroundColor(isEnabled ? (configuration.isPressed ? .yellow : .white) : .white.opacity(0.8))
