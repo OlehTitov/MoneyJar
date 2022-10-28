@@ -53,10 +53,6 @@ struct NumberPadView: View {
                 .buttonStyle(PlainButtonStyle())
             }
         }
-        //When user updates the currency in CurrencySwiperSelector we update the text to show the change of currency
-//        .onChange(of: self.currency) { item in
-//            self.text = updateAmount()
-//        }
     }
     enum Digit : String, CaseIterable {
         case one = "1"
