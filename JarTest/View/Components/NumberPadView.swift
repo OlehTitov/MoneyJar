@@ -141,16 +141,17 @@ struct NumberPadView: View {
         return currency.formatter.string(from: NSNumber(value: amount)) ?? ""
     }
     
-    func placeCurrentGoalAmount() -> Self {
-        var view = self
-        DispatchQueue.main.async {
-            view.showPlaceholder = false
-            view.amountAsDouble = 1000.00
-            let formatter = currency.formatter
-            view.text = formatter.string(from: NSNumber(value: 1000)) ?? ""
-        }
-        return view
-    }
+    ///Method that can be called where the View is declared. Just testing how it works. These kind of methods shoul return Self
+//    func placeCurrentGoalAmount() -> Self {
+//        var view = self
+//        DispatchQueue.main.async {
+//            view.showPlaceholder = false
+//            view.amountAsDouble = 1000.00
+//            let formatter = currency.formatter
+//            view.text = formatter.string(from: NSNumber(value: 1000)) ?? ""
+//        }
+//        return view
+//    }
     
     func simpleSuccess() {
         let generator = UINotificationFeedbackGenerator()
