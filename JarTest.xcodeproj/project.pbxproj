@@ -84,10 +84,7 @@
 		7CC684D228CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC684D128CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift */; };
 		7CC684D428CA3C610067E26F /* SegmentedPickerGoldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC684D328CA3C610067E26F /* SegmentedPickerGoldType.swift */; };
 		7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751E528C2793700DBAF62 /* NSAttributedString+extension.swift */; };
-		7CC751E828C4EC7B00DBAF62 /* BlueGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751E728C4EC7B00DBAF62 /* BlueGradientView.swift */; };
-		7CC751EA28C6517500DBAF62 /* CompoundAssetGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751E928C6517400DBAF62 /* CompoundAssetGridItem.swift */; };
 		7CC751EC28C6534600DBAF62 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751EB28C6534600DBAF62 /* String+extension.swift */; };
-		7CC751EE28C7234F00DBAF62 /* PortfolioTopCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751ED28C7234F00DBAF62 /* PortfolioTopCard.swift */; };
 		7CC751F028C74C5200DBAF62 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */; };
 		7CC751F228C8DDF900DBAF62 /* CustomSegmentedPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC751F128C8DDF900DBAF62 /* CustomSegmentedPicker.swift */; };
 		7CC8FB0428E8A9210032FF3E /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CC8FB0328E8A9210032FF3E /* Awards.json */; };
@@ -131,11 +128,7 @@
 		7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */; };
 		7CFB99E028DE4B6B0049EA78 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */; };
 		7CFB99E528DED90B0049EA78 /* Space_Mono in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB99E428DED90B0049EA78 /* Space_Mono */; };
-		7CFB99FB28E241C30049EA78 /* SeamlessIconTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99FA28E241C30049EA78 /* SeamlessIconTile.swift */; };
-		7CFB99FD28E246DD0049EA78 /* SeamlessBackgroundTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99FC28E246DD0049EA78 /* SeamlessBackgroundTest.swift */; };
-		7CFB99FF28E255AF0049EA78 /* SeamlessIconBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99FE28E255AF0049EA78 /* SeamlessIconBackground.swift */; };
 		7CFB9A0128E25ABB0049EA78 /* Roboto_Mono in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0028E25ABB0049EA78 /* Roboto_Mono */; };
-		7CFB9A0328E2C8440049EA78 /* BackgroundTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0228E2C8440049EA78 /* BackgroundTile.swift */; };
 		7CFB9A0528E428F30049EA78 /* IconsLineWidthTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0428E428F30049EA78 /* IconsLineWidthTest.swift */; };
 		7CFB9A0728E5E3A10049EA78 /* jarCreated.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */; };
 		7CFB9A0928E5E6A30049EA78 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0828E5E6A30049EA78 /* success.wav */; };
@@ -214,10 +207,7 @@
 		7CC684D128CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerGoldMeasurementUnits.swift; sourceTree = "<group>"; };
 		7CC684D328CA3C610067E26F /* SegmentedPickerGoldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerGoldType.swift; sourceTree = "<group>"; };
 		7CC751E528C2793700DBAF62 /* NSAttributedString+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+extension.swift"; sourceTree = "<group>"; };
-		7CC751E728C4EC7B00DBAF62 /* BlueGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueGradientView.swift; sourceTree = "<group>"; };
-		7CC751E928C6517400DBAF62 /* CompoundAssetGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundAssetGridItem.swift; sourceTree = "<group>"; };
 		7CC751EB28C6534600DBAF62 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
-		7CC751ED28C7234F00DBAF62 /* PortfolioTopCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioTopCard.swift; sourceTree = "<group>"; };
 		7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		7CC751F128C8DDF900DBAF62 /* CustomSegmentedPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedPicker.swift; sourceTree = "<group>"; };
 		7CC8FB0328E8A9210032FF3E /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
@@ -262,11 +252,7 @@
 		7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 		7CFB99E328DE71150049EA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7CFB99E428DED90B0049EA78 /* Space_Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Space_Mono; sourceTree = "<group>"; };
-		7CFB99FA28E241C30049EA78 /* SeamlessIconTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamlessIconTile.swift; sourceTree = "<group>"; };
-		7CFB99FC28E246DD0049EA78 /* SeamlessBackgroundTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamlessBackgroundTest.swift; sourceTree = "<group>"; };
-		7CFB99FE28E255AF0049EA78 /* SeamlessIconBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamlessIconBackground.swift; sourceTree = "<group>"; };
 		7CFB9A0028E25ABB0049EA78 /* Roboto_Mono */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto_Mono; sourceTree = "<group>"; };
-		7CFB9A0228E2C8440049EA78 /* BackgroundTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTile.swift; sourceTree = "<group>"; };
 		7CFB9A0428E428F30049EA78 /* IconsLineWidthTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsLineWidthTest.swift; sourceTree = "<group>"; };
 		7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jarCreated.wav; sourceTree = "<group>"; };
 		7CFB9A0828E5E6A30049EA78 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
@@ -337,7 +323,6 @@
 				7CA930F328B74B1300C8286C /* Subtitle.swift */,
 				7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */,
 				7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */,
-				7CFB99FE28E255AF0049EA78 /* SeamlessIconBackground.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -373,9 +358,6 @@
 				7C0ADA6E290910D600206341 /* CustomProgressView.swift */,
 				7CDDF61B28F98F7400A4B706 /* JarBackgroundView.swift */,
 				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
-				7CFB99FA28E241C30049EA78 /* SeamlessIconTile.swift */,
-				7CFB9A0228E2C8440049EA78 /* BackgroundTile.swift */,
-				7CC751E728C4EC7B00DBAF62 /* BlueGradientView.swift */,
 				7CB0E81928CF0F7500E87A6D /* CardBackgroundColor.swift */,
 				7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */,
 				7CDDF61928F6B78B00A4B706 /* BlurView.swift */,
@@ -385,8 +367,6 @@
 				7CC684D128CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift */,
 				7CC684D328CA3C610067E26F /* SegmentedPickerGoldType.swift */,
 				7C87EF4128B381DF0021F607 /* AnimatingLight.swift */,
-				7CC751E928C6517400DBAF62 /* CompoundAssetGridItem.swift */,
-				7CC751ED28C7234F00DBAF62 /* PortfolioTopCard.swift */,
 				7CA930F528B7A12600C8286C /* JarShadow.swift */,
 				7C1D099128ABF28F00C82211 /* AnimatableNumberModifier.swift */,
 				7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */,
@@ -517,7 +497,6 @@
 				7CEF6C3C2868637F0013EA3D /* AddResultView.swift */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
 				7CEF6C38286712CA0013EA3D /* CurrencyTextField.swift */,
-				7CFB99FC28E246DD0049EA78 /* SeamlessBackgroundTest.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -690,7 +669,6 @@
 				7CEF6C3D2868637F0013EA3D /* AddResultView.swift in Sources */,
 				7CEF6C3F286B4DDE0013EA3D /* NumberPadView.swift in Sources */,
 				7CEA503728B0AFDE00D33C45 /* EmptyAssetsView.swift in Sources */,
-				7CFB99FB28E241C30049EA78 /* SeamlessIconTile.swift in Sources */,
 				7CBAF33F28965F9300BD8BC9 /* AmountLine.swift in Sources */,
 				7CBAF325288E7C7F00BD8BC9 /* MainThemeButton.swift in Sources */,
 				7CDDF61628F1498B00A4B706 /* ChangeJarNameView.swift in Sources */,
@@ -724,7 +702,6 @@
 				7C0ADA8B290C6AD400206341 /* AwardStatus.swift in Sources */,
 				7CC751F228C8DDF900DBAF62 /* CustomSegmentedPicker.swift in Sources */,
 				7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */,
-				7CC751E828C4EC7B00DBAF62 /* BlueGradientView.swift in Sources */,
 				7CB0E81A28CF0F7500E87A6D /* CardBackgroundColor.swift in Sources */,
 				7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */,
 				7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */,
@@ -739,12 +716,10 @@
 				7C0ADA7E290C10AE00206341 /* Gold+MeasurementUnit.swift in Sources */,
 				7CC751F028C74C5200DBAF62 /* PortfolioView.swift in Sources */,
 				7CBAF332289037C900BD8BC9 /* CurrencyConverter.swift in Sources */,
-				7CFB9A0328E2C8440049EA78 /* BackgroundTile.swift in Sources */,
 				7C0ADA80290C127A00206341 /* Cash.swift in Sources */,
 				7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */,
 				7C87EF4228B381DF0021F607 /* AnimatingLight.swift in Sources */,
 				7CEF6C222861E22C0013EA3D /* Double+extension.swift in Sources */,
-				7CC751EE28C7234F00DBAF62 /* PortfolioTopCard.swift in Sources */,
 				7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */,
 				7CEF6C39286712CA0013EA3D /* CurrencyTextField.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
@@ -763,13 +738,10 @@
 				7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */,
 				7CDA9901285E774500EDCF42 /* ConfigureJar.swift in Sources */,
 				7CEF6C29286470340013EA3D /* ForeignExchange.swift in Sources */,
-				7CFB99FF28E255AF0049EA78 /* SeamlessIconBackground.swift in Sources */,
-				7CC751EA28C6517500DBAF62 /* CompoundAssetGridItem.swift in Sources */,
 				7C0ADA7A290C0F6A00206341 /* Gold.swift in Sources */,
 				7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7C0ADA8D290C6CDC00206341 /* Account.swift in Sources */,
 				7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */,
-				7CFB99FD28E246DD0049EA78 /* SeamlessBackgroundTest.swift in Sources */,
 				7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */,
 				7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */,
 				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,

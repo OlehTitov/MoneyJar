@@ -60,7 +60,7 @@ struct TransactionListItem: View {
 struct TransactionListItem_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            BlueGradientView()
+           
             List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
                 TransactionListItem(image: "USD", name: "Bitcoin", assetType: "Cryptocurrency", quantity: "0.003", isCommodity: false)
                     .listRowBackground(Color.clear)
