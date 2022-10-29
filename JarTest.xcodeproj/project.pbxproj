@@ -120,7 +120,6 @@
 		7CEF6C262863971D0013EA3D /* ExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C252863971D0013EA3D /* ExchangeClient.swift */; };
 		7CEF6C29286470340013EA3D /* ForeignExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C28286470340013EA3D /* ForeignExchange.swift */; };
 		7CEF6C37286712010013EA3D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C36286712010013EA3D /* Currency.swift */; };
-		7CEF6C39286712CA0013EA3D /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C38286712CA0013EA3D /* CurrencyTextField.swift */; };
 		7CEF6C3D2868637F0013EA3D /* AddResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3C2868637F0013EA3D /* AddResultView.swift */; };
 		7CEF6C3F286B4DDE0013EA3D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */; };
@@ -241,7 +240,6 @@
 		7CEF6C252863971D0013EA3D /* ExchangeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeClient.swift; sourceTree = "<group>"; };
 		7CEF6C28286470340013EA3D /* ForeignExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchange.swift; sourceTree = "<group>"; };
 		7CEF6C36286712010013EA3D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
-		7CEF6C38286712CA0013EA3D /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		7CEF6C3C2868637F0013EA3D /* AddResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultView.swift; sourceTree = "<group>"; };
 		7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBitCoinView.swift; sourceTree = "<group>"; };
@@ -490,7 +488,6 @@
 				7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */,
 				7CEF6C3C2868637F0013EA3D /* AddResultView.swift */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
-				7CEF6C38286712CA0013EA3D /* CurrencyTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -713,7 +710,6 @@
 				7C87EF4228B381DF0021F607 /* AnimatingLight.swift in Sources */,
 				7CEF6C222861E22C0013EA3D /* Double+extension.swift in Sources */,
 				7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */,
-				7CEF6C39286712CA0013EA3D /* CurrencyTextField.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
 				7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */,
 				7CBDCE232906F2C500D858DA /* Bundle+extension.swift in Sources */,
