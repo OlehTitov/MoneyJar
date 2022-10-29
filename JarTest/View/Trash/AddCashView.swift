@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddCashView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @State var amount = "0"
     @State var isFirstResponder = true
     @State var inputCurrency = ForeignCurrency.pln
@@ -50,7 +50,7 @@ struct AddCashView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             AddCashView()
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .navigationTitle("Add some cash")
                 .navigationBarTitleDisplayMode(.inline)
         }

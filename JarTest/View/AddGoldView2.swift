@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddGoldView2: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @StateObject var vm = ViewModel()
     @Binding var mainStack: [NavigationType]
     @State var alertDescription = ""
@@ -65,7 +65,7 @@ struct AddGoldView2: View {
 struct AddGoldView2_Previews: PreviewProvider {
     static var previews: some View {
         AddGoldView2(mainStack: .constant([]))
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }
 
@@ -79,7 +79,7 @@ extension AddGoldView2 {
         @Published var presentResult = false
         @Published var presentAlert = false
         
-        func addGoldToAccount(sc: StateController) {
+        func addGoldToAccount(sc: Model) {
             let gold = Gold(type: selectedType, unit: selectedUnit, weight: Double(weight) ?? 0.0, dateAdded: Date.now)
             let finalAsset = Asset.gold(gold)
             print(finalAsset)

@@ -9,7 +9,7 @@ import SwiftUI
 import Subsonic
 
 struct AwardUnlockedSheet: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @EnvironmentObject private var settingsStore : SettingsStore
     @Binding var show: Bool
     var award: Award

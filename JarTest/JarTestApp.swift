@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct JarTestApp: App {
-    let stateController = StateController(
+    let stateController = Model(
         storageController: StorageController(),
         exchangeClient: MockExchangeClient(), // change to real client for production
         currencyConverter: CurrencyConverter(),

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AllAssetsView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
@@ -103,7 +103,7 @@ struct AllAssetsView: View {
 struct AllAssetsView_Previews: PreviewProvider {
     static var previews: some View {
         AllAssetsView()
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
             .preferredColorScheme(.dark)
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RollingCounterAnimation: View {
     @EnvironmentObject private var settingsStore : SettingsStore
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @State var totalAmount: Double = 0.0
     var initialBalance : Double
     var currentBalance: Double
@@ -79,7 +79,7 @@ struct RollingCounterAnimation: View {
 struct RollingCounterAnimation_Previews: PreviewProvider {
     static var previews: some View {
         RollingCounterAnimation(initialBalance: 800.21, currentBalance: 1000.35, fontSize: 56, decimaSize: 32)
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
             .environmentObject(SettingsStore())
     }
 }

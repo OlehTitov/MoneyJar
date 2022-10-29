@@ -10,7 +10,7 @@ import SwiftUI
 struct ChangeAmountView: View {
     @StateObject var viewModel = SetAmountViewModel()
     @Binding var path: NavigationPath
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @State var alertText = ""
     @State var showResult = false
     var body: some View {
@@ -72,6 +72,6 @@ struct ChangeAmountView: View {
 struct ChangeAmountView_Previews: PreviewProvider {
     static var previews: some View {
         ChangeAmountView(path: .constant(NavigationPath()))
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }

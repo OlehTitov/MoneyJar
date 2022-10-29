@@ -9,7 +9,7 @@ import SwiftUI
 import Subsonic
 
 struct HomeView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     var body: some View {
         Content2()
             .task {
@@ -25,11 +25,11 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             HomeView()
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .environmentObject(SettingsStore())
                 .preferredColorScheme(.dark)
             HomeView()
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .environmentObject(SettingsStore())
                 .preferredColorScheme(.light)
         }
@@ -38,7 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 
 extension HomeView {
     struct Content2: View {
-        @EnvironmentObject private var stateController: StateController
+        @EnvironmentObject private var stateController: Model
         @EnvironmentObject private var settingsStore : SettingsStore
         @Environment(\.colorScheme) var colorScheme
         @AppStorage(storageKeys.greetingSoundPlayed.rawValue) var greetingSoundPlayed = false

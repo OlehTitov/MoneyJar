@@ -9,7 +9,7 @@ import SwiftUI
 import Subsonic
 
 struct AddResultView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @EnvironmentObject private var settingsStore : SettingsStore
     @Environment(\.dismiss) private var dismiss // for dismissing this view
     @Binding var mainStack: [NavigationType]
@@ -63,6 +63,6 @@ struct AddResultView_Previews: PreviewProvider {
     static var previews: some View {
         AddResultView(mainStack: .constant([]), amount: "20.00 EUR")
             .environmentObject(SettingsStore())
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }

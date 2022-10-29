@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIPager
 
 struct AddCashView3: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @StateObject var vm = ViewModel()
     @Binding var mainStack: [NavigationType]
     var selectedCurrency : ForeignCurrency
@@ -83,10 +83,10 @@ struct AddCashView3_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             AddCashView3(mainStack: .constant([]), selectedCurrency: .usd)
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .preferredColorScheme(.light)
             AddCashView3(mainStack: .constant([]), selectedCurrency: .usd)
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .preferredColorScheme(.dark)
         }
     }
@@ -102,7 +102,7 @@ extension AddCashView3 {
         @Published var presentResult : Bool = false
         @Published var showPlaceholder = true
         
-        func generateCurrencyDescription(sc: StateController) -> String {
+        func generateCurrencyDescription(sc: Model) -> String {
             if selectedCurrency == sc.account.baseCurrency {
                 return "in my base currency"
             } else {
@@ -116,7 +116,7 @@ extension AddCashView3 {
             return formatter.string(from: NSNumber(value: amount))!
         }
         
-        func addCashToAccount(sc: StateController) {
+        func addCashToAccount(sc: Model) {
             self.presentResult = true // shows AddResultView as a sheet
             let finalAsset = Asset.cash(Cash(symbol: selectedCurrency, amount: amountAsDouble, dateAdded: Date.now))
             sc.addAsset(asset: finalAsset)

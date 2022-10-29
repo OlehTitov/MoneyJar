@@ -32,7 +32,7 @@ struct ConfigureJar_Previews: PreviewProvider {
         Group {
             ConfigureJar()
                 .environmentObject(
-                    StateController(
+                    Model(
                         storageController: MockStorageController(),
                         exchangeClient: MockExchangeClient(),
                         currencyConverter: CurrencyConverter(), awardsManager: AwardsManager()
@@ -41,7 +41,7 @@ struct ConfigureJar_Previews: PreviewProvider {
             .preferredColorScheme(.light)
             ConfigureJar()
                 .environmentObject(
-                    StateController(
+                    Model(
                         storageController: MockStorageController(),
                         exchangeClient: MockExchangeClient(),
                         currencyConverter: CurrencyConverter(), awardsManager: AwardsManager()

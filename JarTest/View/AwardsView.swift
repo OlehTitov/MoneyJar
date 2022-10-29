@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AwardsView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     var gridItemLayout = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -56,7 +56,7 @@ struct AwardsView: View {
 struct AwardsView_Previews: PreviewProvider {
     static var previews: some View {
         AwardsView()
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }
 

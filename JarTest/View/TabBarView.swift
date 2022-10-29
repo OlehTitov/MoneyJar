@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     var body: some View {
         TabView {
             HomeView()
@@ -38,6 +38,6 @@ struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
             .preferredColorScheme(.dark)
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }

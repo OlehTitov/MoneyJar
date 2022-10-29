@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIPager
 
 struct AddCashView2: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @Environment(\.presentationMode) var presentationMode // for returning to HomeView
     @StateObject var page: Page = .first() // for SwiftUIPager
     @State private var amount : String = "" // string to display the amount with currency symbols

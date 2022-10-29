@@ -32,7 +32,7 @@ struct SetAmount_Previews: PreviewProvider {
         Group {
             SetAmount(selectedCurrency: .usd, jarName: "For home")
                 .environmentObject(
-                    StateController(
+                    Model(
                         storageController: MockStorageController(),
                         exchangeClient: MockExchangeClient(),
                         currencyConverter: CurrencyConverter(), awardsManager: AwardsManager()
@@ -41,7 +41,7 @@ struct SetAmount_Previews: PreviewProvider {
                 .preferredColorScheme(.light)
             SetAmount(selectedCurrency: .usd, jarName: "For home")
                 .environmentObject(
-                    StateController(
+                    Model(
                         storageController: MockStorageController(),
                         exchangeClient: MockExchangeClient(),
                         currencyConverter: CurrencyConverter(), awardsManager: AwardsManager()
@@ -54,7 +54,7 @@ struct SetAmount_Previews: PreviewProvider {
 
 extension SetAmount {
     struct Content: View {
-        @EnvironmentObject private var stateController: StateController
+        @EnvironmentObject private var stateController: Model
         @AppStorage(storageKeys.jarIsCreated.rawValue) var jarIsCreated = false
         @StateObject var viewModel : SetAmountViewModel
         var jarName: String
@@ -137,7 +137,7 @@ class SetAmountViewModel : ObservableObject {
     @Published var nextView = false
     
     //Method is used during Jar creation
-    func updateAccount(sc: StateController, selectedCurrency: ForeignCurrency, jarName: String) {
+    func updateAccount(sc: Model, selectedCurrency: ForeignCurrency, jarName: String) {
         //update master account
         sc.updateMasterAccount(name: jarName, goalAmount: amountAsDouble, currency: selectedCurrency)
         //Trigger next view

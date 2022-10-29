@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddBitCoinView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @Binding var mainStack: [NavigationType]
     @State var amountString = ""
     @State var amountAsDouble = 0.0

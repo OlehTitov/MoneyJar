@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChangeJarNameView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @Binding var path: NavigationPath
     @State var jarName: String
     @State var showResult = false
@@ -71,6 +71,6 @@ struct ChangeJarNameView: View {
 struct ChangeJarNameView_Previews: PreviewProvider {
     static var previews: some View {
         ChangeJarNameView(path: .constant(NavigationPath()), jarName: "For new home")
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }

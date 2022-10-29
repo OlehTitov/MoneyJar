@@ -39,7 +39,7 @@ struct CreditsView: View {
                         VStack(alignment: .leading, spacing: 6) {
                             Text("Created by")
                                 .foregroundColor(.secondary)
-                            Link(destination: URL(string: StateController.appStoreReviewLink)!) {
+                            Link(destination: URL(string: Model.appStoreReviewLink)!) {
                                 HStack {
                                     Text("Oleh Titov")
                                     Image(systemName: "arrow.up.right")

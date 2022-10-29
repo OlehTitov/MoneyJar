@@ -82,6 +82,6 @@ struct MultiProgressView: View {
 struct MultiProgressView_Previews: PreviewProvider {
     static var previews: some View {
         MultiProgressView(totalAmount: 100_000.00, items: [PortfolioItem(assetName: .Currency, amountInBaseCurrency: 50000.00), PortfolioItem(assetName: .Gold, amountInBaseCurrency: 25000.00)], height: 34)
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
     }
 }

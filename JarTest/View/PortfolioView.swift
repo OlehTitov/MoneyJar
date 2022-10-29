@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PortfolioView: View {
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     var body: some View {
         NavigationStack {
             ZStack {
@@ -58,10 +58,10 @@ struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             PortfolioView()
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .preferredColorScheme(.light)
             PortfolioView()
-                .environmentObject(StateController.dummyData())
+                .environmentObject(Model.dummyData())
                 .preferredColorScheme(.dark)
         }
     }

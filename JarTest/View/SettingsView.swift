@@ -10,7 +10,7 @@ import MessageUI
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject private var stateController: StateController
+    @EnvironmentObject private var stateController: Model
     @State var navPath: NavigationPath = NavigationPath()
     @EnvironmentObject private var settingsStore: SettingsStore
     @State var selectedCurrency: ForeignCurrency
@@ -104,7 +104,7 @@ struct SettingsView: View {
                             Alert(title: Text("Please setup your Mail app"))
                         }
                         //Rate in AppStore
-                        Link(destination: URL(string: StateController.appStoreReviewLink)!) {
+                        Link(destination: URL(string: Model.appStoreReviewLink)!) {
                             HStack {
                                 Label {
                                     Text("Rate in AppStore")
@@ -160,7 +160,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView(selectedCurrency: .usd)
-            .environmentObject(StateController.dummyData())
+            .environmentObject(Model.dummyData())
             .environmentObject(SettingsStore())
     }
 }
