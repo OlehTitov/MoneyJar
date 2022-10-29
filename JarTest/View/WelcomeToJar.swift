@@ -13,16 +13,11 @@ struct WelcomeToJar: View {
     @State var isCreateJarPressed = false
     var cardBackground = Color(UIColor.secondarySystemBackground)
     var cardCornerRadius: CGFloat = 12
-    var title = "Multi-asset savings tracker"
-    var paragraph1 = "Set your financial goal. Add different assets and currencies to see how your jar is filling."
-    var paragraph2 = "Save in Bitcoin, gold coins or bars, world currencies and instantly see the amount in your home currency."
-    var paragraph3 = "You own the data, nothing is stored on server."
-    var buttonTitle = "Get started"
     var body: some View {
         VStack {
             //When user presses button we show next view
-            if self.isCreateJarPressed {
-                ConfigureJar().navigationBarHidden(true)
+            if isCreateJarPressed {
+                ConfigureJar()
             } else {
                 //Content
                 ZStack {
@@ -62,6 +57,7 @@ struct WelcomeToJar: View {
             makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: 60, offsetFinish: -250, offsetY: 90, duration: 4)
         }
         .padding(40)
+        .padding(.vertical)
     }
     
     var bottomCardWithTextAndButton: some View {
@@ -71,12 +67,9 @@ struct WelcomeToJar: View {
             VStack {
                 VStack(spacing: 12) {
                     VStack(alignment: .center, spacing: 24) {
-                        Text(title)
+                        Text("Multi-asset savings tracker")
                             .font(.customTitleFont)
-                        Text(paragraph1)
-                            .font(.customHeadlineFont)
-//                        Text(paragraph2)
-                        Text(paragraph3)
+                        Text("Set your financial goal. Add different assets and currencies to see how your jar is filling.")
                             .font(.customHeadlineFont)
                     }
                     .multilineTextAlignment(.center)
@@ -94,9 +87,23 @@ struct WelcomeToJar: View {
         }
     }
     
-    func makeMovingElement(image: String, name: String, type: String, isCommodity: Bool, quantity: String, bgrdOpacity: Double, offsetStart: Double, offsetFinish: Double, offsetY: Double, duration: Double) -> some View {
+    func makeMovingElement(image: String,
+                           name: String,
+                           type: String,
+                           isCommodity: Bool,
+                           quantity: String,
+                           bgrdOpacity: Double,
+                           offsetStart: Double,
+                           offsetFinish: Double,
+                           offsetY: Double,
+                           duration: Double) -> some View {
         VStack {
-            TransactionListItem(image: image, name: name, assetType: type, quantity: quantity, isCommodity: isCommodity, color: .red)
+            TransactionListItem(image: image,
+                                name: name,
+                                assetType: type,
+                                quantity: quantity,
+                                isCommodity: isCommodity,
+                                color: .red)
                 .padding(.horizontal)
                 .padding(.vertical, 6)
         }
