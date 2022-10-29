@@ -9,14 +9,14 @@ import SwiftUI
 import Subsonic
 
 struct HomeView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     var body: some View {
         Content2()
             .task {
-                if stateController.account.rates.isEmpty {
-                    await stateController.getLatestRates()
+                if model.account.rates.isEmpty {
+                    await model.getLatestRates()
                 }
-                stateController.calculateBalance()
+                model.calculateBalance()
         }
     }
 }
@@ -38,7 +38,7 @@ struct ContentView_Previews: PreviewProvider {
 
 extension HomeView {
     struct Content2: View {
-        @EnvironmentObject private var stateController: Model
+        @EnvironmentObject private var model: Model
         @EnvironmentObject private var settingsStore : SettingsStore
         @Environment(\.colorScheme) var colorScheme
         @AppStorage(storageKeys.greetingSoundPlayed.rawValue) var greetingSoundPlayed = false
@@ -55,7 +55,7 @@ extension HomeView {
                     ZStack {
                         UltimateGradientView()
                         VStack {
-                            JarWithCoinsView(progress: stateController.account.progress)
+                            JarWithCoinsView(progress: model.account.progress)
                                 .padding(.bottom, 60)
                                 .padding(.top, 40)
                             ScrollView(.vertical, showsIndicators: false) {
@@ -69,12 +69,12 @@ extension HomeView {
                                 .padding(.top, 24)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 VStack(alignment: .leading, spacing: 16) {
-                                    Text(stateController.account.name)
+                                    Text(model.account.name)
                                         .foregroundColor(.secondary)
                                         .font(.customBodyFont)
-                                    CustomProgressView(progress: stateController.account.progress/100)
+                                    CustomProgressView(progress: model.account.progress/100)
                                     HStack {
-                                        Text("\(stateController.account.progress.toStringWithDecimalIfNeeded()) %")
+                                        Text("\(model.account.progress.toStringWithDecimalIfNeeded()) %")
                                         Spacer()
                                         goalAmount()
                                     }
@@ -119,7 +119,7 @@ extension HomeView {
                         //Check if there are any new awards to display
                         checkAwards()
                     }
-                    .navigationTitle(stateController.account.name)
+                    .navigationTitle(model.account.name)
                     .toolbar(.hidden, for: .navigationBar)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbarBackground(.hidden, for: .navigationBar)
@@ -145,9 +145,9 @@ extension HomeView {
                 }
                 
                 .sheet(isPresented: $presentSheet, onDismiss: {
-                    if !stateController.account.awardsForPresentation.isEmpty {
+                    if !model.account.awardsForPresentation.isEmpty {
                         DispatchQueue.main.async {
-                            stateController.markAwardAsPresented(award: award)
+                            model.markAwardAsPresented(award: award)
                         }
                     }
                     
@@ -159,14 +159,14 @@ extension HomeView {
         }
         
         func newTotalAmount(size: CGFloat, decimalSize: CGFloat) -> some View {
-            RollingCounterAnimation(initialBalance: stateController.account.balanceBeforeChange, currentBalance: stateController.account.balance, fontSize: size, decimaSize: decimalSize)
+            RollingCounterAnimation(initialBalance: model.account.balanceBeforeChange, currentBalance: model.account.balance, fontSize: size, decimaSize: decimalSize)
                 .minimumScaleFactor(0.5)
         }
         
         func goalAmount() -> some View {
             HStack {
                 Image(systemName: "flag")
-                Text(Double(stateController.account.goalAmount).format(with: stateController.account.baseCurrency))
+                Text(Double(model.account.goalAmount).format(with: model.account.baseCurrency))
             }
         }
         
@@ -219,8 +219,8 @@ extension HomeView {
         }
         
         func checkAwards() {
-            stateController.checkAllAwards()
-            if stateController.account.awardsForPresentation.count != 0 {
+            model.checkAllAwards()
+            if model.account.awardsForPresentation.count != 0 {
                 
                 //Show award with delay because there might be a sound of fallings coins and balance amount animation
                 DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -230,10 +230,10 @@ extension HomeView {
         }
         
         var award: Award {
-            if stateController.account.awardsForPresentation.isEmpty {
+            if model.account.awardsForPresentation.isEmpty {
                 return Award(id: 0, name: "Dummy", image: "1_engage", status: .completed, presented: false, detailedText: "")
             } else {
-                return stateController.account.awardsForPresentation[0]
+                return model.account.awardsForPresentation[0]
             }
         }
     }

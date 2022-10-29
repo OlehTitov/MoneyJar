@@ -10,7 +10,7 @@ import SwiftUI
 struct ChangeAmountView: View {
     @StateObject var viewModel = SetAmountViewModel()
     @Binding var path: NavigationPath
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @State var alertText = ""
     @State var showResult = false
     var body: some View {
@@ -21,7 +21,7 @@ struct ChangeAmountView: View {
                 AmountLine(
                     amount: viewModel.amount,
                     showPlaceholder: viewModel.showPlaceholder,
-                    placeholderText: stateController.account.baseCurrency.placeholder(amount: stateController.account.goalAmount), font: .customLargeTitleFont
+                    placeholderText: model.account.baseCurrency.placeholder(amount: model.account.goalAmount), font: .customLargeTitleFont
                 )
                 .minimumScaleFactor(0.5)
                 .frame(height: 100)
@@ -40,7 +40,7 @@ struct ChangeAmountView: View {
                     presentAlert: $viewModel.presentAlert,
                     alertDescription: $alertText,
                     showDecimal: false,
-                    currency: stateController.account.baseCurrency,
+                    currency: model.account.baseCurrency,
                     isForCrypto: false
                 )
                 .alert(alertText, isPresented: $viewModel.presentAlert) {
@@ -50,7 +50,7 @@ struct ChangeAmountView: View {
             }
             .toolbar {
                 Button {
-                    stateController.changeGoalAmount(new: viewModel.amountAsDouble)
+                    model.changeGoalAmount(new: viewModel.amountAsDouble)
                     showResult = true
                 } label: {
                     Text("Save")

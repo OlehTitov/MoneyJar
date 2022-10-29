@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PortfolioView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     var body: some View {
         NavigationStack {
             ZStack {
@@ -17,7 +17,7 @@ struct PortfolioView: View {
                         .fill(Color.clear)
                         .frame(height: 60)
                         .overlay {
-                            MultiProgressView(totalAmount: stateController.account.goalAmount, items: filteredItems, height: 30)
+                            MultiProgressView(totalAmount: model.account.goalAmount, items: filteredItems, height: 30)
                         }
                         .padding(.top)
                         .listRowBackground(Color.clear)
@@ -27,7 +27,7 @@ struct PortfolioView: View {
                             Text(item.assetName.rawValue)
                                 .font(.customHeadlineFont)
                             Spacer()
-                            Text(item.amountInBaseCurrency.format(with: stateController.account.baseCurrency))
+                            Text(item.amountInBaseCurrency.format(with: model.account.baseCurrency))
                                 .font(.customHeadlineFont)
                         }
                     }
@@ -45,7 +45,7 @@ struct PortfolioView: View {
     }
     
     var filteredItems : [PortfolioItem] {
-        let filtered = stateController.account.portfolioItems.filter { $0.amountInBaseCurrency > 0 }
+        let filtered = model.account.portfolioItems.filter { $0.amountInBaseCurrency > 0 }
         let sorted = filtered.sorted {
             $0.amountInBaseCurrency > $1.amountInBaseCurrency
         }

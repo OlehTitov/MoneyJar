@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct AllAssetsView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         NavigationStack {
             ZStack {
                 Color(UIColor.secondarySystemBackground)
                     .ignoresSafeArea()
-                if stateController.account.assets.isEmpty {
+                if model.account.assets.isEmpty {
                     EmptyAssetsView()
                 } else {
                     List {
                         ForEach(sortAssetsByDate(), id: \.self) { date in
                             Section(header: Text(date.toString)) {
-                                ForEach(stateController.account.assets, id: \.self) { asset in
+                                ForEach(model.account.assets, id: \.self) { asset in
                                     switch asset {
                                     case .cash(let cash):
                                         if cash.dateAdded.onlyDate == date {
@@ -73,7 +73,7 @@ struct AllAssetsView: View {
     }
     
     func sortAssetsByDate() -> [Date] {
-        let assets = stateController.account.assets
+        let assets = model.account.assets
         var dates : [Date] = []
         for asset in assets {
             switch asset {

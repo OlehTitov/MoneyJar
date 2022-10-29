@@ -9,7 +9,7 @@ import SwiftUI
 import Subsonic
 
 struct AwardUnlockedSheet: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @EnvironmentObject private var settingsStore : SettingsStore
     @Binding var show: Bool
     var award: Award
@@ -38,9 +38,9 @@ struct AwardUnlockedSheet: View {
                     Button("OK") {
                         self.show = false
                         DispatchQueue.main.async {
-                            stateController.markAwardAsPresented(award: award)
+                            model.markAwardAsPresented(award: award)
                         }
-                        print(stateController.account.awards)
+                        print(model.account.awards)
                     }
                     .buttonStyle(PrimaryButtonStyle())
                 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     var body: some View {
         TabView {
             HomeView()
@@ -26,7 +26,7 @@ struct TabBarView: View {
                     Label("Structure", systemImage: "chart.pie")
                 }
                 
-            SettingsView(selectedCurrency: stateController.account.baseCurrency)
+            SettingsView(selectedCurrency: model.account.baseCurrency)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

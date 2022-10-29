@@ -10,7 +10,7 @@ import MessageUI
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @State var navPath: NavigationPath = NavigationPath()
     @EnvironmentObject private var settingsStore: SettingsStore
     @State var selectedCurrency: ForeignCurrency
@@ -141,7 +141,7 @@ struct SettingsView: View {
             }
             .navigationDestination(for: SettingsRoute.self, destination: { route in
                 switch route {
-                case .jarName: ChangeJarNameView(path: $navPath, jarName: stateController.account.name)
+                case .jarName: ChangeJarNameView(path: $navPath, jarName: model.account.name)
                 case .changeGoalAmount: ChangeAmountView(path: $navPath)
                 case .credits: CreditsView()
                 }
@@ -151,8 +151,8 @@ struct SettingsView: View {
             .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
         .onChange(of: selectedCurrency) { newValue in
-            stateController.setBaseCurrency(newValue: newValue)
-            stateController.calculateBalance()
+            model.setBaseCurrency(newValue: newValue)
+            model.calculateBalance()
         }
     }
 }

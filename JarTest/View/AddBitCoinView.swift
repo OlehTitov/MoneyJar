@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddBitCoinView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @Binding var mainStack: [NavigationType]
     @State var amountString = ""
     @State var amountAsDouble = 0.0
@@ -53,13 +53,13 @@ struct AddBitCoinView: View {
     func addBitCoinToAccount() {
         let finalAsset = Asset.crypto(Crypto(symbol: .bitcoin, amount: Double(amountString) ?? 0.0, dateAdded: Date.now))
         print(finalAsset)
-        stateController.addAsset(asset: finalAsset)
+        model.addAsset(asset: finalAsset)
         self.presentResult = true
     }
     
     func dismissView() {
         mainStack = []
-        stateController.calculateBalance()
+        model.calculateBalance()
     }
 }
 

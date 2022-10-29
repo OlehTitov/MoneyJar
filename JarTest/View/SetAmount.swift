@@ -54,7 +54,7 @@ struct SetAmount_Previews: PreviewProvider {
 
 extension SetAmount {
     struct Content: View {
-        @EnvironmentObject private var stateController: Model
+        @EnvironmentObject private var model: Model
         @AppStorage(storageKeys.jarIsCreated.rawValue) var jarIsCreated = false
         @StateObject var viewModel : SetAmountViewModel
         var jarName: String
@@ -97,7 +97,7 @@ extension SetAmount {
                     
                     Button("Start saving") {
                         viewModel.updateAccount(
-                            sc: stateController,
+                            sc: model,
                             selectedCurrency: selectedCurrency,
                             jarName: jarName
                         )

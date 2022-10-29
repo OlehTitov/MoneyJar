@@ -68,7 +68,7 @@
 		7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */; };
 		7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CBAF3482896DED400BD8BC9 /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC1EB54286EF37E0022139C /* PopupButton.swift */; };
-		7CBAF34E2897AB1600BD8BC9 /* StateControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34D2897AB1500BD8BC9 /* StateControllerTests.swift */; };
+		7CBAF34E2897AB1600BD8BC9 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */; };
 		7CBAF3502898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
 		7CBAF3512898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
 		7CBAF3532898039700BD8BC9 /* MockExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */; };
@@ -219,7 +219,7 @@
 		7CBAF33A2891798C00BD8BC9 /* SetAmountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAmountViewModel.swift; sourceTree = "<group>"; };
 		7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountLine.swift; sourceTree = "<group>"; };
 		7CBAF3412896664A00BD8BC9 /* ChevronStyleTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChevronStyleTextButton.swift; sourceTree = "<group>"; };
-		7CBAF34D2897AB1500BD8BC9 /* StateControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateControllerTests.swift; sourceTree = "<group>"; };
+		7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorageController.swift; sourceTree = "<group>"; };
 		7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExchangeClient.swift; sourceTree = "<group>"; };
 		7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageControllerProtocol.swift; sourceTree = "<group>"; };
@@ -388,7 +388,7 @@
 		7CBAF319288E67F200BD8BC9 /* MoneyJarTests */ = {
 			isa = PBXGroup;
 			children = (
-				7CBAF34D2897AB1500BD8BC9 /* StateControllerTests.swift */,
+				7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */,
 				7CBAF3342890856400BD8BC9 /* CurrencyConverterTests.swift */,
 				7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */,
 				7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */,
@@ -524,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				7C14CA1E28411D1E00D8E2BB /* JarModel.swift */,
+				7CDA98F6285B622600EDCF42 /* Model.swift */,
 				7C0ADA8C290C6CDC00206341 /* Account.swift */,
 				7CEF6C36286712010013EA3D /* Currency.swift */,
 				7CEF6C28286470340013EA3D /* ForeignExchange.swift */,
@@ -534,7 +535,6 @@
 		7CEF6C2A2864706E0013EA3D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7CDA98F6285B622600EDCF42 /* Model.swift */,
 				7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */,
 				7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */,
 				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
@@ -735,7 +735,7 @@
 				7CBAF329288EE38A00BD8BC9 /* JarModel.swift in Sources */,
 				7CBAF33C2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7CBAF3372891126500BD8BC9 /* StorageController.swift in Sources */,
-				7CBAF34E2897AB1600BD8BC9 /* StateControllerTests.swift in Sources */,
+				7CBAF34E2897AB1600BD8BC9 /* ModelTests.swift in Sources */,
 				7CBAF3542898039700BD8BC9 /* MockExchangeClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,7 +879,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OlehTitov.MoneyJarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -898,7 +898,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OlehTitov.MoneyJarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

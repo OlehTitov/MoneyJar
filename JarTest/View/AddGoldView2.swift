@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddGoldView2: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @StateObject var vm = ViewModel()
     @Binding var mainStack: [NavigationType]
     @State var alertDescription = ""
@@ -41,7 +41,7 @@ struct AddGoldView2: View {
                     NumberPadView(text: $vm.weight, showPlaceholder: $vm.showPlaceholder, amountAsDouble: $vm.amountAsDouble, presentAlert: $vm.presentAlert, alertDescription: $alertDescription, showDecimal: true, currency: .usd, isForCrypto: true)
                         .padding()
                     Button("Add gold") {
-                        vm.addGoldToAccount(sc: stateController)
+                        vm.addGoldToAccount(sc: model)
                     }
                     .buttonStyle(PrimaryButtonStyle())
                     .disabled(vm.weight == "")
@@ -58,7 +58,7 @@ struct AddGoldView2: View {
     
     func dismissView() {
         mainStack = []
-        stateController.calculateBalance()
+        model.calculateBalance()
     }
 }
 

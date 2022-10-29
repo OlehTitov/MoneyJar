@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RollingCounterAnimation: View {
     @EnvironmentObject private var settingsStore : SettingsStore
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @State var totalAmount: Double = 0.0
     var initialBalance : Double
     var currentBalance: Double
@@ -28,7 +28,7 @@ struct RollingCounterAnimation: View {
             ///Total amount
             ///Display total amount formatted as currency and with different font size for decimals
             Text(totalAmount
-                .format(with: stateController.account.baseCurrency)
+                .format(with: model.account.baseCurrency)
                 .decimalFormat(fontSize: fontSize, decimalSize: decimaSize))
 
                 .onAppear {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddCashView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @State var amount = "0"
     @State var isFirstResponder = true
     @State var inputCurrency = ForeignCurrency.pln
@@ -40,8 +40,8 @@ struct AddCashView: View {
             return
         }
         let finalAsset = Asset.cash(Cash(symbol: inputCurrency, amount: Double(amount), dateAdded: Date.now))
-        stateController.addAsset(asset: finalAsset)
-        stateController.calculateBalance()
+        model.addAsset(asset: finalAsset)
+        model.calculateBalance()
         print("Added cash to account")
     }
 }

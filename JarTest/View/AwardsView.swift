@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AwardsView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     var gridItemLayout = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -27,12 +27,12 @@ struct AwardsView: View {
                         .padding(10)
                         .background(Color.white)
                         .clipShape(Circle())
-                    Text("You unlocked \(numberOfUnlockedAwards()) of \(stateController.account.awards.count) awards")
+                    Text("You unlocked \(numberOfUnlockedAwards()) of \(model.account.awards.count) awards")
                         .font(.customHeadlineFont)
                         .padding()
                 }
                 LazyVGrid(columns: gridItemLayout) {
-                    ForEach(stateController.account.awards) { award in
+                    ForEach(model.account.awards) { award in
                         NavigationLink{
                             AwardDetails(award: award)
                         }label: {
@@ -47,7 +47,7 @@ struct AwardsView: View {
     }
     
     func numberOfUnlockedAwards() -> Int {
-        stateController.account.awards.filter { award in
+        model.account.awards.filter { award in
             award.status == .completed
         }.count
     }

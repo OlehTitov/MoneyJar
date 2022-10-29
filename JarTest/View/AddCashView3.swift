@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIPager
 
 struct AddCashView3: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @StateObject var vm = ViewModel()
     @Binding var mainStack: [NavigationType]
     var selectedCurrency : ForeignCurrency
@@ -55,7 +55,7 @@ struct AddCashView3: View {
                     
                     //Add button
                     Button("Add currency") {
-                        vm.addCashToAccount(sc: stateController)
+                        vm.addCashToAccount(sc: model)
                     }
                     .buttonStyle(PrimaryButtonStyle())
                     .disabled(vm.amountAsDouble == 0.0)
@@ -75,7 +75,7 @@ struct AddCashView3: View {
     
     func dismissView() {
         mainStack = []
-        stateController.calculateBalance()
+        model.calculateBalance()
     }
 }
 

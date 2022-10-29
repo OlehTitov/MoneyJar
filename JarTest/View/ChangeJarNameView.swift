@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChangeJarNameView: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @Binding var path: NavigationPath
     @State var jarName: String
     @State var showResult = false
@@ -26,7 +26,7 @@ struct ChangeJarNameView: View {
             }
             .toolbar {
                 Button {
-                    stateController.renameJar(newName: jarName)
+                    model.renameJar(newName: jarName)
                     showResult = true
                     focusedTextField = false
                 } label: {

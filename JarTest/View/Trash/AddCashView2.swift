@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIPager
 
 struct AddCashView2: View {
-    @EnvironmentObject private var stateController: Model
+    @EnvironmentObject private var model: Model
     @Environment(\.presentationMode) var presentationMode // for returning to HomeView
     @StateObject var page: Page = .first() // for SwiftUIPager
     @State private var amount : String = "" // string to display the amount with currency symbols
@@ -66,8 +66,8 @@ struct AddCashView2: View {
     func addCashToAccount() {
         self.presentResult = true // shows AddResultView as a sheet
         let finalAsset = Asset.cash(Cash(symbol: selectedCurrency, amount: amountAsDouble, dateAdded: Date.now))
-        stateController.addAsset(asset: finalAsset)
-        stateController.calculateBalance()
+        model.addAsset(asset: finalAsset)
+        model.calculateBalance()
         self.amount = "" //clear the input textfield - it actually doesn't... needs improvement
     }
     

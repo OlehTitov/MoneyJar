@@ -1,5 +1,5 @@
 //
-//  StateController.swift
+//  Model.swift
 //  JarTest
 //
 //  Created by Oleh Titov on 16.06.2022.

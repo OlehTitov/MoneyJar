@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct JarTestApp: App {
-    let stateController = Model(
-        storageController: StorageController(),
-        exchangeClient: MockExchangeClient(), // change to real client for production
-        currencyConverter: CurrencyConverter(),
-        awardsManager: AwardsManager()
-    )
+    let model = Model(storageController: StorageController(),
+                      exchangeClient: MockExchangeClient(), // change to real client for production
+                      currencyConverter: CurrencyConverter(),
+                      awardsManager: AwardsManager())
     let settingsStore = SettingsStore()
     
     //This is to check if user has already created the jar
@@ -24,11 +22,11 @@ struct JarTestApp: App {
         WindowGroup {
             if jarIsCreated {
                 TabBarView()
-                    .environmentObject(stateController)
+                    .environmentObject(model)
                     .environmentObject(settingsStore)
             } else {
                 WelcomeToJar()
-                    .environmentObject(stateController)
+                    .environmentObject(model)
                     .environmentObject(settingsStore)
             }
         }
