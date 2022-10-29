@@ -10,7 +10,6 @@ import Subsonic
 
 struct HomeView: View {
     @EnvironmentObject private var stateController: StateController
-    @StateObject var viewModel = ViewModel()
     var body: some View {
         Content2()
             .task {
@@ -236,21 +235,6 @@ extension HomeView {
             } else {
                 return stateController.account.awardsForPresentation[0]
             }
-        }
-    }
-}
-
-extension HomeView {
-    class ViewModel: ObservableObject {
-        @Published var selection: Int? = nil
-        @Published var showAddAssetOptions = false
-        
-        func setNavigationTo(selection: Int) {
-            self.selection = selection
-        }
-        
-        func showingAddAssetOptions() {
-            showAddAssetOptions = true
         }
     }
 }
