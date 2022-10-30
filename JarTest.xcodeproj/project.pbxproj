@@ -366,6 +366,7 @@
 		7C1D099528AD3EE800C82211 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
 				7CFB9A0828E5E6A30049EA78 /* success.wav */,
 				7CC8FB0928EC54D50032FF3E /* upward_confirmation.wav */,
 				7C1D099828ADE9D500C82211 /* coins-falling.wav */,
@@ -460,6 +461,7 @@
 				7C0ADA87290C692D00206341 /* Awards */,
 				7CEF6C27286470160013EA3D /* Model */,
 				7C06ED2B290E6AC500C2EF09 /* Onboarding */,
+				7C1D099528AD3EE800C82211 /* Sounds */,
 				7CEF6C2A2864706E0013EA3D /* Audio */,
 				7CBAF311288E5D2400BD8BC9 /* ViewModel */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
@@ -494,8 +496,6 @@
 		7CEF6C2A2864706E0013EA3D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
-				7C1D099528AD3EE800C82211 /* Sounds */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
