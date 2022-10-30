@@ -287,6 +287,9 @@
 				7CDDF60F28ED7C4B00A4B706 /* AwardsManager.swift */,
 				7C0ADA88290C6A2B00206341 /* Award.swift */,
 				7C0ADA8A290C6AD400206341 /* AwardStatus.swift */,
+				7CC8FB0728EB7E520032FF3E /* AwardsView.swift */,
+				7CC8FB0B28ED554D0032FF3E /* AwardUnlockedSheet.swift */,
+				7CC8FB0528EB254C0032FF3E /* AwardDetails.swift */,
 			);
 			path = Awards;
 			sourceTree = "<group>";
@@ -449,9 +452,6 @@
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
 				7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */,
 				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
-				7CC8FB0728EB7E520032FF3E /* AwardsView.swift */,
-				7CC8FB0B28ED554D0032FF3E /* AwardUnlockedSheet.swift */,
-				7CC8FB0528EB254C0032FF3E /* AwardDetails.swift */,
 				7C1D099C28AEA01500C82211 /* AllAssetsView.swift */,
 				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
