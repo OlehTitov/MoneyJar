@@ -300,6 +300,15 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		7C06ED2F290EB0E700C2EF09 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
+				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,7 +387,6 @@
 				7C0ADA6C2909079100206341 /* UltimateGradientView.swift */,
 				7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */,
 				7C0ADA6E290910D600206341 /* CustomProgressView.swift */,
-				7CDDF61328EFFB8F00A4B706 /* RollingCounterAnimation.swift */,
 				7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */,
 				7CEA503228AF76D400D33C45 /* TransactionListItem.swift */,
 				7CC684D128CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift */,
@@ -423,6 +431,7 @@
 		7CEC2A4B283547F5007A1897 /* JarTest */ = {
 			isa = PBXGroup;
 			children = (
+				7C06ED2F290EB0E700C2EF09 /* Home */,
 				7C06ED2E290EAF9B00C2EF09 /* Settings */,
 				7C06ED2D290EAE9700C2EF09 /* Storage */,
 				7C06ED2C290EAD5800C2EF09 /* Exchange API */,
@@ -479,7 +488,6 @@
 			isa = PBXGroup;
 			children = (
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
-				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
 				7C1D099C28AEA01500C82211 /* AllAssetsView.swift */,
 				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
