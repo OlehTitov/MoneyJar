@@ -111,11 +111,9 @@
 		7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */; };
 		7CEF6C43286C23C30013EA3D /* AddCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C42286C23C30013EA3D /* AddCashView.swift */; };
 		7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */; };
-		7CFB99E028DE4B6B0049EA78 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */; };
 		7CFB9A0728E5E3A10049EA78 /* jarCreated.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */; };
 		7CFB9A0928E5E6A30049EA78 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0828E5E6A30049EA78 /* success.wav */; };
 		7CFB9A0C28E6C49E0049EA78 /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = 7CFB9A0B28E6C49E0049EA78 /* Subsonic */; };
-		7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,11 +216,9 @@
 		7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBitCoinView.swift; sourceTree = "<group>"; };
 		7CEF6C42286C23C30013EA3D /* AddCashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashView.swift; sourceTree = "<group>"; };
 		7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
-		7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 		7CFB99E328DE71150049EA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jarCreated.wav; sourceTree = "<group>"; };
 		7CFB9A0828E5E6A30049EA78 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
-		7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBaseCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -508,8 +504,6 @@
 			children = (
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
-				7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */,
-				7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
 			);
 			path = View;
@@ -722,7 +716,6 @@
 				7CEF6C222861E22C0013EA3D /* Double+extension.swift in Sources */,
 				7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
-				7CFDDB8028FFF979000A22E7 /* SelectBaseCurrency.swift in Sources */,
 				7CBDCE232906F2C500D858DA /* Bundle+extension.swift in Sources */,
 				7CC751EC28C6534600DBAF62 /* String+extension.swift in Sources */,
 				7CBAF3502898008700BD8BC9 /* MockStorageController.swift in Sources */,
@@ -746,7 +739,6 @@
 				7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */,
 				7CC684D228CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift in Sources */,
 				7CDA98F5285B4FFD00EDCF42 /* StorageController.swift in Sources */,
-				7CFB99E028DE4B6B0049EA78 /* AddAssetView.swift in Sources */,
 				7CA930FC28B8F3D900C8286C /* JarWithCoinsView.swift in Sources */,
 				7CC8FB0828EB7E520032FF3E /* AwardsView.swift in Sources */,
 			);
