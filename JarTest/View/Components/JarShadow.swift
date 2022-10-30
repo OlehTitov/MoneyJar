@@ -8,20 +8,16 @@
 import SwiftUI
 
 struct JarShadow: View {
-    @Environment(\.colorScheme) var colorScheme
     var width: Double
     var height: Double
     var blurRadius: Double
     var opacity: Double
     var body: some View {
         Ellipse()
-            .fill(shadowColor)
+            .fill(Color.black.opacity(0.7))
             .frame(width: width, height: height, alignment: .center)
             .blur(radius: blurRadius, opaque: false)
             .opacity(opacity)
-    }
-    var shadowColor: Color {
-        colorScheme == .dark ? Color.black : Color("forestGreen").opacity(0.7)
     }
 }
 

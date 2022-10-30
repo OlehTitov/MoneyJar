@@ -54,7 +54,7 @@ struct WelcomeToJar: View {
                 .offset(y: animate ? 0 : -200)
                 .animation(.interactiveSpring(), value: animate)
             
-            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: Double(100.00).format(with: .usd), bgrdOpacity: 0.4, offsetStart: -400, offsetFinish: 150, offsetY: -40, duration: 2, delay: 0.6)
+            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: Double(100.00).format(with: .usd), bgrdOpacity: 0.4, offsetStart: 500, offsetFinish: 150, offsetY: -40, duration: 2.2, delay: 1.4)
             
             makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: -400, offsetFinish: 60, offsetY: 90, duration: 2, delay: 0.8)
         }
