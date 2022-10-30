@@ -110,7 +110,7 @@
 		7CEF6C3D2868637F0013EA3D /* AddResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3C2868637F0013EA3D /* AddResultView.swift */; };
 		7CEF6C3F286B4DDE0013EA3D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */; };
-		7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C42286C23C30013EA3D /* AddCashView3.swift */; };
+		7CEF6C43286C23C30013EA3D /* AddCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C42286C23C30013EA3D /* AddCashView.swift */; };
 		7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */; };
 		7CFB99E028DE4B6B0049EA78 /* AddAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */; };
 		7CFB9A0728E5E3A10049EA78 /* jarCreated.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7CFB9A0628E5E3A00049EA78 /* jarCreated.wav */; };
@@ -218,7 +218,7 @@
 		7CEF6C3C2868637F0013EA3D /* AddResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultView.swift; sourceTree = "<group>"; };
 		7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBitCoinView.swift; sourceTree = "<group>"; };
-		7CEF6C42286C23C30013EA3D /* AddCashView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashView3.swift; sourceTree = "<group>"; };
+		7CEF6C42286C23C30013EA3D /* AddCashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCashView.swift; sourceTree = "<group>"; };
 		7CF8ED0228FA93DC00D688A0 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssetView.swift; sourceTree = "<group>"; };
 		7CFB99E328DE71150049EA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -323,7 +323,7 @@
 		7C06ED31290EB27900C2EF09 /* Cash */ = {
 			isa = PBXGroup;
 			children = (
-				7CEF6C42286C23C30013EA3D /* AddCashView3.swift */,
+				7CEF6C42286C23C30013EA3D /* AddCashView.swift */,
 				7C0ADA7F290C127A00206341 /* Cash.swift */,
 				7C0ADA81290C17A300206341 /* ForeignCurrency.swift */,
 			);
@@ -750,7 +750,7 @@
 				7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7C0ADA8D290C6CDC00206341 /* Account.swift in Sources */,
 				7C0ADA75290A668E00206341 /* Font+extension.swift in Sources */,
-				7CEF6C43286C23C30013EA3D /* AddCashView3.swift in Sources */,
+				7CEF6C43286C23C30013EA3D /* AddCashView.swift in Sources */,
 				7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */,
 				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,
 				7CDDF61028ED7C4B00A4B706 /* AwardsManager.swift in Sources */,

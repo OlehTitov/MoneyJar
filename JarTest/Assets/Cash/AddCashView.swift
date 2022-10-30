@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUIPager
 
-struct AddCashView3: View {
+struct AddCashView: View {
     @EnvironmentObject private var model: Model
     @StateObject var vm = ViewModel()
     @Binding var mainStack: [NavigationType]
@@ -79,20 +79,20 @@ struct AddCashView3: View {
     }
 }
 
-struct AddCashView3_Previews: PreviewProvider {
+struct AddCashView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AddCashView3(mainStack: .constant([]), selectedCurrency: .usd)
+            AddCashView(mainStack: .constant([]), selectedCurrency: .usd)
                 .environmentObject(Model.dummyData())
                 .preferredColorScheme(.light)
-            AddCashView3(mainStack: .constant([]), selectedCurrency: .usd)
+            AddCashView(mainStack: .constant([]), selectedCurrency: .usd)
                 .environmentObject(Model.dummyData())
                 .preferredColorScheme(.dark)
         }
     }
 }
 
-extension AddCashView3 {
+extension AddCashView {
     class ViewModel : ObservableObject {
         @Published var selectedCurrency : ForeignCurrency = .usd
         @Published var amount : String = "" // string to display the amount with currency symbols

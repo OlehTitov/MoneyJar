@@ -18,7 +18,7 @@ struct SelectAssetTypeView: View {
                     switch asset {
                     case .cash(let cash):
                         NavigationLink {
-                            AddCashView3(
+                            AddCashView(
                                 mainStack: $mainStack,
                                 selectedCurrency: cash.symbol)
                         } label: {
