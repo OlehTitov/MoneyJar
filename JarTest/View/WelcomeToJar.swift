@@ -45,16 +45,18 @@ struct WelcomeToJar: View {
     
     var jarWithAssetChips: some View {
         ZStack {
-            makeMovingElement(image: "", name: "Gold bar", type: "Commodity", isCommodity: true, quantity: "10 oz", bgrdOpacity: 0.6, offsetStart: -110, offsetFinish: 280, offsetY: 0, duration: 3)
+            makeMovingElement(image: "", name: "Gold bar", type: "Commodity", isCommodity: true, quantity: "10 oz", bgrdOpacity: 0.6, offsetStart: 400, offsetFinish: -120, offsetY: 0, duration: 2, delay: 0.4)
             
             JarShadow(width: 240, height: 40, blurRadius: 16, opacity: 0.4)
                 .offset(y:140)
             
             JarWithCoinsView(progress: 85.7, jarWidth: 250, coinsWidth: 220, frameHeight: 300)
+                .offset(y: animate ? 0 : -200)
+                .animation(.interactiveSpring(), value: animate)
             
-            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: Double(100.00).format(with: .usd), bgrdOpacity: 0.4, offsetStart: 220, offsetFinish: -380, offsetY: -40, duration: 3)
+            makeMovingElement(image: "USD", name: "US Dollar", type: "Currency", isCommodity: false, quantity: Double(100.00).format(with: .usd), bgrdOpacity: 0.4, offsetStart: -400, offsetFinish: 150, offsetY: -40, duration: 2, delay: 0.6)
             
-            makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: 60, offsetFinish: -250, offsetY: 90, duration: 4)
+            makeMovingElement(image: "BTC", name: "Bitcoin", type: "Crypto", isCommodity: false, quantity: "1.24", bgrdOpacity: 0.3, offsetStart: -400, offsetFinish: 60, offsetY: 90, duration: 2, delay: 0.8)
         }
         .padding(40)
         .padding(.vertical)
@@ -85,6 +87,8 @@ struct WelcomeToJar: View {
                 .padding(.bottom)
             }
         }
+        .offset(y: animate ? 0 : 500)
+        .animation(.interactiveSpring(), value: animate)
     }
     
     func makeMovingElement(image: String,
@@ -96,7 +100,8 @@ struct WelcomeToJar: View {
                            offsetStart: Double,
                            offsetFinish: Double,
                            offsetY: Double,
-                           duration: Double) -> some View {
+                           duration: Double,
+                           delay: Double) -> some View {
         VStack {
             TransactionListItem(image: image,
                                 name: name,
@@ -111,8 +116,8 @@ struct WelcomeToJar: View {
         .background(.ultraThinMaterial)
         .cornerRadius(60)
         .shadow(color: Color.black.opacity(0.4), radius: 8, x: 0, y: 2)
-        .offset(x: animate ? offsetStart : offsetFinish, y: offsetY)
-        .animation(.easeInOut(duration: duration), value: animate)
+        .offset(x: animate ? offsetFinish : offsetStart, y: offsetY)
+        .animation(.easeOut(duration: duration).delay(delay), value: animate)
     }
 }
 
