@@ -272,6 +272,7 @@
 				7CEF6C252863971D0013EA3D /* ExchangeClient.swift */,
 				7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */,
 				7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */,
+				7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */,
 			);
 			path = "Exchange API";
 			sourceTree = "<group>";
@@ -446,7 +447,6 @@
 			isa = PBXGroup;
 			children = (
 				7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */,
-				7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */,
 				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
 				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
 				7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */,
