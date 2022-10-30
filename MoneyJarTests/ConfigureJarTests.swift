@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import JarTest
 
 class ConfigureJarTests : XCTestCase {
     //sut = System Under Testing

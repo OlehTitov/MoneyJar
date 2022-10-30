@@ -39,7 +39,6 @@
 		7CA930FE28B8F5E200C8286C /* TextUnderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */; };
 		7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */; };
 		7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */; };
-		7CBAF323288E6A2300BD8BC9 /* WelcomeToJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */; };
 		7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
 		7CBAF328288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
 		7CBAF329288EE38A00BD8BC9 /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
@@ -164,7 +163,6 @@
 		7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssetTypeView.swift; sourceTree = "<group>"; };
 		7CBAF318288E67F200BD8BC9 /* MoneyJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyJarTests.swift; sourceTree = "<group>"; };
-		7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeToJarTests.swift; sourceTree = "<group>"; };
 		7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureJarViewModel.swift; sourceTree = "<group>"; };
 		7CBAF32B288EE86000BD8BC9 /* ConfigureJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureJarTests.swift; sourceTree = "<group>"; };
 		7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
@@ -312,7 +310,6 @@
 				7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */,
 				7CBAF3342890856400BD8BC9 /* CurrencyConverterTests.swift */,
 				7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */,
-				7CBAF322288E6A2300BD8BC9 /* WelcomeToJarTests.swift */,
 				7CBAF32B288EE86000BD8BC9 /* ConfigureJarTests.swift */,
 			);
 			path = MoneyJarTests;
@@ -599,7 +596,6 @@
 				7CBAF35828987DDE00BD8BC9 /* StorageControllerProtocol.swift in Sources */,
 				7CBAF34028965F9300BD8BC9 /* AmountLine.swift in Sources */,
 				7CBAF328288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */,
-				7CBAF323288E6A2300BD8BC9 /* WelcomeToJarTests.swift in Sources */,
 				7CBAF3392891129800BD8BC9 /* ForeignExchange.swift in Sources */,
 				7CBAF3352890856500BD8BC9 /* CurrencyConverterTests.swift in Sources */,
 				7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */,
