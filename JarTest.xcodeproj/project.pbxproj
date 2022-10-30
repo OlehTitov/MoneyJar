@@ -247,6 +247,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C06ED2A290E4FE400C2EF09 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7C1D099A28AE9F0500C82211 /* TabBarView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +380,7 @@
 			children = (
 				7CFB99E328DE71150049EA78 /* Info.plist */,
 				7CEC2A4C283547F5007A1897 /* JarTestApp.swift */,
+				7C06ED2A290E4FE400C2EF09 /* Navigation */,
 				7C0ADA76290C0E7B00206341 /* Assets */,
 				7C0ADA87290C692D00206341 /* Awards */,
 				7CEF6C27286470160013EA3D /* Model */,
@@ -431,7 +440,6 @@
 				7CDA9900285E774400EDCF42 /* ConfigureJar.swift */,
 				7CEF02BD285F3F7D0009A82E /* SetAmount.swift */,
 				7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */,
-				7C1D099A28AE9F0500C82211 /* TabBarView.swift */,
 				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
 				7CC8FB0728EB7E520032FF3E /* AwardsView.swift */,
 				7CC8FB0B28ED554D0032FF3E /* AwardUnlockedSheet.swift */,
