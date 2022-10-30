@@ -455,6 +455,7 @@
 				7C06ED2D290EAE9700C2EF09 /* Storage */,
 				7C06ED2C290EAD5800C2EF09 /* Exchange API */,
 				7CFB99E328DE71150049EA78 /* Info.plist */,
+				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
 				7CEC2A4C283547F5007A1897 /* JarTestApp.swift */,
 				7C06ED2A290E4FE400C2EF09 /* Navigation */,
 				7C0ADA76290C0E7B00206341 /* Assets */,
@@ -462,7 +463,6 @@
 				7CEF6C27286470160013EA3D /* Model */,
 				7C06ED2B290E6AC500C2EF09 /* Onboarding */,
 				7C1D099528AD3EE800C82211 /* Sounds */,
-				7CEF6C2A2864706E0013EA3D /* Audio */,
 				7CBAF311288E5D2400BD8BC9 /* ViewModel */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
 				7CEF6C2B286470B50013EA3D /* View */,
@@ -493,17 +493,9 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7CEF6C2A2864706E0013EA3D /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
 		7CEF6C2B286470B50013EA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
 			);
 			path = View;
