@@ -277,6 +277,16 @@
 			path = "Exchange API";
 			sourceTree = "<group>";
 		};
+		7C06ED2D290EAE9700C2EF09 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */,
+				7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */,
+				7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +386,6 @@
 		7CBAF35528987DB300BD8BC9 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 		7CEC2A4B283547F5007A1897 /* JarTest */ = {
 			isa = PBXGroup;
 			children = (
+				7C06ED2D290EAE9700C2EF09 /* Storage */,
 				7C06ED2C290EAD5800C2EF09 /* Exchange API */,
 				7CFB99E328DE71150049EA78 /* Info.plist */,
 				7CEC2A4C283547F5007A1897 /* JarTestApp.swift */,
@@ -446,10 +456,8 @@
 		7CEF6C2A2864706E0013EA3D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */,
 				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
 				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
-				7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
