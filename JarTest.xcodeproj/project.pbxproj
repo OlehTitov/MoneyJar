@@ -106,7 +106,6 @@
 		7CEF6C222861E22C0013EA3D /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C212861E22C0013EA3D /* Double+extension.swift */; };
 		7CEF6C262863971D0013EA3D /* ExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C252863971D0013EA3D /* ExchangeClient.swift */; };
 		7CEF6C29286470340013EA3D /* ForeignExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C28286470340013EA3D /* ForeignExchange.swift */; };
-		7CEF6C37286712010013EA3D /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C36286712010013EA3D /* Currency.swift */; };
 		7CEF6C3D2868637F0013EA3D /* AddResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3C2868637F0013EA3D /* AddResultView.swift */; };
 		7CEF6C3F286B4DDE0013EA3D /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */; };
@@ -214,7 +213,6 @@
 		7CEF6C212861E22C0013EA3D /* Double+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+extension.swift"; sourceTree = "<group>"; };
 		7CEF6C252863971D0013EA3D /* ExchangeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeClient.swift; sourceTree = "<group>"; };
 		7CEF6C28286470340013EA3D /* ForeignExchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeignExchange.swift; sourceTree = "<group>"; };
-		7CEF6C36286712010013EA3D /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		7CEF6C3C2868637F0013EA3D /* AddResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddResultView.swift; sourceTree = "<group>"; };
 		7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPadView.swift; sourceTree = "<group>"; };
 		7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBitCoinView.swift; sourceTree = "<group>"; };
@@ -434,13 +432,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		7CBAF35528987DB300BD8BC9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		7CEC2A40283547F5007A1897 = {
 			isa = PBXGroup;
 			children = (
@@ -473,7 +464,6 @@
 				7C0ADA87290C692D00206341 /* Awards */,
 				7CEF6C27286470160013EA3D /* Model */,
 				7C06ED2B290E6AC500C2EF09 /* Onboarding */,
-				7CBAF35528987DB300BD8BC9 /* Protocols */,
 				7CEF6C2A2864706E0013EA3D /* Audio */,
 				7CBAF311288E5D2400BD8BC9 /* ViewModel */,
 				7CEF6C2B286470B50013EA3D /* View */,
@@ -500,7 +490,6 @@
 				7C14CA1E28411D1E00D8E2BB /* JarModel.swift */,
 				7CDA98F6285B622600EDCF42 /* Model.swift */,
 				7C0ADA8C290C6CDC00206341 /* Account.swift */,
-				7CEF6C36286712010013EA3D /* Currency.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -724,7 +713,6 @@
 				7CA930F128B6048100C8286C /* Color+extension.swift in Sources */,
 				7CA930F628B7A12600C8286C /* JarShadow.swift in Sources */,
 				7CC8FB0628EB254C0032FF3E /* AwardDetails.swift in Sources */,
-				7CEF6C37286712010013EA3D /* Currency.swift in Sources */,
 				7CA930EF28B6040F00C8286C /* PrimaryButtonStyle.swift in Sources */,
 				7C0ADA7E290C10AE00206341 /* Gold+MeasurementUnit.swift in Sources */,
 				7CC751F028C74C5200DBAF62 /* PortfolioView.swift in Sources */,
