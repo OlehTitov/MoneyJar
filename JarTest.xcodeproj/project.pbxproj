@@ -309,17 +309,47 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		7C06ED30290EB26D00C2EF09 /* Gold */ = {
+			isa = PBXGroup;
+			children = (
+				7CC1EB62287496300022139C /* AddGoldView2.swift */,
+				7C0ADA79290C0F6A00206341 /* Gold.swift */,
+				7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */,
+				7C0ADA7D290C10AE00206341 /* Gold+MeasurementUnit.swift */,
+			);
+			path = Gold;
+			sourceTree = "<group>";
+		};
+		7C06ED31290EB27900C2EF09 /* Cash */ = {
+			isa = PBXGroup;
+			children = (
+				7CEF6C42286C23C30013EA3D /* AddCashView3.swift */,
+				7C0ADA7F290C127A00206341 /* Cash.swift */,
+				7C0ADA81290C17A300206341 /* ForeignCurrency.swift */,
+			);
+			path = Cash;
+			sourceTree = "<group>";
+		};
+		7C06ED32290EB28200C2EF09 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */,
+				7C0ADA83290C670800206341 /* Crypto.swift */,
+				7C0ADA85290C678600206341 /* Crypto+CryptoCurrency.swift */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				7C0ADA77290C0EC600206341 /* Asset.swift */,
-				7C0ADA79290C0F6A00206341 /* Gold.swift */,
-				7C0ADA7B290C0FF200206341 /* Gold+GoldType.swift */,
-				7C0ADA7D290C10AE00206341 /* Gold+MeasurementUnit.swift */,
-				7C0ADA7F290C127A00206341 /* Cash.swift */,
-				7C0ADA81290C17A300206341 /* ForeignCurrency.swift */,
-				7C0ADA83290C670800206341 /* Crypto.swift */,
-				7C0ADA85290C678600206341 /* Crypto+CryptoCurrency.swift */,
+				7C1D099C28AEA01500C82211 /* AllAssetsView.swift */,
+				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
+				7CEF6C3C2868637F0013EA3D /* AddResultView.swift */,
+				7C06ED30290EB26D00C2EF09 /* Gold */,
+				7C06ED31290EB27900C2EF09 /* Cash */,
+				7C06ED32290EB28200C2EF09 /* Crypto */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -488,15 +518,9 @@
 			isa = PBXGroup;
 			children = (
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
-				7C1D099C28AEA01500C82211 /* AllAssetsView.swift */,
-				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
 				7CFDDB7F28FFF979000A22E7 /* SelectBaseCurrency.swift */,
-				7CC1EB62287496300022139C /* AddGoldView2.swift */,
-				7CEF6C40286B65230013EA3D /* AddBitCoinView.swift */,
-				7CEF6C42286C23C30013EA3D /* AddCashView3.swift */,
 				7CFB99DF28DE4B6B0049EA78 /* AddAssetView.swift */,
-				7CEF6C3C2868637F0013EA3D /* AddResultView.swift */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
 			);
 			path = View;
