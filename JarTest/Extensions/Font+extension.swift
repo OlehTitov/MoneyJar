@@ -51,7 +51,7 @@ extension UIFont {
     }
     
     static func customTitleFont() -> UIFont {
-        return customFont(name: "Montserrat-Bold", size: 28)
+        return customFont(name: "Montserrat-Bold", size: 26)
     }
     
     static func customLargeTitleFont() -> UIFont {

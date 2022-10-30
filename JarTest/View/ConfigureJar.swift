@@ -76,7 +76,7 @@ extension ConfigureJar {
                         
                     VStack(spacing: 12) {
                         Text("What are you saving for?")
-                            .font(.customHeadlineFont)
+                            .font(.customBodyFont)
                         LegacyTextField(
                             text: $name,
                             isFirstResponder: $isFirstResponder,
