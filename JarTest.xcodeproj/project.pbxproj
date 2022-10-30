@@ -255,6 +255,16 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		7C06ED2B290E6AC500C2EF09 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				7CDA98FE285E6C8300EDCF42 /* WelcomeToJar.swift */,
+				7CDA9900285E774400EDCF42 /* ConfigureJar.swift */,
+				7CEF02BD285F3F7D0009A82E /* SetAmount.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +394,7 @@
 				7C0ADA76290C0E7B00206341 /* Assets */,
 				7C0ADA87290C692D00206341 /* Awards */,
 				7CEF6C27286470160013EA3D /* Model */,
+				7C06ED2B290E6AC500C2EF09 /* Onboarding */,
 				7C1D099528AD3EE800C82211 /* Sounds */,
 				7CBAF35528987DB300BD8BC9 /* Protocols */,
 				7CEF6C2A2864706E0013EA3D /* Services */,
@@ -435,10 +446,7 @@
 		7CEF6C2B286470B50013EA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7CDA98FE285E6C8300EDCF42 /* WelcomeToJar.swift */,
 				7CDDF61128EF0C1E00A4B706 /* Launch Screen.storyboard */,
-				7CDA9900285E774400EDCF42 /* ConfigureJar.swift */,
-				7CEF02BD285F3F7D0009A82E /* SetAmount.swift */,
 				7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */,
 				7CEC2A4E283547F5007A1897 /* HomeView.swift */,
 				7CC8FB0728EB7E520032FF3E /* AwardsView.swift */,
