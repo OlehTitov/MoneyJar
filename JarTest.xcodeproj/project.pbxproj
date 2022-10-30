@@ -31,12 +31,9 @@
 		7C1D099F28AEA22F00C82211 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099E28AEA22F00C82211 /* SettingsView.swift */; };
 		7CA930EF28B6040F00C8286C /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */; };
 		7CA930F128B6048100C8286C /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F028B6048100C8286C /* Color+extension.swift */; };
-		7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F328B74B1300C8286C /* Subtitle.swift */; };
 		7CA930F628B7A12600C8286C /* JarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F528B7A12600C8286C /* JarShadow.swift */; };
 		7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F728B892FF00C8286C /* JarWithFlag.swift */; };
-		7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */; };
 		7CA930FC28B8F3D900C8286C /* JarWithCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */; };
-		7CA930FE28B8F5E200C8286C /* TextUnderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */; };
 		7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */; };
 		7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */; };
 		7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
@@ -151,12 +148,9 @@
 		7C1D099E28AEA22F00C82211 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		7CA930F028B6048100C8286C /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
-		7CA930F328B74B1300C8286C /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		7CA930F528B7A12600C8286C /* JarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarShadow.swift; sourceTree = "<group>"; };
 		7CA930F728B892FF00C8286C /* JarWithFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarWithFlag.swift; sourceTree = "<group>"; };
-		7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JumboMonospacedAmount.swift; sourceTree = "<group>"; };
 		7CA930FB28B8F3D900C8286C /* JarWithCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarWithCoinsView.swift; sourceTree = "<group>"; };
-		7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextUnderButton.swift; sourceTree = "<group>"; };
 		7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAssetTypeView.swift; sourceTree = "<group>"; };
 		7CBAF318288E67F200BD8BC9 /* MoneyJarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyJarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyJarTests.swift; sourceTree = "<group>"; };
@@ -376,16 +370,6 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		7CA930F228B74ADA00C8286C /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				7CA930F328B74B1300C8286C /* Subtitle.swift */,
-				7CA930FD28B8F5E100C8286C /* TextUnderButton.swift */,
-				7CA930F928B8A06400C8286C /* JumboMonospacedAmount.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		7CBAF311288E5D2400BD8BC9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,7 +450,6 @@
 				7CBAF311288E5D2400BD8BC9 /* ViewModel */,
 				7CBAF33D28965F7C00BD8BC9 /* Components */,
 				7CEF6C2B286470B50013EA3D /* View */,
-				7CA930F228B74ADA00C8286C /* Modifiers */,
 				7CEF6C2C286470CD0013EA3D /* Extensions */,
 				7C0ADA70290A5E8600206341 /* Montserrat */,
 				7CEC2A50283547F7007A1897 /* Assets.xcassets */,
@@ -673,7 +656,6 @@
 				7CBAF3532898039700BD8BC9 /* MockExchangeClient.swift in Sources */,
 				7CDDF61428EFFB8F00A4B706 /* RollingCounterAnimation.swift in Sources */,
 				7C1D099B28AE9F0500C82211 /* TabBarView.swift in Sources */,
-				7CA930FE28B8F5E200C8286C /* TextUnderButton.swift in Sources */,
 				7CEF02BE285F3F7D0009A82E /* SetAmount.swift in Sources */,
 				7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */,
 				7CBDCE212906F09A00D858DA /* CreditsView.swift in Sources */,
@@ -691,7 +673,6 @@
 				7CC8FB0C28ED554D0032FF3E /* AwardUnlockedSheet.swift in Sources */,
 				7C0ADA8B290C6AD400206341 /* AwardStatus.swift in Sources */,
 				7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */,
-				7CA930F428B74B1300C8286C /* Subtitle.swift in Sources */,
 				7CA930F828B892FF00C8286C /* JarWithFlag.swift in Sources */,
 				7C0ADA84290C670800206341 /* Crypto.swift in Sources */,
 				7CDA98E3285478E300EDCF42 /* CustomCorner.swift in Sources */,
@@ -728,7 +709,6 @@
 				7CF8ED0328FA93DC00D688A0 /* BackgroundView.swift in Sources */,
 				7CDDF61028ED7C4B00A4B706 /* AwardsManager.swift in Sources */,
 				7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */,
-				7CA930FA28B8A06400C8286C /* JumboMonospacedAmount.swift in Sources */,
 				7CC684D228CA34A60067E26F /* SegmentedPickerGoldMeasurementUnits.swift in Sources */,
 				7CDA98F5285B4FFD00EDCF42 /* StorageController.swift in Sources */,
 				7CA930FC28B8F3D900C8286C /* JarWithCoinsView.swift in Sources */,
