@@ -296,6 +296,7 @@
 				7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */,
 				7CDDF61528F1498B00A4B706 /* ChangeJarNameView.swift */,
 				7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */,
+				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -323,9 +324,9 @@
 		7C06ED31290EB27900C2EF09 /* Cash */ = {
 			isa = PBXGroup;
 			children = (
-				7CEF6C42286C23C30013EA3D /* AddCashView.swift */,
 				7C0ADA7F290C127A00206341 /* Cash.swift */,
 				7C0ADA81290C17A300206341 /* ForeignCurrency.swift */,
+				7CEF6C42286C23C30013EA3D /* AddCashView.swift */,
 			);
 			path = Cash;
 			sourceTree = "<group>";
@@ -508,7 +509,6 @@
 		7CEF6C2A2864706E0013EA3D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7CDDF61728F4258500A4B706 /* SettingsStore.swift */,
 				7C1D099328AD16BF00C82211 /* AudioPlayer.swift */,
 			);
 			path = Services;
