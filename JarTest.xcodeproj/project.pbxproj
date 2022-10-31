@@ -25,7 +25,6 @@
 		7C0ADA89290C6A2B00206341 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA88290C6A2B00206341 /* Award.swift */; };
 		7C0ADA8B290C6AD400206341 /* AwardStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA8A290C6AD400206341 /* AwardStatus.swift */; };
 		7C0ADA8D290C6CDC00206341 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA8C290C6CDC00206341 /* Account.swift */; };
-		7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7C1D099428AD16BF00C82211 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1D099328AD16BF00C82211 /* AudioPlayer.swift */; };
 		7C1D099728AD3F0F00C82211 /* coins-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7C1D099628AD3F0F00C82211 /* coins-sound.wav */; };
 		7C1D099928ADE9D500C82211 /* coins-falling.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7C1D099828ADE9D500C82211 /* coins-falling.wav */; };
@@ -41,7 +40,6 @@
 		7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */; };
 		7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
 		7CBAF328288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
-		7CBAF329288EE38A00BD8BC9 /* JarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C14CA1E28411D1E00D8E2BB /* JarModel.swift */; };
 		7CBAF32A288EE3BC00BD8BC9 /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C212861E22C0013EA3D /* Double+extension.swift */; };
 		7CBAF32D288EE86000BD8BC9 /* ConfigureJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF32B288EE86000BD8BC9 /* ConfigureJarTests.swift */; };
 		7CBAF332289037C900BD8BC9 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */; };
@@ -145,7 +143,6 @@
 		7C0ADA88290C6A2B00206341 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		7C0ADA8A290C6AD400206341 /* AwardStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardStatus.swift; sourceTree = "<group>"; };
 		7C0ADA8C290C6CDC00206341 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		7C14CA1E28411D1E00D8E2BB /* JarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarModel.swift; sourceTree = "<group>"; };
 		7C1D099328AD16BF00C82211 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		7C1D099628AD3F0F00C82211 /* coins-sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "coins-sound.wav"; path = "../../../../../Downloads/coins-sound.wav"; sourceTree = "<group>"; };
 		7C1D099828ADE9D500C82211 /* coins-falling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "coins-falling.wav"; path = "../../../../../Downloads/coins-falling.wav"; sourceTree = "<group>"; };
@@ -503,7 +500,6 @@
 		7CEF6C27286470160013EA3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C14CA1E28411D1E00D8E2BB /* JarModel.swift */,
 				7CDA98F6285B622600EDCF42 /* Model.swift */,
 				7C0ADA8C290C6CDC00206341 /* Account.swift */,
 			);
@@ -662,7 +658,6 @@
 				7CBAF3392891129800BD8BC9 /* ForeignExchange.swift in Sources */,
 				7CBAF3352890856500BD8BC9 /* CurrencyConverterTests.swift in Sources */,
 				7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */,
-				7CBAF329288EE38A00BD8BC9 /* JarModel.swift in Sources */,
 				7CBAF33C2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7CBAF3372891126500BD8BC9 /* StorageController.swift in Sources */,
 				7CBAF34E2897AB1600BD8BC9 /* ModelTests.swift in Sources */,
@@ -719,7 +714,6 @@
 				7CC751F028C74C5200DBAF62 /* PortfolioView.swift in Sources */,
 				7CBAF332289037C900BD8BC9 /* CurrencyConverter.swift in Sources */,
 				7C0ADA80290C127A00206341 /* Cash.swift in Sources */,
-				7C14CA1F28411D1E00D8E2BB /* JarModel.swift in Sources */,
 				7CEF6C222861E22C0013EA3D /* Double+extension.swift in Sources */,
 				7CC751E628C2793800DBAF62 /* NSAttributedString+extension.swift in Sources */,
 				7CEA503328AF76D400D33C45 /* TransactionListItem.swift in Sources */,
