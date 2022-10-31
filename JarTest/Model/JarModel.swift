@@ -14,12 +14,6 @@ import SwiftUI
 //    case portfolio
 //}
 
-enum StorageKeys: String {
-    case greetingSoundPlayed
-    case jarIsCreated
-    case soundIsOn
-    case hapticsIsOn
-}
 
 
 
