@@ -340,6 +340,14 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		7C06ED36290FA92800C2EF09 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
 		7C0ADA76290C0E7B00206341 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,7 +355,6 @@
 				7C1D099C28AEA01500C82211 /* AllAssetsView.swift */,
 				7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */,
 				7CEF6C3C2868637F0013EA3D /* AddResultView.swift */,
-				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
 				7C06ED30290EB26D00C2EF09 /* Gold */,
 				7C06ED31290EB27900C2EF09 /* Cash */,
 				7C06ED32290EB28200C2EF09 /* Crypto */,
@@ -454,6 +461,7 @@
 				7C06ED2E290EAF9B00C2EF09 /* Settings */,
 				7C0ADA76290C0E7B00206341 /* Assets */,
 				7C0ADA87290C692D00206341 /* Awards */,
+				7C06ED36290FA92800C2EF09 /* Portfolio */,
 				7CEF6C27286470160013EA3D /* Model */,
 				7C06ED2D290EAE9700C2EF09 /* Storage */,
 				7C06ED2C290EAD5800C2EF09 /* Exchange API */,
