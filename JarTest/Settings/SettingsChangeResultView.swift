@@ -18,14 +18,15 @@ struct SettingsChangeResultView: View {
                 Spacer()
                 Image("penguin_waving")
                     .resizable()
-                    .frame(width: 120, height: 120)
+                    .frame(width: 100, height: 100)
                     .background(Color.white)
                     .clipShape(Circle())
-                Text(settingsTitle)
-                    .subtitleStyle()
-                Text(newValue)
-                    .font(.title)
-                    .bold()
+                VStack(spacing: 12) {
+                    Text(settingsTitle)
+                        .font(.customTitleFont)
+                    Text(newValue)
+                        .font(.customBodyFont)
+                }
                 Spacer()
             }
             .safeAreaInset(edge: .bottom) {
