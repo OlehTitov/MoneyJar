@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7C06ED35290FA3C500C2EF09 /* CenteredLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */; };
+		7C06ED38290FA97C00C2EF09 /* PortfolioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED37290FA97C00C2EF09 /* PortfolioItem.swift */; };
 		7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6C2909079100206341 /* UltimateGradientView.swift */; };
 		7C0ADA6F290910D600206341 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6E290910D600206341 /* CustomProgressView.swift */; };
 		7C0ADA71290A5E8600206341 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ADA70290A5E8600206341 /* Montserrat */; };
@@ -126,6 +127,7 @@
 
 /* Begin PBXFileReference section */
 		7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredLabelStyle.swift; sourceTree = "<group>"; };
+		7C06ED37290FA97C00C2EF09 /* PortfolioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioItem.swift; sourceTree = "<group>"; };
 		7C0ADA6C2909079100206341 /* UltimateGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateGradientView.swift; sourceTree = "<group>"; };
 		7C0ADA6E290910D600206341 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		7C0ADA70290A5E8600206341 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				7CC751EF28C74C5200DBAF62 /* PortfolioView.swift */,
+				7C06ED37290FA97C00C2EF09 /* PortfolioItem.swift */,
 			);
 			path = Portfolio;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				7CDA9903285F1BBF00EDCF42 /* LegacyTextField.swift in Sources */,
 				7CEC2A4F283547F5007A1897 /* HomeView.swift in Sources */,
 				7CC684D428CA3C610067E26F /* SegmentedPickerGoldType.swift in Sources */,
+				7C06ED38290FA97C00C2EF09 /* PortfolioItem.swift in Sources */,
 				7C1D099D28AEA01500C82211 /* AllAssetsView.swift in Sources */,
 				7CDA98F7285B622600EDCF42 /* Model.swift in Sources */,
 				7CEA503F28B26BFB00D33C45 /* MultiProgressView.swift in Sources */,
