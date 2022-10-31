@@ -106,21 +106,22 @@ struct SettingsView: View {
                             Alert(title: Text("Please setup your Mail app"))
                         }
                         //Rate in AppStore
-                        Button {
-                            requestReview()
-                        } label: {
-                            HStack {
-                                Label {
-                                    Text("Rate in AppStore")
-                                        .font(.customHeadlineFont)
-                                }icon: {
-                                    Image(systemName: "star")
-                                }
-                                Spacer()
-                                Image(systemName: "arrow.up.right")
-                            }
-                        }
-                        .buttonStyle(.plain)
+                        /// requestReview may not work. need App id to open URL libk to write review
+//                        Button {
+//                            requestReview()
+//                        } label: {
+//                            HStack {
+//                                Label {
+//                                    Text("Rate in AppStore")
+//                                        .font(.customHeadlineFont)
+//                                }icon: {
+//                                    Image(systemName: "star")
+//                                }
+//                                Spacer()
+//                                Image(systemName: "arrow.up.right")
+//                            }
+//                        }
+//                        .buttonStyle(.plain)
 
                     }
                     .listRowBackground(Color.clear)
