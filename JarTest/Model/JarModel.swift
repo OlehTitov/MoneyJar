@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-enum HomeViewStatus {
-    case home
-    case listOfTransactions
-    case portfolio
-}
+//enum HomeViewStatus {
+//    case home
+//    case listOfTransactions
+//    case portfolio
+//}
 
-enum storageKeys: String {
+enum StorageKeys: String {
     case greetingSoundPlayed
     case jarIsCreated
     case soundIsOn

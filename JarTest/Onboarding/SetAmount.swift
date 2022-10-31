@@ -55,7 +55,7 @@ struct SetAmount_Previews: PreviewProvider {
 extension SetAmount {
     struct Content: View {
         @EnvironmentObject private var model: Model
-        @AppStorage(storageKeys.jarIsCreated.rawValue) var jarIsCreated = false
+        @AppStorage(StorageKeys.jarIsCreated.rawValue) var jarIsCreated = false
         @StateObject var viewModel : SetAmountViewModel
         var jarName: String
         @State var selectedCurrency: ForeignCurrency

@@ -14,7 +14,7 @@ struct SettingsView: View {
     @State var navPath: NavigationPath = NavigationPath()
     @EnvironmentObject private var settingsStore: SettingsStore
     @State var selectedCurrency: ForeignCurrency
-    @AppStorage(storageKeys.soundIsOn.rawValue) var soundIsOn = true
+    @AppStorage(StorageKeys.soundIsOn.rawValue) var soundIsOn = true
     //Mail settings
     @State var isShowingMailView = false
     @State var alertNoMail = false

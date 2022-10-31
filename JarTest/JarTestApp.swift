@@ -16,7 +16,7 @@ struct JarTestApp: App {
     let settingsStore = SettingsStore()
     
     //This is to check if user has already created the jar
-    var jarIsCreated = UserDefaults.standard.bool(forKey: storageKeys.jarIsCreated.rawValue)
+    var jarIsCreated = UserDefaults.standard.bool(forKey: StorageKeys.jarIsCreated.rawValue)
     
     var body: some Scene {
         WindowGroup {

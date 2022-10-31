@@ -41,7 +41,7 @@ extension HomeView {
         @EnvironmentObject private var model: Model
         @EnvironmentObject private var settingsStore : SettingsStore
         @Environment(\.colorScheme) var colorScheme
-        @AppStorage(storageKeys.greetingSoundPlayed.rawValue) var greetingSoundPlayed = false
+        @AppStorage(StorageKeys.greetingSoundPlayed.rawValue) var greetingSoundPlayed = false
         @ObservedObject var player = AudioPlayer(name: "coins-falling", withExtension: "wav")
         @State var mainStack: [NavigationType] = []
         @State var presentSheet = false
