@@ -335,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */,
+				7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -416,7 +417,6 @@
 				7CEA503628B0AFDE00D33C45 /* EmptyAssetsView.swift */,
 				7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */,
 				7CA930F728B892FF00C8286C /* JarWithFlag.swift */,
-				7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */,
 				7CEA503E28B26BFB00D33C45 /* MultiProgressView.swift */,
 				7CDA98E2285478E300EDCF42 /* CustomCorner.swift */,
 			);
