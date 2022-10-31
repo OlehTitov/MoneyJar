@@ -7,9 +7,11 @@
 
 import SwiftUI
 import MessageUI
+import StoreKit
 
 struct SettingsView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.requestReview) var requestReview
     @EnvironmentObject private var model: Model
     @State var navPath: NavigationPath = NavigationPath()
     @EnvironmentObject private var settingsStore: SettingsStore
@@ -104,7 +106,9 @@ struct SettingsView: View {
                             Alert(title: Text("Please setup your Mail app"))
                         }
                         //Rate in AppStore
-                        Link(destination: URL(string: Model.appStoreReviewLink)!) {
+                        Button {
+                            requestReview()
+                        } label: {
                             HStack {
                                 Label {
                                     Text("Rate in AppStore")
