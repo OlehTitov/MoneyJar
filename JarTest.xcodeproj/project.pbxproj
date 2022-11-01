@@ -10,6 +10,7 @@
 		7C06ED35290FA3C500C2EF09 /* CenteredLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */; };
 		7C06ED38290FA97C00C2EF09 /* PortfolioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED37290FA97C00C2EF09 /* PortfolioItem.swift */; };
 		7C06ED3B290FAB4D00C2EF09 /* StorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED3A290FAB4D00C2EF09 /* StorageKeys.swift */; };
+		7C06ED3D2910484D00C2EF09 /* SettingRowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06ED3C2910484D00C2EF09 /* SettingRowStyle.swift */; };
 		7C0ADA6D2909079100206341 /* UltimateGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6C2909079100206341 /* UltimateGradientView.swift */; };
 		7C0ADA6F290910D600206341 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0ADA6E290910D600206341 /* CustomProgressView.swift */; };
 		7C0ADA71290A5E8600206341 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 7C0ADA70290A5E8600206341 /* Montserrat */; };
@@ -128,6 +129,7 @@
 		7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredLabelStyle.swift; sourceTree = "<group>"; };
 		7C06ED37290FA97C00C2EF09 /* PortfolioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioItem.swift; sourceTree = "<group>"; };
 		7C06ED3A290FAB4D00C2EF09 /* StorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageKeys.swift; sourceTree = "<group>"; };
+		7C06ED3C2910484D00C2EF09 /* SettingRowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowStyle.swift; sourceTree = "<group>"; };
 		7C0ADA6C2909079100206341 /* UltimateGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimateGradientView.swift; sourceTree = "<group>"; };
 		7C0ADA6E290910D600206341 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		7C0ADA70290A5E8600206341 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Montserrat; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 			children = (
 				7C06ED34290FA3C500C2EF09 /* CenteredLabelStyle.swift */,
 				7CA930EE28B6040F00C8286C /* PrimaryButtonStyle.swift */,
+				7C06ED3C2910484D00C2EF09 /* SettingRowStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -721,6 +724,7 @@
 				7CEF6C41286B65230013EA3D /* AddBitCoinView.swift in Sources */,
 				7CDA9901285E774500EDCF42 /* ConfigureJar.swift in Sources */,
 				7CEF6C29286470340013EA3D /* ForeignExchange.swift in Sources */,
+				7C06ED3D2910484D00C2EF09 /* SettingRowStyle.swift in Sources */,
 				7C0ADA7A290C0F6A00206341 /* Gold.swift in Sources */,
 				7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
 				7C0ADA8D290C6CDC00206341 /* Account.swift in Sources */,

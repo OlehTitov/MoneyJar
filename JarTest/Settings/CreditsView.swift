@@ -15,45 +15,57 @@ struct CreditsView: View {
                 Section {
                     Image("AppColorIcon")
                         .resizable()
-                        .frame(width: 140, height: 140)
+                        .frame(width: 100, height: 100)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .padding()
                     //Version
                     Label {
-                        VStack(alignment: .leading, spacing: 6) {
+                        HStack {
                             Text("Current version")
-                                .foregroundColor(.secondary)
+                            Spacer()
                             Text("\(Bundle.main.appVersionLong) (\(Bundle.main.appBuild))")
-                                .fontWeight(.bold)
+                                .bold()
                         }
                     } icon: {
                         Image(systemName: "info")
-                            .font(.title2.weight(.regular))
-                            .frame(width: 50, height: 50)
-                            .background(Color.black.opacity(0.1))
-                            .cornerRadius(12)
                     }
-                    .labelStyle(CenteredLabelStyle())
+                    .modifier(SettingRowStyle())
+
                     //Created by
-                    Label {
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text("Created by")
-                                .foregroundColor(.secondary)
-                            Link(destination: URL(string: Model.appStoreReviewLink)!) {
+                    Link(destination: URL(string: "https://twitter.com/OlegTitov81")!) {
+                        Label {
+                            HStack {
+                                Text("Created by")
+                                Spacer()
                                 HStack {
                                     Text("Oleh Titov")
+                                        .bold()
                                     Image(systemName: "arrow.up.right")
                                 }
                             }
+                        } icon: {
+                            Image(systemName: "face.smiling")
                         }
-                    } icon: {
-                        Image(systemName: "face.smiling")
-                            .font(.title2.weight(.light))
-                            .frame(width: 30, height: 30)
-//                            .background(Color.black.opacity(0.1))
-//                            .cornerRadius(12)
+                        .modifier(SettingRowStyle())
                     }
-                    .labelStyle(CenteredLabelStyle())
+                    
+                    //Penguin images by
+                    Link(destination: URL(string: "https://www.etsy.com/shop/MIMIDigitalstudio")!) {
+                        Label {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Penguin images by")
+                                HStack {
+                                    Text("MIMIDigitalstudio")
+                                        .bold()
+                                    Image(systemName: "arrow.up.right")
+                                }
+                            }
+                        } icon: {
+                            Image(systemName: "paintbrush.pointed")
+                        }
+                        .modifier(SettingRowStyle())
+                    }
+                    
                 }
                 .listRowBackground(Color.clear)
                 .listRowSeparator(.hidden)
