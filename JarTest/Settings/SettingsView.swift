@@ -25,27 +25,25 @@ struct SettingsView: View {
         NavigationStack(path: $navPath) {
             ZStack {
                 BackgroundView()
-                Form {
+                List {
                     ///Jar Settings
-                    Section(header: Text("Jar settings").font(.customBodyFont)) {
+                    Section(header: Text("Jar configuration")) {
                         //Jar name and Goal amount
                         ForEach(SettingsRoute.general, id: \.self) { route in
                             NavigationLink(value: route) {
                                 Label {
                                     Text(route.rawValue)
-                                        .font(.customHeadlineFont)
                                 }icon: {
                                     Image(systemName: route.icon)
                                 }
-//                                Label(route.rawValue, systemImage: route.icon)
                             }
+                            .modifier(SettingRowStyle())
                         }
                         //Base currency
                         Picker(
                             selection: $selectedCurrency,
                             label: Label {
                                 Text("Base currency")
-                                    .font(.customHeadlineFont)
                             }icon: {
                                 Image(systemName: "dollarsign")
                             }
@@ -55,45 +53,50 @@ struct SettingsView: View {
                                     .font(.customBodyFont)
                             }
                         }
+                        .modifier(SettingRowStyle())
                     }
+                    .listRowInsets(EdgeInsets.init(top: 6, leading: 16, bottom: 6, trailing: 16))
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     ///General Settings
-                    Section(header: Text("General").font(.customBodyFont)) {
+                    Section(header: Text("General")) {
                         //Sound settings
                         Label {
                             Toggle(isOn: $settingsStore.soundIsOn) {
                                 Text("Sound")
-                                    .font(.customHeadlineFont)
                             }
                                 .tint(Color.accentColor)
                         } icon: {
                             Image(systemName: "music.note")
                         }
+                        .modifier(SettingRowStyle())
                         //Haptic settings
+                        ///Add haptics in later releases
 //                        Label {
 //                            Toggle("Haptics", isOn: $settingsStore.hapticsIsOn)
 //                                .tint(Color.accentColor)
 //                        } icon: {
 //                            Image(systemName: "hand.tap")
 //                        }
+//                        .modifier(SettingRowStyle())
                     }
+                    .listRowInsets(EdgeInsets.init(top: 6, leading: 16, bottom: 6, trailing: 16))
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     
                     ///Get in touch
-                    Section(header: Text("Get in touch").font(.customBodyFont)) {
+                    Section(header: Text("Get in touch")) {
                         //Email
                         Label {
                             HStack {
                                 Text("Email")
-                                    .font(.customHeadlineFont)
                                 Spacer()
                                 Image(systemName: "arrow.up.right")
                             }
                         } icon: {
                             Image(systemName: "envelope")
                         }
+                        .modifier(SettingRowStyle())
                         .onTapGesture {
                             MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
                         }
@@ -124,24 +127,29 @@ struct SettingsView: View {
 //                        .buttonStyle(.plain)
 
                     }
+                    .listRowInsets(EdgeInsets.init(top: 6, leading: 16, bottom: 6, trailing: 16))
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                     
                     ///Other
-                    Section(header: Text("Other").font(.customBodyFont)) {
+                    Section {
                         NavigationLink(value: SettingsRoute.credits) {
                             Label {
                                 Text(SettingsRoute.credits.rawValue)
-                                    .font(.customHeadlineFont)
+//                                    .font(.customHeadlineFont)
                             }icon: {
                                 Image(systemName: SettingsRoute.credits.icon)
                             }
                         }
+                        .modifier(SettingRowStyle())
                     }
+                    .listRowInsets(EdgeInsets.init(top: 6, leading: 16, bottom: 6, trailing: 16))
                     .listRowBackground(Color.clear)
                     .listRowSeparator(.hidden)
                 }
+//                .environment(\.defaultMinListRowHeight, 0)
                 .listStyle(.plain)
+                .listRowInsets(EdgeInsets.init(top: 0, leading: 4, bottom: 0, trailing: 4))
                 .scrollContentBackground(.hidden)
             }
             .navigationDestination(for: SettingsRoute.self, destination: { route in
@@ -153,7 +161,7 @@ struct SettingsView: View {
             })
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
-            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
+//            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
         .onChange(of: selectedCurrency) { newValue in
             model.setBaseCurrency(newValue: newValue)

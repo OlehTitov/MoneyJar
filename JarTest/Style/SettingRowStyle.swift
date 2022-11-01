@@ -12,9 +12,10 @@ struct SettingRowStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
+            .frame(height: 48)
+            .padding(.horizontal)
             .background(Color(UIColor.tertiarySystemBackground))
-            .cornerRadius(16)
+            .cornerRadius(12)
             .font(.customBodyFont)
     }
 }
