@@ -78,7 +78,7 @@ struct AwardThumbnailView: View {
     }
     
     func strokeColor(award: Award) -> Color {
-        award.status == .completed ? Color.green : .secondary.opacity(0.5)
+        award.status == .completed ? Color.indigo : .secondary.opacity(0.5)
     }
 }
 
