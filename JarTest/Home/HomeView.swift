@@ -64,6 +64,9 @@ extension HomeView {
                                         .foregroundColor(.secondary)
                                         .font(.customBodyFont)
                                     newTotalAmount(size: 50, decimalSize: 32)
+                                    Text(labelWithLastRatesUpdateTime())
+                                        .foregroundColor(.secondary)
+                                        .font(.customBodyFont)
                                 }
                                 .padding(.vertical)
                                 .padding(.top, 24)
@@ -161,6 +164,14 @@ extension HomeView {
         func newTotalAmount(size: CGFloat, decimalSize: CGFloat) -> some View {
             RollingCounterAnimation(initialBalance: model.account.balanceBeforeChange, currentBalance: model.account.balance, fontSize: size, decimaSize: decimalSize)
                 .minimumScaleFactor(0.5)
+        }
+        
+        
+        func labelWithLastRatesUpdateTime() -> String {
+            guard let date = model.account.lastRatesUpdate.toDate() else {
+                return "Not available"
+            }
+            return date.toString
         }
         
         func goalAmount() -> some View {
