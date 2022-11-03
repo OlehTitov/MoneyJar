@@ -20,7 +20,7 @@ struct AllAssetsView: View {
                 } else {
                     List {
                         ForEach(sortAssetsByDate(), id: \.self) { date in
-                            Section(header: Text(date.toString)) {
+                            Section(header: Text(date.toString(format: .short, showTime: false))) {
                                 ForEach(model.account.assets, id: \.self) { asset in
                                     switch asset {
                                     case .cash(let cash):

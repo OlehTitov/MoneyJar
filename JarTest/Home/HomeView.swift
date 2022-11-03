@@ -174,7 +174,7 @@ extension HomeView {
             guard let date = model.account.lastRatesUpdate.toDate() else {
                 return "Not available"
             }
-            return date.toString
+            return date.toString(format: .long, showTime: true)
         }
         
         func goalAmount() -> some View {

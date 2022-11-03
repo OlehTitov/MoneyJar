@@ -23,9 +23,13 @@ extension Date {
 
 extension Date {
     
-    var toString: String {
+    func toString(format: DateFormatter.Style, showTime: Bool) -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.dateStyle = format
+        formatter.timeZone = .current
+        if showTime {
+            formatter.timeStyle = .short
+        }
         formatter.timeZone = .current
         print(formatter.string(from: self))
         return formatter.string(from: self)
