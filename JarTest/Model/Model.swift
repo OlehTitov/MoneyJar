@@ -103,8 +103,8 @@ class Model : ObservableObject {
         storageController.save(account)
     }
     
-    func getLatestRates() async {
-        if account.needToUpdateRates {
+    func getLatestRates(forced: Bool) async {
+        if account.needToUpdateRates || forced {
             let fetched = await exchangeClient.getLatestRates()
             guard let fetched = fetched else {
                 return

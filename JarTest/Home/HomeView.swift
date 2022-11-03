@@ -14,7 +14,7 @@ struct HomeView: View {
         Content2()
             .task {
                 if model.account.rates.isEmpty {
-                    await model.getLatestRates()
+                    await model.getLatestRates(forced: false)
                 }
                 model.calculateBalance()
         }
@@ -102,6 +102,9 @@ extension HomeView {
                                 }
                                 .frame(maxHeight: .infinity, alignment: .top)
                                 .offset(y: -50)
+                            }
+                            .refreshable {
+                                await model.getLatestRates(forced: true)
                             }
                         }
                         Button {
