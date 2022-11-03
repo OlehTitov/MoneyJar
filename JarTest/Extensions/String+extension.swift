@@ -31,8 +31,10 @@ extension String {
     }
     
     func toDate() -> Date? {
-        let formater = DateFormatter()
-        formater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        return formater.date(from: self)
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        print("String \(self) to date: \(formatter.date(from: self))")
+        return formatter.date(from: self)
     }
 }

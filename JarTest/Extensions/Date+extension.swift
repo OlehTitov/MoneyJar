@@ -27,6 +27,7 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeZone = .current
+        print(formatter.string(from: self))
         return formatter.string(from: self)
     }
     
