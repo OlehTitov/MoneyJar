@@ -13,6 +13,20 @@ struct Account : Codable {
     var baseCurrency: ForeignCurrency
     var rates: [String : Double]
     var lastRatesUpdate : String
+    var needToUpdateRates: Bool {
+        //Get rates for the first time
+        if lastRatesUpdate.isEmpty {
+            return true
+        }
+        //If can not convert string to date
+        guard let date = lastRatesUpdate.toDate() else {
+            return true
+        }
+        //If rates are older than one day
+        if !Calendar.current.isDateInToday(date) {
+            return true
+        }
+    }
     var assets : [Asset] // Container for all assets
     var balance : Double
     var awards: [Award]

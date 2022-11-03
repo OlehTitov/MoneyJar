@@ -104,19 +104,18 @@ class Model : ObservableObject {
     }
     
     func getLatestRates() async {
-        let fetched = await exchangeClient.getLatestRates()
-        guard let fetched = fetched else {
-            return
+        if account.needToUpdateRates {
+            let fetched = await exchangeClient.getLatestRates()
+            guard let fetched = fetched else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.account.rates = fetched.rates
+                self.account.lastRatesUpdate = fetched.lastupdate
+            }
+            
+            storageController.save(account)
         }
-        /**
-         Publishing changes from background thread is not allowed
-         */
-        DispatchQueue.main.async {
-            self.account.rates = fetched.rates
-            self.account.lastRatesUpdate = fetched.lastupdate
-        }
-        
-        storageController.save(account)
     }
     
 }
