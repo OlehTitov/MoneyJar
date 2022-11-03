@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct JarTestApp: App {
     let model = Model(storageController: StorageController(),
-                      exchangeClient: MockExchangeClient(), // change to real client for production
+                      exchangeClient: ExchangeClient(), // change to real client for production
                       currencyConverter: CurrencyConverter(),
                       awardsManager: AwardsManager())
     let settingsStore = SettingsStore()
