@@ -29,4 +29,10 @@ extension String {
                 }
                 return attributedString
     }
+    
+    func toDate() -> Date? {
+        let formater = DateFormatter()
+        formater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return formater.date(from: self)
+    }
 }
