@@ -26,6 +26,7 @@ struct Account : Codable {
         if !Calendar.current.isDateInToday(date) {
             return true
         }
+        return false
     }
     var assets : [Asset] // Container for all assets
     var balance : Double
