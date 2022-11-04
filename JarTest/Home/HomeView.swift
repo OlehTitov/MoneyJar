@@ -64,7 +64,7 @@ extension HomeView {
                                         .foregroundColor(.secondary)
                                         .font(.customBodyFont)
                                     newTotalAmount(size: 50, decimalSize: 32)
-                                    Text("Exchange rates updated on \(labelWithLastRatesUpdateTime())")
+                                    Text(labelWithLastRatesUpdateTime())
                                         .foregroundColor(.secondary)
                                         .font(.customCaptionFont)
                                 }
@@ -174,7 +174,18 @@ extension HomeView {
             guard let date = model.account.lastRatesUpdate.toDate() else {
                 return "Not available"
             }
-            return date.toString(format: .long, showTime: true)
+            var calendar = Calendar.current
+            calendar.timeZone = .current
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            
+            if calendar.isDateInToday(date) {
+                return "Rates were last updated today at \(date.timeOnlyToString())"
+            }
+            if calendar.isDateInYesterday(date) {
+                return "Rates were last updated yesterday at \(date.timeOnlyToString())"
+            }
+            return "Rates were last updated on \(date.toString(format: .long, showTime: true))"
         }
         
         func goalAmount() -> some View {

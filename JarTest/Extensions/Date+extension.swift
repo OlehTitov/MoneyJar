@@ -35,5 +35,11 @@ extension Date {
         return formatter.string(from: self)
     }
     
+    func timeOnlyToString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm a"
+        return formatter.string(from: self)
+    }
+    
 }
 
