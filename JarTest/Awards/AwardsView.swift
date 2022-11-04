@@ -66,7 +66,7 @@ struct AwardThumbnailView: View {
         VStack {
             ZStack {
                 Circle()
-                    .strokeBorder(strokeColor(award: award), lineWidth: 5)
+                    .strokeBorder(strokeColor(award: award), lineWidth: 3)
                     .frame(width: 100, height: 100)
                 ConditionalAwardImage(award: award, size: 80)
             }
@@ -78,7 +78,7 @@ struct AwardThumbnailView: View {
     }
     
     func strokeColor(award: Award) -> Color {
-        award.status == .completed ? Color.indigo : .secondary.opacity(0.5)
+        award.status == .completed ? Color.green : .secondary.opacity(0.5)
     }
 }
 

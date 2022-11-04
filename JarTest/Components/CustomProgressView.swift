@@ -20,7 +20,7 @@ struct CustomProgressView: View {
                     .frame(width: geometry.size.width)
                 
                 Capsule()
-                    .fill(Color.indigo)
+                    .fill(Color.accentColor)
                     .frame(height: 8)
                     .frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width))
                 
