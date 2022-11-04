@@ -161,7 +161,6 @@ struct SettingsView: View {
             })
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
-//            .toolbarBackground(colorScheme == .dark ? Color("shipCove") : Color("mint"), for: .navigationBar)
         }
         .onChange(of: selectedCurrency) { newValue in
             model.setBaseCurrency(newValue: newValue)

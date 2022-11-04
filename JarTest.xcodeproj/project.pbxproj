@@ -40,31 +40,16 @@
 		7CB0E81828CDD05900E87A6D /* SelectAssetTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0E81728CDD05900E87A6D /* SelectAssetTypeView.swift */; };
 		7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */; };
 		7CBAF327288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
-		7CBAF328288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF326288E7CE300BD8BC9 /* ConfigureJarViewModel.swift */; };
-		7CBAF32A288EE3BC00BD8BC9 /* Double+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C212861E22C0013EA3D /* Double+extension.swift */; };
 		7CBAF32D288EE86000BD8BC9 /* ConfigureJarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF32B288EE86000BD8BC9 /* ConfigureJarTests.swift */; };
 		7CBAF332289037C900BD8BC9 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */; };
-		7CBAF333289037CA00BD8BC9 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF331289037C900BD8BC9 /* CurrencyConverter.swift */; };
 		7CBAF3352890856500BD8BC9 /* CurrencyConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3342890856400BD8BC9 /* CurrencyConverterTests.swift */; };
-		7CBAF336289110E200BD8BC9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98F6285B622600EDCF42 /* Model.swift */; };
-		7CBAF3372891126500BD8BC9 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA98F4285B4FFD00EDCF42 /* StorageController.swift */; };
-		7CBAF3382891126900BD8BC9 /* ExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C252863971D0013EA3D /* ExchangeClient.swift */; };
-		7CBAF3392891129800BD8BC9 /* ForeignExchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C28286470340013EA3D /* ForeignExchange.swift */; };
 		7CBAF33B2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33A2891798C00BD8BC9 /* SetAmountViewModel.swift */; };
-		7CBAF33C2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33A2891798C00BD8BC9 /* SetAmountViewModel.swift */; };
 		7CBAF33F28965F9300BD8BC9 /* AmountLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */; };
-		7CBAF34028965F9300BD8BC9 /* AmountLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF33E28965F9300BD8BC9 /* AmountLine.swift */; };
-		7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDA9902285F1BBE00EDCF42 /* LegacyTextField.swift */; };
-		7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEF6C3E286B4DDE0013EA3D /* NumberPadView.swift */; };
 		7CBAF34E2897AB1600BD8BC9 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */; };
 		7CBAF3502898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
-		7CBAF3512898008700BD8BC9 /* MockStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF34F2898008700BD8BC9 /* MockStorageController.swift */; };
 		7CBAF3532898039700BD8BC9 /* MockExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */; };
-		7CBAF3542898039700BD8BC9 /* MockExchangeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF3522898039700BD8BC9 /* MockExchangeClient.swift */; };
 		7CBAF35728987DDD00BD8BC9 /* StorageControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */; };
-		7CBAF35828987DDE00BD8BC9 /* StorageControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35628987DDD00BD8BC9 /* StorageControllerProtocol.swift */; };
 		7CBAF35A28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
-		7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBAF35928987E1300BD8BC9 /* ExchangeClientProtocol.swift */; };
 		7CBDCE1B29017DB500D858DA /* ChangeAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1A29017DB500D858DA /* ChangeAmountView.swift */; };
 		7CBDCE1D2901C33E00D858DA /* SettingsChangeResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1C2901C33E00D858DA /* SettingsChangeResultView.swift */; };
 		7CBDCE1F29050D3400D858DA /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDCE1E29050D3400D858DA /* MailView.swift */; };
@@ -576,7 +561,6 @@
 				TargetAttributes = {
 					7CBAF317288E67F200BD8BC9 = {
 						CreatedOnToolsVersion = 13.4;
-						TestTargetID = 7CEC2A48283547F5007A1897;
 					};
 					7CEC2A48283547F5007A1897 = {
 						CreatedOnToolsVersion = 13.1;
@@ -638,25 +622,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CBAF333289037CA00BD8BC9 /* CurrencyConverter.swift in Sources */,
-				7CBAF3512898008700BD8BC9 /* MockStorageController.swift in Sources */,
-				7CBAF32A288EE3BC00BD8BC9 /* Double+extension.swift in Sources */,
 				7CBAF32D288EE86000BD8BC9 /* ConfigureJarTests.swift in Sources */,
-				7CBAF3472896DEB900BD8BC9 /* NumberPadView.swift in Sources */,
-				7CBAF336289110E200BD8BC9 /* Model.swift in Sources */,
-				7CBAF3462896DEAF00BD8BC9 /* LegacyTextField.swift in Sources */,
-				7CBAF35B28987E1300BD8BC9 /* ExchangeClientProtocol.swift in Sources */,
-				7CBAF3382891126900BD8BC9 /* ExchangeClient.swift in Sources */,
-				7CBAF35828987DDE00BD8BC9 /* StorageControllerProtocol.swift in Sources */,
-				7CBAF34028965F9300BD8BC9 /* AmountLine.swift in Sources */,
-				7CBAF328288E7CE300BD8BC9 /* ConfigureJarViewModel.swift in Sources */,
-				7CBAF3392891129800BD8BC9 /* ForeignExchange.swift in Sources */,
 				7CBAF3352890856500BD8BC9 /* CurrencyConverterTests.swift in Sources */,
 				7CBAF31B288E67F200BD8BC9 /* MoneyJarTests.swift in Sources */,
-				7CBAF33C2891798C00BD8BC9 /* SetAmountViewModel.swift in Sources */,
-				7CBAF3372891126500BD8BC9 /* StorageController.swift in Sources */,
 				7CBAF34E2897AB1600BD8BC9 /* ModelTests.swift in Sources */,
-				7CBAF3542898039700BD8BC9 /* MockExchangeClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,7 +725,6 @@
 		7CBAF31F288E67F200BD8BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
@@ -768,14 +736,12 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JarTest.app/JarTest";
 			};
 			name = Debug;
 		};
 		7CBAF320288E67F200BD8BC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
@@ -787,7 +753,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JarTest.app/JarTest";
 			};
 			name = Release;
 		};

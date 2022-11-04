@@ -56,7 +56,7 @@ class ModelTests: XCTestCase {
     
     func testCalculatebalance() async {
         //Get currency rates as we need rates to calculate the balance
-        await model.getLatestRates()
+        await model.getLatestRates(forced: false)
         //Check if there are rates
         XCTAssertTrue(!model.account.rates.isEmpty)
         

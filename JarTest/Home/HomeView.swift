@@ -64,9 +64,9 @@ extension HomeView {
                                         .foregroundColor(.secondary)
                                         .font(.customBodyFont)
                                     newTotalAmount(size: 50, decimalSize: 32)
-                                    Text(labelWithLastRatesUpdateTime())
+                                    Text("Exchange rates updated on \(labelWithLastRatesUpdateTime())")
                                         .foregroundColor(.secondary)
-                                        .font(.customBodyFont)
+                                        .font(.customCaptionFont)
                                 }
                                 .padding(.vertical)
                                 .padding(.top, 24)
