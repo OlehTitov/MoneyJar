@@ -14,11 +14,12 @@ class ModelTests: XCTestCase {
     let mockStorage = MockStorageController()
     let mockExchange = MockExchangeClient()
     let currencyConverter = CurrencyConverter()
+    let awardsManager = AwardsManager()
     
     var model : Model!
     
     override func setUp() {
-        model = Model(storageController: mockStorage, exchangeClient: mockExchange, currencyConverter: currencyConverter)
+        model = Model(storageController: mockStorage, exchangeClient: mockExchange, currencyConverter: currencyConverter, awardsManager: awardsManager)
     }
     
     func testStateControllerInitSuccess() {
@@ -54,11 +55,19 @@ class ModelTests: XCTestCase {
         XCTAssertTrue(model.account.assets.count == 1)
     }
     
-    func testCalculatebalance() async {
+    func testRatesAreNotEmpty() async {
         //Get currency rates as we need rates to calculate the balance
         await model.getLatestRates(forced: false)
-        //Check if there are rates
-        XCTAssertTrue(!model.account.rates.isEmpty)
+        let asyncWaitDuration = 0.5
+          DispatchQueue.main.asyncAfter(deadline: .now() + asyncWaitDuration) {
+              //Check if there are rates
+              XCTAssertTrue(!self.model.account.rates.isEmpty)
+          }
+    }
+    
+    func testCalculatebalance() async {
+        //Get currency rates as we need rates to calculate the balance
+        await model.getLatestRates(forced: true)
         
         //Add some assets
         let cash = Asset.cash(Cash(symbol: .eur, amount: 1000.00, dateAdded: Date.now))
@@ -72,13 +81,15 @@ class ModelTests: XCTestCase {
         //Expected balance
         let expectedBalance = 4000.00
         
-        //Calculate balance
-        model.calculateBalance()
-        
-        //Check values
-        XCTAssertTrue(model.account.baseCurrency == .eur)
-        XCTAssertEqual(expectedBalance, model.account.balance, "Should be equal")
-        
+        let asyncWaitDuration = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + asyncWaitDuration) {
+            //Calculate balance
+            self.model.calculateBalance()
+            
+            //Check values
+            XCTAssertTrue(self.model.account.baseCurrency == .eur)
+            XCTAssertEqual(expectedBalance, self.model.account.balance, "Should be equal")
+        }
     }
 
 }

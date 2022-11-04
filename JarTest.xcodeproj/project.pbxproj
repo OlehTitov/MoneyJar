@@ -561,6 +561,7 @@
 				TargetAttributes = {
 					7CBAF317288E67F200BD8BC9 = {
 						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 7CEC2A48283547F5007A1897;
 					};
 					7CEC2A48283547F5007A1897 = {
 						CreatedOnToolsVersion = 13.1;
@@ -725,6 +726,7 @@
 		7CBAF31F288E67F200BD8BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
@@ -736,12 +738,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JarTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JarTest";
 			};
 			name = Debug;
 		};
 		7CBAF320288E67F200BD8BC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7UQ7Z257NM;
@@ -753,6 +757,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JarTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JarTest";
 			};
 			name = Release;
 		};
