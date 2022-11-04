@@ -10,6 +10,7 @@ import Foundation
 class Model : ObservableObject {
     @Published var account : Account
     
+    @Published var animateAmount: Bool = false
     private let storageController : StorageControllerProtocol
     
     private let exchangeClient : ExchangeClientProtocol
@@ -50,6 +51,7 @@ class Model : ObservableObject {
         account.balanceBeforeChange = account.balance //used to animate the balance change
         account.assets.append(asset)
         storageController.save(account)
+        animateAmount = true
     }
     
     func calculateBalance() {

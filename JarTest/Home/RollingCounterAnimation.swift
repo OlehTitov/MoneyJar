@@ -32,11 +32,17 @@ struct RollingCounterAnimation: View {
                 .decimalFormat(fontSize: fontSize, decimalSize: decimaSize))
 
                 .onAppear {
-                    if amountAdded == 0 {
-                        totalAmount = currentBalance
-                    } else {
+//                    if amountAdded == 0 {
+//                        totalAmount = currentBalance
+//                    } else {
+//                        totalAmount = initialBalance
+//                        addNumberWithRollingAnimation()
+//                    }
+                    if model.animateAmount {
                         totalAmount = initialBalance
                         addNumberWithRollingAnimation()
+                    } else {
+                        totalAmount = currentBalance
                     }
                 }
         }
@@ -65,6 +71,10 @@ struct RollingCounterAnimation: View {
                     // Add piece of the entire entered number to our total
                     stepCounter += 1
                     self.totalAmount += self.amountAdded / Double(steps)
+                    //Reset animateAmount to False
+                    if stepCounter == steps {
+                        model.animateAmount = false
+                    }
                     //stop playing sound of coins
                     if stepCounter == steps && settingsStore.soundIsOn {
                         player.pauseSmoothly(duration: 0)
