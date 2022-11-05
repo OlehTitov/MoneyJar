@@ -64,31 +64,38 @@ extension ConfigureJar {
         let pagerItemSpacing : CGFloat = 0
         let pagerInteractiveScale : Double = 0.7
         let pagerItemAspectRatio : Double = 0.8
+        let cardBackground = Color(UIColor.secondarySystemBackground)
+        let cardCornerRadius: CGFloat = 12
         
         var body: some View {
             ZStack {
-                BackgroundView()
+                UltimateGradientView()
                 VStack(spacing: 12) {
                     currencyJarSelection
                         .onAppear {
                             scrollPagerToNextOption()
                         }
                         
-                    VStack(spacing: 12) {
-                        Text("What are you saving for?")
-                            .font(.customBodyFont)
-                        LegacyTextField(
-                            text: $name,
-                            isFirstResponder: $isFirstResponder,
-                            keyboard: .alphabet
-                        )
-                        Spacer()
-                        Button("Create Jar") {
-                            nextPressed()
+                    ZStack {
+                        CustomCorner(corners: [.topLeft, .topRight], radius: cardCornerRadius)
+                            .fill(cardBackground)
+                        VStack(spacing: 12) {
+                            Text("What are you saving for?")
+                                .font(.customBodyFont)
+                                .padding(.top, 36)
+                            LegacyTextField(
+                                text: $name,
+                                isFirstResponder: $isFirstResponder,
+                                keyboard: .alphabet
+                            )
+                            Spacer()
+                            Button("Create Jar") {
+                                nextPressed()
+                            }
+                            .buttonStyle(PrimaryButtonStyle())
+                            .disabled(checkButtonDisabled())
+                            .padding(.bottom)
                         }
-                        .buttonStyle(PrimaryButtonStyle())
-                        .disabled(checkButtonDisabled())
-                        .padding(.bottom)
                     }
                 }
             }
@@ -97,7 +104,6 @@ extension ConfigureJar {
         var currencyJarSelection: some View {
             Pager(page: page, data: ForeignCurrency.forInitialSelection, id: \.self) { item in
                 self.pageView(item)
-                    .padding()
             }
             .multiplePagination()
             .itemSpacing(pagerItemSpacing)
@@ -114,11 +120,10 @@ extension ConfigureJar {
             VStack {
                 Spacer()
                 ZStack {
-                    JarShadow(width: 150, height: 18, blurRadius: 6, opacity: 0.2)
-                        .offset(y:116)
                     Image(jarImageName)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .padding(.vertical, 30)
                     ZStack {
                         Circle()
                             .strokeBorder(item.color, lineWidth: 3)
@@ -133,6 +138,7 @@ extension ConfigureJar {
                                     .frame(width: 68, height: 68)
                         )
                     }
+                    .padding(.top, 30)
                 }
                 Spacer()
             }
