@@ -65,61 +65,66 @@ extension SetAmount {
         var jarImage = "Jar-4"
         var jarIcon = "flag.fill"
         var jarHeight = UIScreen.main.bounds.height/5
+        let cardBackground = Color(UIColor.secondarySystemBackground)
+        let cardCornerRadius: CGFloat = 12
         
         var body: some View {
             ZStack {
-                BackgroundView()
+                UltimateGradientView()
                 VStack {
                     Spacer()
-                    VStack(spacing: 20) {
-                        ZStack {
-                            JarShadow(width: 150, height: 20, blurRadius: 12, opacity: 0.5)
-                                .offset(y: 94)
-                            JarWithFlag(
-                                jarImage: jarImage,
-                                jarHeight: jarHeight,
-                                jarIcon: jarIcon,
-                                color: selectedCurrency.color
-                            )
-                        }
-                        Text(headline)
-                            .font(.customBodyFont)
-                        
-                        AmountLine(
-                            amount: viewModel.amount,
-                            showPlaceholder: viewModel.showPlaceholder,
-                            placeholderText: selectedCurrency.placeholder(amount: 0.0), font: .customTitleFont
-                        )
-                        .minimumScaleFactor(0.5)
-                        .frame(height: 100)
-                    }
-                    Spacer()
-                    
-                    Button("Start saving") {
-                        viewModel.updateAccount(
-                            sc: model,
-                            selectedCurrency: selectedCurrency,
-                            jarName: jarName
-                        )
-                        jarIsCreated = true
-                    }
-                    .buttonStyle(PrimaryButtonStyle())
-                    .disabled(viewModel.isButtonDisabled)
-                    
-                    NumberPadView(
-                        text: $viewModel.amount,
-                        showPlaceholder: $viewModel.showPlaceholder,
-                        amountAsDouble: $viewModel.amountAsDouble,
-                        presentAlert: $viewModel.presentAlert,
-                        alertDescription: $alertText,
-                        showDecimal: false,
-                        currency: selectedCurrency,
-                        isForCrypto: false
+                    JarWithFlag(
+                        jarImage: jarImage,
+                        jarHeight: jarHeight,
+                        jarIcon: jarIcon,
+                        color: selectedCurrency.color
                     )
-                    .alert(alertText, isPresented: $viewModel.presentAlert) {
-                        Button("OK", role: .cancel, action: {})
+                    .padding(.vertical)
+                    ZStack {
+                        CustomCorner(corners: [.topLeft, .topRight], radius: cardCornerRadius)
+                            .fill(cardBackground)
+                        VStack(spacing: 12) {
+                            
+                            Text(headline)
+                                .font(.customBodyFont)
+                                .padding(.top, 36)
+                            AmountLine(
+                                amount: viewModel.amount,
+                                showPlaceholder: viewModel.showPlaceholder,
+                                placeholderText: selectedCurrency.placeholder(amount: 0.0), font: .customTitleFont
+                            )
+                            .minimumScaleFactor(0.5)
+                            .frame(height: 100)
+                            Spacer()
+                            
+                            Button("Start saving") {
+                                viewModel.updateAccount(
+                                    sc: model,
+                                    selectedCurrency: selectedCurrency,
+                                    jarName: jarName
+                                )
+                                jarIsCreated = true
+                            }
+                            .buttonStyle(PrimaryButtonStyle())
+                            .disabled(viewModel.isButtonDisabled)
+                            
+                            NumberPadView(
+                                text: $viewModel.amount,
+                                showPlaceholder: $viewModel.showPlaceholder,
+                                amountAsDouble: $viewModel.amountAsDouble,
+                                presentAlert: $viewModel.presentAlert,
+                                alertDescription: $alertText,
+                                showDecimal: false,
+                                currency: selectedCurrency,
+                                isForCrypto: false
+                            )
+                            .alert(alertText, isPresented: $viewModel.presentAlert) {
+                                Button("OK", role: .cancel, action: {})
+                            }
+                            .padding(EdgeInsets.init(top: 0, leading: 16, bottom: 36, trailing: 16))
+                        }
                     }
-                    .padding()
+                    .ignoresSafeArea()
                 }
             }
         }
