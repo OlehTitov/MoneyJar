@@ -396,7 +396,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		7CBAF319288E67F200BD8BC9 /* MoneyJarTests */ = {
+		7CBAF319288E67F200BD8BC9 /* Unit tests */ = {
 			isa = PBXGroup;
 			children = (
 				7CBAF34D2897AB1500BD8BC9 /* ModelTests.swift */,
@@ -404,7 +404,7 @@
 				7CBAF31A288E67F200BD8BC9 /* MoneyJarTests.swift */,
 				7CBAF32B288EE86000BD8BC9 /* ConfigureJarTests.swift */,
 			);
-			path = MoneyJarTests;
+			path = "Unit tests";
 			sourceTree = "<group>";
 		};
 		7CBAF33D28965F7C00BD8BC9 /* Components */ = {
@@ -433,7 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				7CEC2A4B283547F5007A1897 /* JarTest */,
-				7CBAF319288E67F200BD8BC9 /* MoneyJarTests */,
+				7CBAF319288E67F200BD8BC9 /* Unit tests */,
 				7CEC2A4A283547F5007A1897 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -889,7 +889,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JarTest/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Money Jar";
+				INFOPLIST_KEY_CFBundleDisplayName = "Savings Jar";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -925,7 +925,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JarTest/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Money Jar";
+				INFOPLIST_KEY_CFBundleDisplayName = "Savings Jar";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
